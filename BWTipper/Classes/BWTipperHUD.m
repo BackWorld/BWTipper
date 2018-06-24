@@ -74,8 +74,6 @@
     [hud show];
 }
 
-
-
 + (void)showWithImage: (UIImage *)image
              message: (NSString *)message
     backgroundDimmed: (BOOL)backgroundDimmed
@@ -90,6 +88,30 @@
     hud.delay = delay;
     
     [hud show];
+}
+
++ (void)showLoadingWithMessage:(NSString *)message backgroundDimmed: (BOOL)backgroundDimmed timeout:(NSTimeInterval)timeout{
+    BWTipperHUD *hud = [self new];
+    
+    hud.userInteractionEnabled = backgroundDimmed;
+    hud.message = message;
+    hud.delay = CGFLOAT_MAX;
+    
+    [hud showLoadingWithTimeout: timeout];
+}
+
++ (void)showLoadingWithAnimatedImages:(NSArray<UIImage *> *)images
+                             duration:(NSTimeInterval)duration
+                              message:(NSString *)message
+                     backgroundDimmed:(BOOL)backgroundDimmed
+                              timeout:(NSTimeInterval)timeout{
+    BWTipperHUD *hud = [self new];
+    
+    hud.userInteractionEnabled = backgroundDimmed;
+    hud.message = message;
+    hud.delay = CGFLOAT_MAX;
+    
+    [hud showLoadingWithAnimatedImages:images duration:duration timeout:timeout];
 }
 
 #pragma mark - Overrides
@@ -160,6 +182,36 @@
 
 #pragma mark - Private
 
+- (void)showLoadingWithAnimatedImages:(NSArray<UIImage *> *)images
+                             duration:(NSTimeInterval)duration
+                              timeout:(NSTimeInterval)timeout{
+    
+    self.imageViewSize = CGSizeMake(80, 80);
+    self.imageView.animationImages = images;
+    self.imageView.animationDuration = duration;
+    [self.imageView startAnimating];
+    
+    [self show];
+    
+    // 启动超时计时器
+    if (timeout > 0) {
+        [self performSelector:@selector(playHideAnimation) withObject:nil afterDelay:timeout];
+    }
+}
+
+- (void)showLoadingWithTimeout: (NSTimeInterval)timeout{
+    self.imageViewSize = CGSizeMake(80, 80);
+    self.imageView.hidden = YES;
+    self.indicatorView.hidden = NO;
+    [self.indicatorView startAnimating];
+    
+    [self show];
+    
+    // 启动超时计时器
+    if (timeout > 0) {
+        [self performSelector:@selector(playHideAnimation) withObject:nil afterDelay:timeout];
+    }
+}
 
 #pragma mark - Setters
 - (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled{
@@ -174,6 +226,10 @@
     self.imageView.image = image;
     
     _image = image;
+}
+
+- (void)setDelay:(NSTimeInterval)delay{
+    _delay = delay ?: 1.0;
 }
 
 
@@ -209,7 +265,8 @@
 - (UIActivityIndicatorView *)indicatorView{
     if (!_indicatorView) {
         _indicatorView = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
-        _indicatorView.tintColor = BWTipperConfigure.defaultConfigure.themeRevertedColor;
+        _indicatorView.transform = CGAffineTransformMakeScale(1.3, 1.3);
+        _indicatorView.color = BWTipperConfigure.defaultConfigure.themeRevertedColor;
         _indicatorView.hidden = YES;
         _indicatorView.hidesWhenStopped = YES;
     }

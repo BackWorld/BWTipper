@@ -17,30 +17,27 @@
     return self;
 }
 
-+ (void)dismiss{
++ (void)dismissWithAnimated: (BOOL)animated{
     for (UIView *subview in kKeyWindow.subviews) {
         if ([subview isKindOfClass:self.class]) {
-            [subview removeFromSuperview];
+            if (animated) {
+                BWTipperComponent *component = (BWTipperComponent *)subview;
+                [component playHideAnimation];
+            }
+            else{
+                [subview removeFromSuperview];
+            }
         }
     }
 }
 
 - (void)show{
     // 移除其它
-    [BWTipperComponent dismiss];
+    [BWTipperComponent dismissWithAnimated:NO];
     
     // 添加当前
     [kKeyWindow addSubview:self];
 }
-
-- (void)playDisplayAnimation{
-    
-}
-
-- (void)playHideAnimation{
-    
-}
-
 
 #pragma mark - Setters
 

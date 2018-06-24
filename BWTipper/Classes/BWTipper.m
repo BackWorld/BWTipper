@@ -13,16 +13,18 @@
     [BWTipperConfigure defaultConfigure];
 }
 
+#pragma mark - HUD
+
++ (void)hudWithStyle:(BWTipperStyle)style {
+    [self hudWithStyle:style message:nil];
+}
+
 + (void)hudWithStyle:(BWTipperStyle)style message:(NSString *)message{
     [self hudWithStyle:style message:message backgroundDimmed:NO delay:1.5 completion:nil];
 }
 
 + (void)hudWithStyle:(BWTipperStyle)style message:(NSString *)message backgroundDimmed:(BOOL)backgroundDimmed delay:(NSTimeInterval)delay completion:(BWTipperCompletion)completion{
     [BWTipperHUD showWithStyle:style message:message backgroundDimmed:backgroundDimmed delay:delay completion:completion];
-}
-
-+ (void)hudWithImage:(UIImage *)image message:(NSString *)message{
-    [self hudWithImage:image message:message backgroundDimmed:NO delay:1.5 completion:nil];
 }
 
 + (void)hudWithImage: (UIImage *)image
@@ -33,8 +35,39 @@
     [BWTipperHUD showWithImage:image message:message backgroundDimmed:backgroundDimmed delay:delay completion:completion];
 }
 
-+ (void)hudTest{
-    [self hudWithStyle:1 message:@"数据请求失败，请重试"];
+#pragma mark - HUD Loading Default
+
++ (void)hudLoading{
+    [self hudLoadingWithMessage:nil];
 }
+
++ (void)hudLoadingWithMessage:(NSString *)message{
+    [self hudLoadingWithMessage:message backgroundDimmed:NO timeout:0];
+}
+
++ (void)hudLoadingWithMessage:(NSString *)message backgroundDimmed:(BOOL)backgroundDimmed timeout:(NSTimeInterval)timeout{
+    [BWTipperHUD showLoadingWithMessage:message backgroundDimmed:backgroundDimmed timeout:timeout];
+}
+
+#pragma mark - HUD Loading Images
++ (void)hudLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
+                            duration: (NSTimeInterval)duration{
+    [self hudLoadingWithAnimatedImages:images duration:duration message:nil backgroundDimmed:NO timeout:0];
+}
+
++ (void)hudLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
+                            duration: (NSTimeInterval)duration
+                             message: (NSString *)message
+                    backgroundDimmed: (BOOL)backgroundDimmed
+                             timeout: (NSTimeInterval)timeout{
+    [BWTipperHUD showLoadingWithAnimatedImages:images duration:duration message:message backgroundDimmed:backgroundDimmed timeout:timeout];
+}
+
+
+#pragma mark - Common
++ (void)dismiss{
+    [BWTipperHUD dismissWithAnimated:YES];
+}
+
 
 @end

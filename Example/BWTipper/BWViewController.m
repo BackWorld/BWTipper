@@ -18,24 +18,34 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    UIImageView *iv = [[UIImageView alloc] initWithImage:[BWTipperConfigure.defaultConfigure iconWithStyle:BWTipperStyleSuccess]];
-    iv.backgroundColor = UIColor.redColor;
-    [self.view addSubview:iv];
     
-    UIButton *label = [UIButton appearance];
-    
-    [label setTintColor:UIColor.redColor];
+}
+
+- (IBAction)dismiss:(id)sender {
+    [BWTipper dismiss];
 }
 
 - (IBAction)changeTheme:(UISegmentedControl *)sender {
     
     BWTipperConfigure.defaultConfigure.theme = sender.selectedSegmentIndex;
+    
+    BWTipperConfigure.defaultConfigure.shadowOn = sender.selectedSegmentIndex;
+    
+    BWTipperConfigure.defaultConfigure.cornerRoundOn = !sender.selectedSegmentIndex;
 }
 
 - (IBAction)showHUD:(id)sender {
 //    [BWTipper hudTest];
-    [BWTipper hudWithImage:[UIImage imageNamed:@"check"] message:@"哈哈哈"];
+    [BWTipper hudWithStyle:BWTipperStyleSuccess];
+//    [BWTipper hudLoadingWithMessage:nil backgroundDimmed:YES timeout:5];
+    
+    
+    NSMutableArray *images = [NSMutableArray new];
+    for (int i=3; i>=0; i--) {
+        NSString *icon = [NSString stringWithFormat:@"number-%d.png", i];
+        [images addObject:[UIImage imageNamed:icon]];
+    }
+    [BWTipper hudLoadingWithAnimatedImages:images duration:0.5];
 }
 
 @end

@@ -15,8 +15,7 @@
 
 @property(nonatomic, copy)NSString *message;
 
-
-+ (void)dismiss;
++ (void)dismissWithAnimated: (BOOL)animated;
 
 - (void)show;
 

@@ -25,11 +25,13 @@
 
 
 + (void)showLoadingWithMessage: (NSString *)message
-                       timeout: (NSTimeInterval)timeout;
+              backgroundDimmed: (BOOL)backgroundDimmed
+                      timeout: (NSTimeInterval)timeout;
 
-+ (void)showLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
-                              message: (NSString *)message
-                             duration: (NSTimeInterval)duration
-                              timeout: (NSTimeInterval)timeout;
++ (void)showLoadingWithAnimatedImages:(NSArray<UIImage *> *)images
+                             duration:(NSTimeInterval)duration
+                              message:(NSString *)message
+                     backgroundDimmed:(BOOL)backgroundDimmed
+                              timeout:(NSTimeInterval)timeout;
 
 @end

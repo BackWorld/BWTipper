@@ -13,17 +13,16 @@
 
 #pragma mark - HUD
 
-+ (void)hudWithStyle: (BWTipperStyle)style
-             message: (NSString *)message;
++ (void)hudWithStyle:(BWTipperStyle)style;
+
++ (void)hudWithStyle:(BWTipperStyle)style
+             message:(NSString *)message;
 
 + (void)hudWithStyle: (BWTipperStyle)style
-              message: (NSString *)message
-     backgroundDimmed: (BOOL)backgroundDimmed
-                delay: (NSTimeInterval)delay
-           completion: (BWTipperCompletion)completion;
-
-+ (void)hudWithImage: (UIImage *)image
-             message: (NSString *)message;
+             message: (NSString *)message
+    backgroundDimmed: (BOOL)backgroundDimmed
+               delay: (NSTimeInterval)delay
+          completion: (BWTipperCompletion)completion;
 
 + (void)hudWithImage: (UIImage *)image
              message: (NSString *)message
@@ -32,22 +31,36 @@
           completion: (BWTipperCompletion)completion;
 
 
-+ (void)hudLoadingWithMessage: (NSString *)message
-                      timeout: (NSTimeInterval)timeout;
+#pragma mark HUD Loading
+
++ (void)hudLoading;
+
++ (void)hudLoadingWithMessage:(NSString *)message;
+
++ (void)hudLoadingWithMessage:(NSString *)message
+             backgroundDimmed:(BOOL)backgroundDimmed
+                      timeout:(NSTimeInterval)timeout;
+
+#pragma mark HUD Loading Images
++ (void)hudLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
+                            duration: (NSTimeInterval)duration;
 
 + (void)hudLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
                             duration: (NSTimeInterval)duration
                              message: (NSString *)message
+                    backgroundDimmed: (BOOL)backgroundDimmed
                              timeout: (NSTimeInterval)timeout;
-
-+ (void)hudTest;
 
 #pragma mark - Toast
 
 
 #pragma mark - Snackbar
 
-#pragma mark - Public
+#pragma mark - Common
+
+/**
+ 移除
+ */
 + (void)dismiss;
 
 @end
