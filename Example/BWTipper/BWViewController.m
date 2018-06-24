@@ -7,6 +7,7 @@
 //
 
 #import "BWViewController.h"
+#import <BWTipper/BWTipper.h>
 
 @interface BWViewController ()
 
@@ -17,13 +18,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+	
+    UIImageView *iv = [[UIImageView alloc] initWithImage:[BWTipperConfigure.defaultConfigure iconWithStyle:BWTipperStyleSuccess]];
+    iv.backgroundColor = UIColor.redColor;
+    [self.view addSubview:iv];
+    
+    UIButton *label = [UIButton appearance];
+    
+    [label setTintColor:UIColor.redColor];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)changeTheme:(UISegmentedControl *)sender {
+    
+    BWTipperConfigure.defaultConfigure.theme = sender.selectedSegmentIndex;
+}
+
+- (IBAction)showHUD:(id)sender {
+//    [BWTipper hudTest];
+    [BWTipper hudWithImage:[UIImage imageNamed:@"check"] message:@"哈哈哈"];
 }
 
 @end
