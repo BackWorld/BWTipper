@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'BWTipper_Example' do
+  pod 'BWTipper', :path => '../'
+
+  target 'BWTipper_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
