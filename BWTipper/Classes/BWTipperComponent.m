@@ -6,19 +6,68 @@
 //
 
 #import "BWTipperComponent.h"
-#import "BWTipperConfigure.h"
 
 @implementation BWTipperComponent
 
+#pragma mark - Intial
+
 - (instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:kKeyWindow.bounds]) {
-        self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    if (self = [super initWithFrame:frame]) {
+        [self initialSettings];
     }
     return self;
 }
 
+- (void)initialSettings{
+    [self initData];
+    [self addViews];
+}
+
+- (void)initData{
+    self.userInteractionEnabled = NO;
+    self.delay = 1.5;
+}
+
+- (void)addViews{
+    [self addSubview:self.wrapperView];
+}
+
+
+
+#pragma mark - Interface
+- (void)show{
+    // 移除其它
+    [BWTipperComponent dismissWithAnimated:NO];
+    
+    // 添加当前
+    [self.keyWindow addSubview:self];
+}
+
+- (void)playDisplayAnimation{
+    
+}
+
+- (void)playHideAnimation{
+    
+}
+
+- (void)setWrapperViewCornerRoundRadius:(CGFloat)radius{
+    if (BWTipperConfigure.defaultConfigure.cornerRoundOn) {
+        _wrapperView.layer.cornerRadius = radius;
+    }
+}
+
+#pragma mark - Lifecycle
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    
+    self.frame = self.keyWindow.bounds;
+}
+
+
+#pragma mark - Private
 + (void)dismissWithAnimated: (BOOL)animated{
-    for (UIView *subview in kKeyWindow.subviews) {
+    for (UIView *subview in BWTipperTool.tipperKeyWindow.subviews) {
         if ([subview isKindOfClass:self.class]) {
             if (animated) {
                 BWTipperComponent *component = (BWTipperComponent *)subview;
@@ -31,23 +80,25 @@
     }
 }
 
-- (void)show{
-    // 移除其它
-    [BWTipperComponent dismissWithAnimated:NO];
-    
-    // 添加当前
-    [kKeyWindow addSubview:self];
-}
-
 #pragma mark - Setters
+
+- (void)setDelay:(NSTimeInterval)delay{
+    _delay = delay ?: 1.0;
+}
 
 - (void)setMessage:(NSString *)message{
     self.messageLabel.text = message;
+    [self.messageLabel sizeToFit];
     
     _message = message;
 }
 
 #pragma mark - Getters
+
+- (UIWindow *)keyWindow{
+    return [BWTipperTool tipperKeyWindow];
+}
+
 - (UIView *)wrapperView{
     if (!_wrapperView) {
         _wrapperView = [UIView new];

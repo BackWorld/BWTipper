@@ -6,7 +6,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BWTipperConfigure.h"
+#import "BWTipperHUD.h"
+#import "BWTipperToast.h"
+#import "BWTipperSnackbar.h"
 
 @interface BWTipper : NSObject
 
@@ -53,6 +55,9 @@
 
 #pragma mark - Toast
 
++ (void)toastWithMessage: (NSString *)message;
+
++ (void)toastWithMessage: (NSString *)message delay: (NSTimeInterval)delay;
 
 #pragma mark - Snackbar
 

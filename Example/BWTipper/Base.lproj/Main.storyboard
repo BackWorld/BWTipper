@@ -48,6 +48,14 @@
                                     <action selector="dismiss:" destination="whP-gf-Uak" eventType="touchUpInside" id="AHn-I8-LQL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lD-tW-LUz">
+                                <rect key="frame" x="148" y="352" width="78" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="show Toast"/>
+                                <connections>
+                                    <action selector="showToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="Jzs-nE-NiM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>

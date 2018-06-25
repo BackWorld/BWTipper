@@ -9,11 +9,6 @@
 #import "BWTipperConfigure.h"
 
 
-#define kDisplayAnimationDuration 0.3f
-#define kHideAnimationDuration 0.2f
-#define kAnimationScaleFrom 0.8f
-#define kAnimationScaleTo 1.0f
-
 
 #pragma mark - BWTipperHUD
 @interface BWTipperHUD()
@@ -23,39 +18,22 @@
 @property(nonatomic, strong)UIActivityIndicatorView *indicatorView;
 
 #pragma mark - Data Properties
-@property(nonatomic)NSTimeInterval delay;
 @property(nonatomic, strong)UIImage *image;
-@property(nonatomic, copy)BWTipperCompletion completion;
 
 @property(nonatomic)CGSize imageViewSize;
 @property(nonatomic, readonly)CGFloat messageHeight;
-@property(nonatomic)BOOL isAnimating;
 
 @end
 
 @implementation BWTipperHUD
 
 #pragma mark - Intial
-- (instancetype)initWithFrame:(CGRect)frame{
-    if (self = [super initWithFrame:frame]) {
-        [self initialSettings];
-    }
-    return self;
-}
-
-- (void)initialSettings{
-    [self initData];
-    [self addViews];
-}
 
 - (void)initData{
+    [super initData];
     self.imageViewSize = CGSizeMake(60, 60);
-    self.delay = 1.5;
 }
 
-- (void)addViews{
-    [self addSubview:self.wrapperView];
-}
 
 #pragma mark - Public
 +(void)showWithStyle:(BWTipperStyle)style
@@ -134,7 +112,7 @@
     // wrapper
     CGFloat messageSize = self.messageHeight > 0 ? space + self.messageHeight : 0;
     CGFloat size = self.imageViewSize.height + space * 2 + messageSize;
-    CGPoint center = CGPointMake(CGRectGetMidX(kKeyWindow.bounds), CGRectGetMidY(kKeyWindow.bounds));
+    CGPoint center = CGPointMake(CGRectGetMidX(self.keyWindow.bounds), CGRectGetMidY(self.keyWindow.bounds));
     self.wrapperView.frame = CGRectMake(0, 0, size, size);
     self.wrapperView.center = center;
     
@@ -228,10 +206,6 @@
     _image = image;
 }
 
-- (void)setDelay:(NSTimeInterval)delay{
-    _delay = delay ?: 1.0;
-}
-
 
 #pragma mark - Getters
 - (CGFloat)messageHeight{
@@ -248,9 +222,7 @@
     [view addSubview:self.indicatorView];
     [view addSubview:self.messageLabel];
     
-    if (BWTipperConfigure.defaultConfigure.cornerRoundOn) {
-        view.layer.cornerRadius = 20;
-    }
+    [self setWrapperViewCornerRoundRadius:20];
     
     return view;
 }

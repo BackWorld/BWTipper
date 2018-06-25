@@ -5,8 +5,10 @@
 //  Created by zhuxuhong on 2018/6/24.
 //
 
-#import <Foundation/Foundation.h>
+#import "BWTipperComponent.h"
 
-@interface BWTipperToast : UIView
+@interface BWTipperToast : BWTipperComponent
+
++ (void)showWithMessage: (NSString *)message delay: (NSTimeInterval)delay;
 
 @end

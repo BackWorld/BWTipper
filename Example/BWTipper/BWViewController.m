@@ -34,6 +34,13 @@
     BWTipperConfigure.defaultConfigure.cornerRoundOn = !sender.selectedSegmentIndex;
 }
 
+
+- (IBAction)showToast:(id)sender {
+    [BWTipper toastWithMessage:@"提交成功"];
+    [BWTipper toastWithMessage:@"LongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToast" delay:10];
+}
+
+
 - (IBAction)showHUD:(id)sender {
 //    [BWTipper hudTest];
     [BWTipper hudWithStyle:BWTipperStyleSuccess];

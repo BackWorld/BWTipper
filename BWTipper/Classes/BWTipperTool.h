@@ -7,8 +7,6 @@
 
 #import <Foundation/Foundation.h>
 
-#define kKeyWindow [BWTipperTool tipperKeyWindow]
-
 
 #pragma mark - Defines
 
