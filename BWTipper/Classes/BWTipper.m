@@ -89,7 +89,7 @@
 
 #pragma mark - Common
 + (void)dismiss{
-    [BWTipperHUD dismissWithAnimated:YES];
+    [BWTipperHUD dismissComponentByClass:BWTipperHUD.class animated:YES];
 }
 
 

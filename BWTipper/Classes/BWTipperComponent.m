@@ -37,15 +37,13 @@
     [self addSubview:self.wrapperView];
 }
 
-
-
 #pragma mark - Interface
-- (void)show{
++ (void)showComponent: (BWTipperComponent *)component{
     // 移除其它
-    [BWTipperComponent dismissWithAnimated:NO];
+    [BWTipperComponent dismissComponentByClass:component.class animated:NO];
     
     // 添加当前
-    [self.keyWindow addSubview:self];
+    [BWTipperTool.tipperKeyWindow addSubview:component];
 }
 
 - (void)playDisplayAnimation{
@@ -74,9 +72,9 @@
 }
 
 #pragma mark - Private
-+ (void)dismissWithAnimated: (BOOL)animated{
++ (void)dismissComponentByClass: (Class)componentClass animated: (BOOL)animated{
     for (UIView *subview in BWTipperTool.tipperKeyWindow.subviews) {
-        if ([subview isKindOfClass:self.class]) {
+        if ([subview isKindOfClass:componentClass]) {
             if (animated) {
                 BWTipperComponent *component = (BWTipperComponent *)subview;
                 [component playHideAnimation];

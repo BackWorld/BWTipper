@@ -30,13 +30,14 @@
 @property(nonatomic)BOOL isAnimating;
 @property(nonatomic, strong, readonly)UIWindow *keyWindow;
 
++ (void)showComponent: (BWTipperComponent *)component;
+
++ (void)dismissComponentByClass: (Class)componentClass
+                       animated: (BOOL)animated;
+
 - (void)initData;
 
 - (void)addViews;
-
-+ (void)dismissWithAnimated: (BOOL)animated;
-
-- (void)show;
 
 - (void)playDisplayAnimation;
 

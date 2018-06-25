@@ -51,7 +51,7 @@
         [bar.button sizeToFit];
     }
     
-    [bar show];
+    [self showComponent:bar];
 }
 
 #pragma mark - Overrides

@@ -46,7 +46,7 @@
     hud.completion = completion;
     hud.delay = delay;
     
-    [hud show];
+    [self showComponent:hud];
 }
 
 + (void)showWithImage: (UIImage *)image
@@ -62,7 +62,7 @@
     hud.completion = completion;
     hud.delay = delay;
     
-    [hud show];
+    [self showComponent:hud];
 }
 
 + (void)showLoadingWithMessage:(NSString *)message backgroundDimmed: (BOOL)backgroundDimmed timeout:(NSTimeInterval)timeout{
@@ -166,7 +166,7 @@
     self.imageView.animationDuration = duration;
     [self.imageView startAnimating];
     
-    [self show];
+    [BWTipperHUD showComponent:self];
     
     // 启动超时计时器
     if (timeout > 0) {
@@ -180,7 +180,7 @@
     self.indicatorView.hidden = NO;
     [self.indicatorView startAnimating];
     
-    [self show];
+    [BWTipperHUD showComponent:self];
     
     // 启动超时计时器
     if (timeout > 0) {

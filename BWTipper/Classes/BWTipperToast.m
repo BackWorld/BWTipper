@@ -65,7 +65,7 @@
     toast.delay = delay;
     toast.message = message;
     
-    [toast show];
+    [self showComponent:toast];
 }
 
 #pragma mark - Overrides
