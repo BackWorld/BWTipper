@@ -14,13 +14,10 @@
 @interface BWTipperHUD()
 
 #pragma mark - UI Properties
-@property(nonatomic, strong)UIImageView *imageView;
 @property(nonatomic, strong)UIActivityIndicatorView *indicatorView;
 
 #pragma mark - Data Properties
-@property(nonatomic, strong)UIImage *image;
-
-@property(nonatomic)CGSize imageViewSize;
+@property(nonatomic, copy)BWTipperCompletion completion;
 @property(nonatomic, readonly)CGFloat messageHeight;
 
 @end
@@ -200,12 +197,6 @@
     [super setUserInteractionEnabled:userInteractionEnabled];
 }
 
-- (void)setImage:(UIImage *)image{
-    self.imageView.image = image;
-    
-    _image = image;
-}
-
 
 #pragma mark - Getters
 - (CGFloat)messageHeight{
@@ -215,12 +206,10 @@
     return 0;
 }
 
-
 - (UIView *)wrapperView{
     UIView *view = [super wrapperView];
     [view addSubview:self.imageView];
     [view addSubview:self.indicatorView];
-    [view addSubview:self.messageLabel];
     
     [self setWrapperViewCornerRoundRadius:20];
     
@@ -245,12 +234,6 @@
     return _indicatorView;
 }
 
-- (UIImageView *)imageView{
-    if (!_imageView) {
-        _imageView = [UIImageView new];
-    }
-    return _imageView;
-}
 
 
 @end

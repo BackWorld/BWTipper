@@ -73,6 +73,20 @@
     [BWTipperToast showWithMessage:message delay:delay];
 }
 
+#pragma mark - Snackbar
++ (void)snackbarWithStyle:(BWTipperStyle)style message:(NSString *)message delay:(NSTimeInterval)delay{
+    [self snackbarWithStyle:style message:message action:nil actionHandler:nil delay:delay];
+}
+
++ (void)snackbarWithStyle:(BWTipperStyle)style
+                  message:(NSString *)message
+                   action:(NSString *)action
+            actionHandler:(BWTipperSnackbarActionHandler)actionHandler
+                    delay:(NSTimeInterval)delay{
+    [BWTipperSnackbar showWithStyle:style message:message action:action actionHandler:actionHandler delay:delay];
+}
+
+
 #pragma mark - Common
 + (void)dismiss{
     [BWTipperHUD dismissWithAnimated:YES];

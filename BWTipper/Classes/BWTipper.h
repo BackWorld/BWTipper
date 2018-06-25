@@ -60,6 +60,16 @@
 + (void)toastWithMessage: (NSString *)message delay: (NSTimeInterval)delay;
 
 #pragma mark - Snackbar
++ (void)snackbarWithStyle: (BWTipperStyle)style
+                  message: (NSString *)message
+                    delay: (NSTimeInterval)delay;
+
+
++ (void)snackbarWithStyle: (BWTipperStyle)style
+                  message: (NSString *)message
+                   action: (NSString *)action
+            actionHandler: (BWTipperSnackbarActionHandler)actionHandler
+                    delay: (NSTimeInterval)delay;
 
 #pragma mark - Common
 

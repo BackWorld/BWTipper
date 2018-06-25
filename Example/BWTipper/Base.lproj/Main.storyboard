@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICI-H6-O8B">
-                                <rect key="frame" x="151" y="257" width="73" height="30"/>
+                                <rect key="frame" x="148" y="145" width="73" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="show HUD"/>
                                 <connections>
@@ -49,11 +49,19 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lD-tW-LUz">
-                                <rect key="frame" x="148" y="352" width="78" height="30"/>
+                                <rect key="frame" x="148" y="253" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="show Toast"/>
                                 <connections>
                                     <action selector="showToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="Jzs-nE-NiM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laH-gI-dBZ">
+                                <rect key="frame" x="119" y="328" width="105" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="show Snackbar"/>
+                                <connections>
+                                    <action selector="showSnackbar:" destination="whP-gf-Uak" eventType="touchUpInside" id="8Af-U1-jc7"/>
                                 </connections>
                             </button>
                         </subviews>

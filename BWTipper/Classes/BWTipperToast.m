@@ -96,13 +96,6 @@
 #pragma mark - Private
 
 #pragma mark - Getters
-- (UIView *)wrapperView{
-    UIView *view = [super wrapperView];
-    [view addSubview:self.messageLabel];
-    
-    return view;
-}
-
 - (UILabel *)messageLabel{
     UILabel *label = [super messageLabel];
     label.numberOfLines = 0;

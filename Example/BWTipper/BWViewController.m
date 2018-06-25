@@ -37,7 +37,7 @@
 
 - (IBAction)showToast:(id)sender {
     [BWTipper toastWithMessage:@"提交成功"];
-    [BWTipper toastWithMessage:@"LongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToast" delay:10];
+//    [BWTipper toastWithMessage:@"LongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToastLongToastToastToast" delay:10];
 }
 
 
@@ -53,6 +53,12 @@
         [images addObject:[UIImage imageNamed:icon]];
     }
     [BWTipper hudLoadingWithAnimatedImages:images duration:0.5];
+}
+
+- (IBAction)showSnackbar:(id)sender {
+    [BWTipper snackbarWithStyle:BWTipperStyleError message:@"网络已断开连接" action:@"去检查" actionHandler:^(NSString *action) {
+        NSLog(@"you tapped: %@", action);
+    } delay:5];
 }
 
 @end

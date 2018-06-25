@@ -11,6 +11,11 @@
 
 #pragma mark - Intial
 
+- (instancetype)init
+{
+    return [self initWithFrame:CGRectZero];
+}
+
 - (instancetype)initWithFrame:(CGRect)frame{
     if (self = [super initWithFrame:frame]) {
         [self initialSettings];
@@ -57,13 +62,16 @@
     }
 }
 
+- (void)setStatusBarHidden: (BOOL)hide{
+    [UIApplication.sharedApplication setStatusBarHidden:hide withAnimation:UIStatusBarAnimationFade];
+}
+
 #pragma mark - Lifecycle
 - (void)layoutSubviews{
     [super layoutSubviews];
     
     self.frame = self.keyWindow.bounds;
 }
-
 
 #pragma mark - Private
 + (void)dismissWithAnimated: (BOOL)animated{
@@ -81,6 +89,11 @@
 }
 
 #pragma mark - Setters
+- (void)setImage:(UIImage *)image{
+    self.imageView.image = image;
+    
+    _image = image;
+}
 
 - (void)setDelay:(NSTimeInterval)delay{
     _delay = delay ?: 1.0;
@@ -105,6 +118,8 @@
         _wrapperView.backgroundColor = BWTipperConfigure.defaultConfigure.themeColor;
         _wrapperView.alpha = 0;
         
+        [_wrapperView addSubview:self.messageLabel];
+        
         if (BWTipperConfigure.defaultConfigure.shadowOn) {
             _wrapperView.layer.shadowOffset = CGSizeZero;
             _wrapperView.layer.shadowOpacity = 0.3;
@@ -121,6 +136,14 @@
         _messageLabel.textColor = BWTipperConfigure.defaultConfigure.themeRevertedColor;
     }
     return _messageLabel;
+}
+
+
+- (UIImageView *)imageView{
+    if (!_imageView) {
+        _imageView = [UIImageView new];
+    }
+    return _imageView;
 }
 
 @end

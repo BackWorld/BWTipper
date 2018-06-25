@@ -19,13 +19,15 @@
 #pragma mark - UI
 @property(nonatomic, strong)UIView *wrapperView;
 @property(nonatomic, strong)UILabel *messageLabel;
+@property(nonatomic, strong)UIImageView *imageView;
 
 #pragma mark - Data
-@property(nonatomic)BOOL isAnimating;
-@property(nonatomic)NSTimeInterval delay;
+@property(nonatomic)CGSize imageViewSize;
 @property(nonatomic, copy)NSString *message;
-@property(nonatomic, copy)BWTipperCompletion completion;
+@property(nonatomic, strong)UIImage *image;
+@property(nonatomic)NSTimeInterval delay;
 
+@property(nonatomic)BOOL isAnimating;
 @property(nonatomic, strong, readonly)UIWindow *keyWindow;
 
 - (void)initData;
@@ -41,5 +43,7 @@
 - (void)playHideAnimation;
 
 - (void)setWrapperViewCornerRoundRadius: (CGFloat)radius;
+
+- (void)setStatusBarHidden: (BOOL)hide;
 
 @end
