@@ -8,9 +8,9 @@
 #import "BWTipperSnackbar.h"
 
 #define kStatusBarHeight 20
-#define kHeight (kStatusBarHeight + 68)
+#define kWrapperViewHeight (kStatusBarHeight + 68)
 
-#define kAnimationFrameYFrom -kHeight
+#define kAnimationFrameYFrom (-kWrapperViewHeight)
 #define kAnimationFrameYTo 0
 
 
@@ -28,7 +28,6 @@
 
 - (void)initData{
     [super initData];
-    self.imageViewSize = CGSizeMake(34, 34);
     self.userInteractionEnabled = YES;
 }
 
@@ -44,6 +43,7 @@
     bar.message = message;
     bar.image = [BWTipperConfigure.defaultConfigure iconWithStyle:style];
     bar.actionHandler = actionHandler;
+    bar.delay = delay;
     if (actionHandler && action.length > 0) {
         bar.delay = CGFLOAT_MAX;
         bar.button.hidden = NO;
@@ -61,15 +61,15 @@
     
     // self frame
     CGRect frame = self.frame;
-    frame.size.height = kHeight;
+    frame.size.height = kWrapperViewHeight;
     self.frame = frame;
     
     CGFloat space = 20;
     
     // wrapper view
     CGFloat w = CGRectGetWidth(self.frame);
-    CGFloat h = kHeight;
-    CGFloat contentH = kHeight - kStatusBarHeight;
+    CGFloat h = kWrapperViewHeight;
+    CGFloat contentH = kWrapperViewHeight - kStatusBarHeight;
     
     self.wrapperView.frame = self.frame;
     
@@ -145,11 +145,22 @@
     }
 }
 
+#pragma mark - Setters
+- (void)setDelay:(NSTimeInterval)delay{
+    super.delay = delay ?: 1.5;
+}
+
 #pragma mark - Getters
-- (UIView *)wrapperView{
-    UIView *view = [super wrapperView];
-    [view addSubview:self.imageView];
-    [view addSubview:self.button];
+
+- (CGSize)imageViewSize{
+    return CGSizeMake(34, 34);
+}
+
+- (UIVisualEffectView *)wrapperView{
+    UIVisualEffectView *view = [super wrapperView];
+    
+    [view.contentView addSubview:self.imageView];
+    [view.contentView addSubview:self.button];
     
     return view;
 }

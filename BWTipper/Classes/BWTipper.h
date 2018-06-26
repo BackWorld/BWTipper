@@ -40,6 +40,9 @@
 + (void)hudLoadingWithMessage:(NSString *)message;
 
 + (void)hudLoadingWithMessage:(NSString *)message
+             backgroundDimmed:(BOOL)backgroundDimmed;
+
++ (void)hudLoadingWithMessage:(NSString *)message
              backgroundDimmed:(BOOL)backgroundDimmed
                       timeout:(NSTimeInterval)timeout;
 
@@ -60,6 +63,10 @@
 + (void)toastWithMessage: (NSString *)message delay: (NSTimeInterval)delay;
 
 #pragma mark - Snackbar
+
++ (void)snackbarWithStyle: (BWTipperStyle)style
+                  message: (NSString *)message;
+
 + (void)snackbarWithStyle: (BWTipperStyle)style
                   message: (NSString *)message
                     delay: (NSTimeInterval)delay;
@@ -68,8 +75,7 @@
 + (void)snackbarWithStyle: (BWTipperStyle)style
                   message: (NSString *)message
                    action: (NSString *)action
-            actionHandler: (BWTipperSnackbarActionHandler)actionHandler
-                    delay: (NSTimeInterval)delay;
+            actionHandler: (BWTipperSnackbarActionHandler)actionHandler;
 
 #pragma mark - Common
 

@@ -7,6 +7,12 @@
 
 #import "BWTipperComponent.h"
 
+@interface BWTipperComponent()
+
+@property(nonatomic, strong)UIView *shadowView;
+
+@end
+
 @implementation BWTipperComponent
 
 #pragma mark - Intial
@@ -34,6 +40,9 @@
 }
 
 - (void)addViews{
+//    if (BWTipperConfigure.defaultConfigure.shadowOn) {
+//        [self addSubview:self.shadowView];
+//    }
     [self addSubview:self.wrapperView];
 }
 
@@ -54,12 +63,6 @@
     
 }
 
-- (void)setWrapperViewCornerRoundRadius:(CGFloat)radius{
-    if (BWTipperConfigure.defaultConfigure.cornerRoundOn) {
-        _wrapperView.layer.cornerRadius = radius;
-    }
-}
-
 - (void)setStatusBarHidden: (BOOL)hide{
     [UIApplication.sharedApplication setStatusBarHidden:hide withAnimation:UIStatusBarAnimationFade];
 }
@@ -68,7 +71,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    self.frame = self.keyWindow.bounds;
+    self.frame = kWindow.bounds;
 }
 
 #pragma mark - Private
@@ -104,25 +107,42 @@
     _message = message;
 }
 
-#pragma mark - Getters
-
-- (UIWindow *)keyWindow{
-    return [BWTipperTool tipperKeyWindow];
+- (void)setWrapperCornerRadius:(CGFloat)wrapperCornerRadius{
+    if (BWTipperConfigure.defaultConfigure.cornerRoundOn) {
+        self.wrapperView.layer.cornerRadius = wrapperCornerRadius;
+    }
+    _wrapperCornerRadius = wrapperCornerRadius;
 }
 
-- (UIView *)wrapperView{
+#pragma mark - Getters
+
+- (UIView *)shadowView{
+    if (!_shadowView) {
+        _shadowView = [UIView new];
+        _shadowView.backgroundColor = UIColor.redColor;
+        _shadowView.layer.shadowOffset = CGSizeZero;
+        _shadowView.layer.shadowOpacity = 0.3;
+        _shadowView.layer.shadowRadius = 8;
+    }
+    return _shadowView;
+}
+
+- (UIVisualEffectView *)wrapperView{
     if (!_wrapperView) {
-        _wrapperView = [UIView new];
-        _wrapperView.backgroundColor = BWTipperConfigure.defaultConfigure.themeColor;
+        _wrapperView = [UIVisualEffectView new];
+        UIBlurEffectStyle style = (BWTipperConfigure.defaultConfigure.theme == BWTipperThemeDark)
+        ? UIBlurEffectStyleDark
+        : UIBlurEffectStyleLight;
+        _wrapperView.effect = [UIBlurEffect effectWithStyle:style];
+        _wrapperView.backgroundColor = [BWTipperConfigure.defaultConfigure.themeColor colorWithAlphaComponent:0.3];
+        _wrapperView.clipsToBounds = YES;
         _wrapperView.alpha = 0;
+
+        _wrapperView.layer.shadowOffset = CGSizeZero;
+        _wrapperView.layer.shadowOpacity = 0.3;
+        _wrapperView.layer.shadowRadius = 8;
         
-        [_wrapperView addSubview:self.messageLabel];
-        
-        if (BWTipperConfigure.defaultConfigure.shadowOn) {
-            _wrapperView.layer.shadowOffset = CGSizeZero;
-            _wrapperView.layer.shadowOpacity = 0.3;
-            _wrapperView.layer.shadowRadius = 8;
-        }
+        [_wrapperView.contentView addSubview:self.messageLabel];
     }
     return _wrapperView;
 }

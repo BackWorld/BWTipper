@@ -25,28 +25,28 @@
     self.messageLabel.frame = CGRectZero;
     [self.messageLabel sizeToFit];
     
-    CGPoint center = CGPointMake(CGRectGetMidX(self.keyWindow.bounds), CGRectGetMidY(self.keyWindow.bounds));
+    CGPoint center = kCenter;
     
     CGFloat offset = 50;
     CGFloat space = 30;
     CGSize messageSize = self.messageLabel.bounds.size;
     
-    CGFloat maxWidth = CGRectGetWidth(self.keyWindow.bounds) - 3 * offset;
+    CGFloat maxWidth = CGRectGetWidth(kWindow.bounds) - 3 * offset;
     
     // 多行
     if (messageSize.width > maxWidth) {
         messageSize = [self.messageLabel sizeThatFits:CGSizeMake(maxWidth, CGFLOAT_MAX)];
-        [self setWrapperViewCornerRoundRadius: 20];
+        self.wrapperCornerRadius = 20;
     }
     // 单行
     else{
-        [self setWrapperViewCornerRoundRadius:(messageSize.height + space) / 2];
+        self.wrapperCornerRadius = (messageSize.height + space) / 2;
     }
     
     CGFloat w = messageSize.width + offset;
     CGFloat h = messageSize.height + space;
-    CGFloat x = CGRectGetWidth(self.keyWindow.bounds) / 2 - w / 2;
-    CGFloat y = CGRectGetHeight(self.keyWindow.bounds) - h - 44 - 34;
+    CGFloat x = CGRectGetWidth(kWindow.bounds) / 2 - w / 2;
+    CGFloat y = CGRectGetHeight(kWindow.bounds) - h - 44 - 34;
     
     CGRect frame = CGRectMake(x, y, w, h);
     self.wrapperView.frame = frame;
@@ -75,9 +75,7 @@
     }
     
     self.isAnimating = YES;
-    self.wrapperView.transform = CGAffineTransformMakeScale(kAnimationScaleFrom, kAnimationScaleFrom);
-    [UIView animateWithDuration:kDisplayAnimationDuration delay:0 usingSpringWithDamping:1 initialSpringVelocity:0.3 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        self.wrapperView.transform = CGAffineTransformMakeScale(kAnimationScaleTo, kAnimationScaleTo);
+    [UIView animateWithDuration:kDisplayAnimationDuration delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.wrapperView.alpha = 1;
     } completion:^(BOOL finished) {
         // 启动计时器

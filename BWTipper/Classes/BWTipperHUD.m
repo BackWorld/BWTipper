@@ -8,6 +8,13 @@
 #import "BWTipperHUD.h"
 #import "BWTipperConfigure.h"
 
+#define kWrapperViewMinWidth 140.0f
+#define kWrapperViewMaxWidth (CGRectGetWidth(kWindow.bounds) - 40.0f * 2)
+
+#define kLayoutSpace20 20.0f
+#define kLayoutSpace30 20.0f
+
+#define kHasMessage (self.message.length > 0)
 
 
 #pragma mark - BWTipperHUD
@@ -18,19 +25,17 @@
 
 #pragma mark - Data Properties
 @property(nonatomic, copy)BWTipperCompletion completion;
-@property(nonatomic, readonly)CGFloat messageHeight;
 
 @end
 
 @implementation BWTipperHUD
 
 #pragma mark - Intial
-
 - (void)initData{
     [super initData];
-    self.imageViewSize = CGSizeMake(60, 60);
+    
+    self.wrapperCornerRadius = 20;
 }
-
 
 #pragma mark - Public
 +(void)showWithStyle:(BWTipperStyle)style
@@ -103,29 +108,41 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    // 计算frame
-    CGFloat space = 30;
+    self.messageLabel.frame = CGRectZero;
+    [self.messageLabel sizeToFit];
     
-    // wrapper
-    CGFloat messageSize = self.messageHeight > 0 ? space + self.messageHeight : 0;
-    CGFloat size = self.imageViewSize.height + space * 2 + messageSize;
-    CGPoint center = CGPointMake(CGRectGetMidX(self.keyWindow.bounds), CGRectGetMidY(self.keyWindow.bounds));
-    self.wrapperView.frame = CGRectMake(0, 0, size, size);
-    self.wrapperView.center = center;
+    // 计算frame
+    CGFloat space = kLayoutSpace20;
+    CGFloat wrapperW = kWrapperViewMinWidth;
+    CGFloat messageW = CGRectGetWidth(self.messageLabel.bounds);
+    CGFloat messageH = 0;
+    
+    if (messageW > kWrapperViewMaxWidth) {
+        wrapperW = kWrapperViewMaxWidth;
+        messageH = [self.messageLabel sizeThatFits:CGSizeMake(wrapperW, CGFLOAT_MAX)].height;
+    }
     
     // image view
-    CGFloat y = space;
-    CGFloat x = CGRectGetMidX(self.wrapperView.bounds) - self.imageViewSize.width / 2;
-    self.imageView.frame = CGRectMake(x, y, self.imageViewSize.width, self.imageViewSize.height);
+    CGFloat imageY = kHasMessage
+    ? space
+    : (wrapperW / 2 - self.imageViewSize.height / 2);
+    CGFloat imageX = wrapperW / 2 - self.imageViewSize.width / 2;
+    self.imageView.frame = CGRectMake(imageX, imageY, self.imageViewSize.width, self.imageViewSize.height);
     
     // indicator view
     self.indicatorView.frame = self.imageView.frame;
     
     // message label
-    if (self.messageHeight > 0) {
-        y = CGRectGetMaxY(self.imageView.frame) + space;
-        self.messageLabel.frame = CGRectMake(20, y, CGRectGetWidth(self.wrapperView.bounds) - 40, self.messageHeight);
-    }
+    CGFloat messageY = CGRectGetMaxY(self.imageView.frame) + (kHasMessage ? 8 : 0);
+    self.messageLabel.frame = CGRectMake(20, messageY, wrapperW - 40, messageH);
+    
+    // wrapper view
+    CGFloat wrapperH = kHasMessage
+    ? (CGRectGetMaxY(self.messageLabel.frame) + space)
+    : wrapperW;
+    
+    self.wrapperView.frame = CGRectMake(0, 0, wrapperW, wrapperH);
+    self.wrapperView.center = kCenter;
     
     // 动画
     [self playDisplayAnimation];
@@ -161,7 +178,6 @@
                              duration:(NSTimeInterval)duration
                               timeout:(NSTimeInterval)timeout{
     
-    self.imageViewSize = CGSizeMake(80, 80);
     self.imageView.animationImages = images;
     self.imageView.animationDuration = duration;
     [self.imageView startAnimating];
@@ -175,7 +191,6 @@
 }
 
 - (void)showLoadingWithTimeout: (NSTimeInterval)timeout{
-    self.imageViewSize = CGSizeMake(80, 80);
     self.imageView.hidden = YES;
     self.indicatorView.hidden = NO;
     [self.indicatorView startAnimating];
@@ -188,6 +203,10 @@
     }
 }
 
+- (BOOL)hasMessage{
+    return self.message.length > 0;
+}
+
 #pragma mark - Setters
 - (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled{
     if (userInteractionEnabled) {
@@ -197,21 +216,20 @@
     [super setUserInteractionEnabled:userInteractionEnabled];
 }
 
-
 #pragma mark - Getters
-- (CGFloat)messageHeight{
-    if (self.message.length > 0) {
-        return 20;
+
+- (CGSize)imageViewSize{
+    if (self.imageView.animationImages.count > 0) {
+        return CGSizeMake(100, 100);
     }
-    return 0;
+    return CGSizeMake(60, 60);
 }
 
-- (UIView *)wrapperView{
-    UIView *view = [super wrapperView];
-    [view addSubview:self.imageView];
-    [view addSubview:self.indicatorView];
+- (UIVisualEffectView *)wrapperView{
+    UIVisualEffectView *view = [super wrapperView];
     
-    [self setWrapperViewCornerRoundRadius:20];
+    [view.contentView addSubview:self.imageView];
+    [view.contentView addSubview:self.indicatorView];
     
     return view;
 }
@@ -219,6 +237,7 @@
 - (UILabel *)messageLabel{
     UILabel *label = [super messageLabel];
     label.textAlignment = NSTextAlignmentCenter;
+    label.numberOfLines = 2;
     
     return label;
 }

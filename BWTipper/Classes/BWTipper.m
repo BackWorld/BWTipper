@@ -20,7 +20,7 @@
 }
 
 + (void)hudWithStyle:(BWTipperStyle)style message:(NSString *)message{
-    [self hudWithStyle:style message:message backgroundDimmed:NO delay:1.5 completion:nil];
+    [self hudWithStyle:style message:message backgroundDimmed:NO delay:0 completion:nil];
 }
 
 + (void)hudWithStyle:(BWTipperStyle)style message:(NSString *)message backgroundDimmed:(BOOL)backgroundDimmed delay:(NSTimeInterval)delay completion:(BWTipperCompletion)completion{
@@ -43,6 +43,10 @@
 
 + (void)hudLoadingWithMessage:(NSString *)message{
     [self hudLoadingWithMessage:message backgroundDimmed:NO timeout:0];
+}
+
++ (void)hudLoadingWithMessage:(NSString *)message backgroundDimmed:(BOOL)backgroundDimmed{
+    [self hudLoadingWithMessage:message backgroundDimmed:backgroundDimmed timeout:0];
 }
 
 + (void)hudLoadingWithMessage:(NSString *)message backgroundDimmed:(BOOL)backgroundDimmed timeout:(NSTimeInterval)timeout{
@@ -74,16 +78,20 @@
 }
 
 #pragma mark - Snackbar
+
++ (void)snackbarWithStyle:(BWTipperStyle)style message:(NSString *)message{
+    [self snackbarWithStyle:style message:message delay:0];
+}
+
 + (void)snackbarWithStyle:(BWTipperStyle)style message:(NSString *)message delay:(NSTimeInterval)delay{
-    [self snackbarWithStyle:style message:message action:nil actionHandler:nil delay:delay];
+    [BWTipperSnackbar showWithStyle:style message:message action:nil actionHandler:nil delay:delay];
 }
 
 + (void)snackbarWithStyle:(BWTipperStyle)style
                   message:(NSString *)message
                    action:(NSString *)action
-            actionHandler:(BWTipperSnackbarActionHandler)actionHandler
-                    delay:(NSTimeInterval)delay{
-    [BWTipperSnackbar showWithStyle:style message:message action:action actionHandler:actionHandler delay:delay];
+            actionHandler:(BWTipperSnackbarActionHandler)actionHandler{
+    [BWTipperSnackbar showWithStyle:style message:message action:action actionHandler:actionHandler delay:0];
 }
 
 

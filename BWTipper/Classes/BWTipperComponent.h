@@ -14,15 +14,19 @@
 #define kAnimationScaleFrom 0.8f
 #define kAnimationScaleTo 1.0f
 
+#define kWindow [BWTipperTool tipperKeyWindow]
+#define kCenter CGPointMake(CGRectGetMidX(kWindow.bounds), CGRectGetMidY(kWindow.bounds))
+
 @interface BWTipperComponent : UIView
 
 #pragma mark - UI
-@property(nonatomic, strong)UIView *wrapperView;
+@property(nonatomic, strong)UIVisualEffectView *wrapperView;
 @property(nonatomic, strong)UILabel *messageLabel;
 @property(nonatomic, strong)UIImageView *imageView;
 
 #pragma mark - Data
-@property(nonatomic)CGSize imageViewSize;
+@property(nonatomic, readonly)CGSize imageViewSize;
+@property(nonatomic)CGFloat wrapperCornerRadius;
 @property(nonatomic, copy)NSString *message;
 @property(nonatomic, strong)UIImage *image;
 @property(nonatomic)NSTimeInterval delay;
@@ -42,8 +46,6 @@
 - (void)playDisplayAnimation;
 
 - (void)playHideAnimation;
-
-- (void)setWrapperViewCornerRoundRadius: (CGFloat)radius;
 
 - (void)setStatusBarHidden: (BOOL)hide;
 

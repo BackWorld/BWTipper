@@ -29,9 +29,9 @@
     
     BWTipperConfigure.defaultConfigure.theme = sender.selectedSegmentIndex;
     
-    BWTipperConfigure.defaultConfigure.shadowOn = sender.selectedSegmentIndex;
+//    BWTipperConfigure.defaultConfigure.shadowOn = sender.selectedSegmentIndex;
     
-    BWTipperConfigure.defaultConfigure.cornerRoundOn = !sender.selectedSegmentIndex;
+//    BWTipperConfigure.defaultConfigure.cornerRoundOn = !sender.selectedSegmentIndex;
 }
 
 
@@ -42,11 +42,10 @@
 
 
 - (IBAction)showHUD:(id)sender {
-//    [BWTipper hudTest];
-    [BWTipper hudWithStyle:BWTipperStyleSuccess];
-//    [BWTipper hudLoadingWithMessage:nil backgroundDimmed:YES timeout:5];
+//    [BWTipper hudWithStyle:BWTipperStyleSuccess];
+    [BWTipper hudLoadingWithMessage:@"LongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessage" backgroundDimmed:NO];
     
-    
+    return;
     NSMutableArray *images = [NSMutableArray new];
     for (int i=3; i>=0; i--) {
         NSString *icon = [NSString stringWithFormat:@"number-%d.png", i];
@@ -56,9 +55,11 @@
 }
 
 - (IBAction)showSnackbar:(id)sender {
-    [BWTipper snackbarWithStyle:BWTipperStyleError message:@"网络已断开连接" action:@"去检查" actionHandler:^(NSString *action) {
-        NSLog(@"you tapped: %@", action);
-    } delay:5];
+//    [BWTipper snackbarWithStyle:BWTipperStyleError message:@"网络已断开连接" action:@"去检查" actionHandler:^(NSString *action) {
+//        NSLog(@"you tapped: %@", action);
+//    }];
+    
+    [BWTipper snackbarWithStyle:BWTipperStyleSuccess message:@"Congratulations!"];
 }
 
 @end
