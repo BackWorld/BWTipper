@@ -7,7 +7,9 @@
 
 #import "BWTipperSnackbar.h"
 
-#define kStatusBarHeight 20
+#define kIsLandscape UIDeviceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)
+
+#define kStatusBarHeight (kIsLandscape ? 0 : 20)
 #define kWrapperViewHeight (kStatusBarHeight + 68)
 
 #define kAnimationFrameYFrom (-kWrapperViewHeight)

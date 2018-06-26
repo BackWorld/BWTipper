@@ -17,7 +17,6 @@ typedef void(^BWTipperSnackbarActionHandler)(NSString *action);
         actionHandler: (BWTipperSnackbarActionHandler)actionHandler
                 delay: (NSTimeInterval)delay;
 
-
 + (void)showWithImage: (UIImage *)image
               message: (NSString *)message
                action: (NSString *)action
