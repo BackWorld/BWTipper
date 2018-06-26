@@ -59,7 +59,9 @@
 //        NSLog(@"you tapped: %@", action);
 //    }];
     
-    [BWTipper snackbarWithStyle:BWTipperStyleSuccess message:@"Congratulations!"];
+//    [BWTipper snackbarWithStyle:BWTipperStyleSuccess message:@"Congratulations!"];
+    
+    [BWTipper snackbarWithImage:[UIImage imageNamed:@"check.png"] message:@"这是一个带有自定义图片的通知" action:@"OK" actionHandler:nil];
 }
 
 @end

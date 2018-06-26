@@ -94,6 +94,12 @@
     [BWTipperSnackbar showWithStyle:style message:message action:action actionHandler:actionHandler delay:0];
 }
 
++ (void)snackbarWithImage:(UIImage *)image
+                  message:(NSString *)message
+                   action:(NSString *)action
+            actionHandler:(BWTipperSnackbarActionHandler)actionHandler{
+    [BWTipperSnackbar showWithImage:image message:message action:action actionHandler:actionHandler delay:0];
+}
 
 #pragma mark - Common
 + (void)dismiss{

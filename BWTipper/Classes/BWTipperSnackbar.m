@@ -7,7 +7,7 @@
 
 #import "BWTipperSnackbar.h"
 
-#define kIsLandscape UIDeviceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)
+#define kIsLandscape UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)
 
 #define kStatusBarHeight (kIsLandscape ? 0 : 20)
 #define kWrapperViewHeight (kStatusBarHeight + 68)
@@ -40,13 +40,22 @@
                action:(NSString *)action
         actionHandler:(BWTipperSnackbarActionHandler)actionHandler
                 delay:(NSTimeInterval)delay{
+    
+    [self showWithImage:[BWTipperConfigure.defaultConfigure iconWithStyle:style] message:message action:action actionHandler:actionHandler delay:delay];
+}
+
++ (void)showWithImage:(UIImage *)image
+              message:(NSString *)message
+               action:(NSString *)action
+        actionHandler:(BWTipperSnackbarActionHandler)actionHandler
+                delay:(NSTimeInterval)delay{
     BWTipperSnackbar *bar = [BWTipperSnackbar new];
     
     bar.message = message;
-    bar.image = [BWTipperConfigure.defaultConfigure iconWithStyle:style];
+    bar.image = image;
     bar.actionHandler = actionHandler;
     bar.delay = delay;
-    if (actionHandler && action.length > 0) {
+    if (action.length > 0) {
         bar.delay = CGFLOAT_MAX;
         bar.button.hidden = NO;
         [bar.button setTitle:action forState:UIControlStateNormal];
@@ -143,8 +152,8 @@
 - (void)buttonAction: (UIButton *)sender{
     if (self.actionHandler) {
         self.actionHandler(sender.currentTitle);
-        [self playHideAnimation];
     }
+    [self playHideAnimation];
 }
 
 #pragma mark - Setters
@@ -158,8 +167,8 @@
     return CGSizeMake(34, 34);
 }
 
-- (UIVisualEffectView *)wrapperView{
-    UIVisualEffectView *view = [super wrapperView];
+- (UIView *)wrapperView{
+    UIView *view = [super wrapperView];
     
     [view addSubview:self.imageView];
     [view addSubview:self.button];

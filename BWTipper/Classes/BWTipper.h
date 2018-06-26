@@ -77,6 +77,12 @@
                    action: (NSString *)action
             actionHandler: (BWTipperSnackbarActionHandler)actionHandler;
 
+
++ (void)snackbarWithImage: (UIImage *)image
+                  message: (NSString *)message
+                   action: (NSString *)action
+            actionHandler: (BWTipperSnackbarActionHandler)actionHandler;
+
 #pragma mark - Common
 
 /**

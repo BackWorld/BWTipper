@@ -73,7 +73,7 @@
 
 #pragma mark - Private
 + (void)dismissComponentByClass: (Class)componentClass animated: (BOOL)animated{
-    for (UIView *subview in BWTipperTool.tipperKeyWindow.subviews) {
+    for (UIView *subview in kWindow.subviews) {
         if ([subview isKindOfClass:componentClass]) {
             if (animated) {
                 BWTipperComponent *component = (BWTipperComponent *)subview;

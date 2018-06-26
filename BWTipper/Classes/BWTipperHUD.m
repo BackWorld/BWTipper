@@ -95,15 +95,6 @@
 }
 
 #pragma mark - Overrides
-- (void)removeFromSuperview{
-    [super removeFromSuperview];
-    
-    if (self.completion) {
-        self.completion();
-    }
-    
-    self.isAnimating = NO;
-}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -172,6 +163,16 @@
     }];
 }
 
+- (void)removeFromSuperview{
+    [super removeFromSuperview];
+    
+    if (self.completion) {
+        self.completion();
+    }
+    
+    self.isAnimating = NO;
+}
+
 #pragma mark - Private
 
 - (void)showLoadingWithAnimatedImages:(NSArray<UIImage *> *)images
@@ -225,8 +226,8 @@
     return CGSizeMake(60, 60);
 }
 
-- (UIVisualEffectView *)wrapperView{
-    UIVisualEffectView *view = [super wrapperView];
+- (UIView *)wrapperView{
+    UIView *view = [super wrapperView];
     
     [view addSubview:self.imageView];
     [view addSubview:self.indicatorView];
