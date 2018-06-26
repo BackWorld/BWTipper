@@ -9,7 +9,7 @@
 
 @interface BWTipperComponent()
 
-@property(nonatomic, strong)UIView *shadowView;
+@property(nonatomic, strong)UIVisualEffectView *effectView;
 
 @end
 
@@ -40,9 +40,6 @@
 }
 
 - (void)addViews{
-//    if (BWTipperConfigure.defaultConfigure.shadowOn) {
-//        [self addSubview:self.shadowView];
-//    }
     [self addSubview:self.wrapperView];
 }
 
@@ -109,40 +106,37 @@
 
 - (void)setWrapperCornerRadius:(CGFloat)wrapperCornerRadius{
     if (BWTipperConfigure.defaultConfigure.cornerRoundOn) {
-        self.wrapperView.layer.cornerRadius = wrapperCornerRadius;
+        self.effectView.layer.cornerRadius = wrapperCornerRadius;
     }
     _wrapperCornerRadius = wrapperCornerRadius;
 }
 
 #pragma mark - Getters
 
-- (UIView *)shadowView{
-    if (!_shadowView) {
-        _shadowView = [UIView new];
-        _shadowView.backgroundColor = UIColor.redColor;
-        _shadowView.layer.shadowOffset = CGSizeZero;
-        _shadowView.layer.shadowOpacity = 0.3;
-        _shadowView.layer.shadowRadius = 8;
-    }
-    return _shadowView;
-}
-
-- (UIVisualEffectView *)wrapperView{
-    if (!_wrapperView) {
-        _wrapperView = [UIVisualEffectView new];
+- (UIVisualEffectView *)effectView{
+    if (!_effectView) {
+        _effectView = [UIVisualEffectView new];
+        _effectView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+        
         UIBlurEffectStyle style = (BWTipperConfigure.defaultConfigure.theme == BWTipperThemeDark)
         ? UIBlurEffectStyleDark
         : UIBlurEffectStyleLight;
-        _wrapperView.effect = [UIBlurEffect effectWithStyle:style];
-        _wrapperView.backgroundColor = [BWTipperConfigure.defaultConfigure.themeColor colorWithAlphaComponent:0.3];
-        _wrapperView.clipsToBounds = YES;
-        _wrapperView.alpha = 0;
+        _effectView.effect = [UIBlurEffect effectWithStyle:style];
+        _effectView.clipsToBounds = YES;
+    }
+    return _effectView;
+}
 
+- (UIView *)wrapperView{
+    if (!_wrapperView) {
+        _wrapperView = [UIView new];
+        
         _wrapperView.layer.shadowOffset = CGSizeZero;
         _wrapperView.layer.shadowOpacity = 0.3;
         _wrapperView.layer.shadowRadius = 8;
         
-        [_wrapperView.contentView addSubview:self.messageLabel];
+        [_wrapperView addSubview:self.effectView];
+        [_wrapperView addSubview:self.messageLabel];
     }
     return _wrapperView;
 }

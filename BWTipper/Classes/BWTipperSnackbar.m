@@ -159,8 +159,8 @@
 - (UIVisualEffectView *)wrapperView{
     UIVisualEffectView *view = [super wrapperView];
     
-    [view.contentView addSubview:self.imageView];
-    [view.contentView addSubview:self.button];
+    [view addSubview:self.imageView];
+    [view addSubview:self.button];
     
     return view;
 }

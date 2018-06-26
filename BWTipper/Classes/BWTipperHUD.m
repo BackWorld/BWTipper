@@ -228,8 +228,8 @@
 - (UIVisualEffectView *)wrapperView{
     UIVisualEffectView *view = [super wrapperView];
     
-    [view.contentView addSubview:self.imageView];
-    [view.contentView addSubview:self.indicatorView];
+    [view addSubview:self.imageView];
+    [view addSubview:self.indicatorView];
     
     return view;
 }
