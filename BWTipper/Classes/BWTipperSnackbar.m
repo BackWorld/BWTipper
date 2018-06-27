@@ -78,11 +78,10 @@
     CGFloat space = 20;
     
     // wrapper view
-    CGFloat w = CGRectGetWidth(self.frame);
+    CGFloat w = CGRectGetWidth(frame);
     CGFloat h = kWrapperViewHeight;
     CGFloat contentH = kWrapperViewHeight - kStatusBarHeight;
-    
-    self.wrapperView.frame = self.frame;
+    self.wrapperView.frame = frame;
     
     // image view
     CGFloat imageY = (contentH - self.imageViewSize.height) / 2 + kStatusBarHeight;
@@ -120,9 +119,6 @@
     }
     
     self.isAnimating = YES;
-    
-    self.wrapperView.alpha = 1;
-    
     CGRect frame = self.wrapperView.frame;
     frame.origin.y = kAnimationFrameYFrom;
     self.wrapperView.frame = frame;
@@ -169,6 +165,7 @@
 
 - (UIView *)wrapperView{
     UIView *view = [super wrapperView];
+    view.alpha = 1;
     
     [view addSubview:self.imageView];
     [view addSubview:self.button];

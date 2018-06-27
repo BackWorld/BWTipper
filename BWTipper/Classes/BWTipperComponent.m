@@ -130,10 +130,13 @@
 - (UIView *)wrapperView{
     if (!_wrapperView) {
         _wrapperView = [UIView new];
+        _wrapperView.alpha = 0;
         
-        _wrapperView.layer.shadowOffset = CGSizeZero;
-        _wrapperView.layer.shadowOpacity = 0.3;
-        _wrapperView.layer.shadowRadius = 8;
+        if (BWTipperConfigure.defaultConfigure.shadowOn) {
+            _wrapperView.layer.shadowOffset = CGSizeZero;
+            _wrapperView.layer.shadowOpacity = 0.3;
+            _wrapperView.layer.shadowRadius = 8;
+        }
         
         [_wrapperView addSubview:self.effectView];
         [_wrapperView addSubview:self.messageLabel];
