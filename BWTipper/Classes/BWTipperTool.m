@@ -31,7 +31,14 @@ NSString *const BWTipperStyleIconImageKeyInfo = @"BWTipperStyleIconImageKeyInfo"
 #pragma mark - Public
 
 + (UIWindow *)tipperKeyWindow{
-    return UIApplication.sharedApplication.keyWindow;
+    UIWindow *window = UIApplication.sharedApplication.windows[0];
+    for (UIWindow *item in UIApplication.sharedApplication.windows) {
+        if ([item isKindOfClass:NSClassFromString(@"UIRemoteKeyboardWindow")]) {
+            window = item;
+            break;
+        }
+    }
+    return window;
 }
 
 + (UIImage *)image:(UIImage *)image withTintColor:(UIColor *)color{
