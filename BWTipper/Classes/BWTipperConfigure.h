@@ -51,5 +51,7 @@
 
 - (UIColor *)themeColor;
 
+- (BOOL)isLightTheme;
+
 
 @end

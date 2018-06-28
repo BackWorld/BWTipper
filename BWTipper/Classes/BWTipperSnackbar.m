@@ -7,10 +7,13 @@
 
 #import "BWTipperSnackbar.h"
 
+#define kIsIphoneX (CGRectGetHeight(UIApplication.sharedApplication.statusBarFrame) == 44)
+
 #define kIsLandscape UIInterfaceOrientationIsLandscape(UIApplication.sharedApplication.statusBarOrientation)
 
-#define kStatusBarHeight (kIsLandscape ? 0 : 20)
-#define kWrapperViewHeight (kStatusBarHeight + 68)
+// 精细化调整
+#define kStatusBarHeight (kIsLandscape ? 0 : (kIsIphoneX ? 30 : 20))
+#define kWrapperViewHeight (kIsLandscape ? 44 : (kStatusBarHeight + (kIsIphoneX ? 58 : 68)))
 
 #define kAnimationFrameYFrom (-kWrapperViewHeight)
 #define kAnimationFrameYTo 0
@@ -20,6 +23,8 @@
 @property(nonatomic, strong)UIButton *button;
 
 @property(nonatomic)BWTipperSnackbarActionHandler actionHandler;
+
+@property(nonatomic)UIStatusBarStyle originalStatusBarStyle;
 
 @end
 
@@ -107,11 +112,16 @@
     
     self.isAnimating = NO;
     
-    [self setStatusBarHidden:NO];
+    [UIApplication.sharedApplication setStatusBarStyle:self.originalStatusBarStyle];
 }
 
 - (void)playDisplayAnimation{
-    [self setStatusBarHidden:NO];
+    self.originalStatusBarStyle = UIApplication.sharedApplication.statusBarStyle;
+    
+    UIStatusBarStyle style = BWTipperConfigure.defaultConfigure.isLightTheme
+    ? UIStatusBarStyleDefault
+    : UIStatusBarStyleLightContent;
+    [UIApplication.sharedApplication setStatusBarStyle:style];
     
     if (self.isAnimating) {
         return;
@@ -125,8 +135,6 @@
         CGRect frame = self.wrapperView.frame;
         frame.origin.y = kAnimationFrameYTo;
         self.wrapperView.frame = frame;
-        
-        [self setStatusBarHidden:YES];
     } completion:^(BOOL finished) {
         // 启动计时器
         [self performSelector:@selector(playHideAnimation) withObject:nil afterDelay:self.delay];

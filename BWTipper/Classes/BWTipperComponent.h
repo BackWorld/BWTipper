@@ -47,6 +47,4 @@
 
 - (void)playHideAnimation;
 
-- (void)setStatusBarHidden: (BOOL)hide;
-
 @end

@@ -114,10 +114,11 @@
     if (!_wrapperView) {
         _wrapperView = [UIVisualEffectView new];
         _wrapperView.alpha = 0;
+        _wrapperView.contentView.backgroundColor = [BWTipperConfigure.defaultConfigure.themeColor colorWithAlphaComponent:0.5];
         
-        UIBlurEffectStyle style = (BWTipperConfigure.defaultConfigure.theme == BWTipperThemeDark)
-        ? UIBlurEffectStyleDark
-        : UIBlurEffectStyleLight;
+        UIBlurEffectStyle style = BWTipperConfigure.defaultConfigure.isLightTheme
+        ? UIBlurEffectStyleLight
+        : UIBlurEffectStyleDark;
         _wrapperView.effect = [UIBlurEffect effectWithStyle:style];
         
         if (BWTipperConfigure.defaultConfigure.shadowOn) {
@@ -125,7 +126,6 @@
             _wrapperView.layer.shadowOpacity = 0.3;
             _wrapperView.layer.shadowRadius = 8;
         }
-        
         
         [_wrapperView.contentView addSubview:self.messageLabel];
     }

@@ -45,6 +45,10 @@
     return [BWTipperTool image:image withTintColor:self.themeRevertedColor];
 }
 
+- (BOOL)isLightTheme{
+    return (self.theme == BWTipperThemeLight);
+}
+
 #pragma mark - Private
 - (UIColor *)themeRevertedColor{
     BOOL isDarkTheme = (self.theme == BWTipperThemeDark);
