@@ -13,7 +13,7 @@
 
 // 精细化调整
 #define kStatusBarHeight (kIsLandscape ? 0 : (kIsIphoneX ? 30 : 20))
-#define kWrapperViewHeight (kIsLandscape ? 44 : (kStatusBarHeight + (kIsIphoneX ? 58 : 68)))
+#define kWrapperViewHeight (kIsLandscape ? 44 : (kStatusBarHeight + (kIsIphoneX ? 58 : 44)))
 
 #define kAnimationFrameYFrom (-kWrapperViewHeight)
 #define kAnimationFrameYTo 0
