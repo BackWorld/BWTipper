@@ -15,7 +15,6 @@
 #define kAnimationFrameYFrom (-kWrapperViewHeight)
 #define kAnimationFrameYTo 0
 
-
 @interface BWTipperSnackbar()
 
 @property(nonatomic, strong)UIButton *button;
@@ -94,8 +93,8 @@
     self.button.frame = CGRectMake(buttonX, kStatusBarHeight, buttonW, buttonH);
     
     // message label
-    CGFloat messageW = w - space - self.imageViewSize.width - space - buttonW - space;
     CGFloat messageX = CGRectGetMaxX(self.imageView.frame) + space;
+    CGFloat messageW = w - messageX - space - buttonW - space;
     CGSize messageSize = [self.messageLabel sizeThatFits:CGSizeMake(messageW, CGFLOAT_MAX)];
     CGFloat messageY = (contentH - messageSize.height) / 2 + kStatusBarHeight;
     self.messageLabel.frame = CGRectMake(messageX, messageY, messageW, messageSize.height);
@@ -171,6 +170,13 @@
     [view.contentView addSubview:self.button];
     
     return view;
+}
+
+- (UILabel *)messageLabel{
+    UILabel *label = [super messageLabel];
+    label.numberOfLines = 2;
+    
+    return label;
 }
 
 - (UIButton *)button{
