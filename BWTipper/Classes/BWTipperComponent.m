@@ -117,7 +117,7 @@
         _wrapperView.contentView.backgroundColor = [BWTipperConfigure.defaultConfigure.themeColor colorWithAlphaComponent:0.5];
         
         UIBlurEffectStyle style = BWTipperConfigure.defaultConfigure.isLightTheme
-        ? UIBlurEffectStyleLight
+        ? UIBlurEffectStyleExtraLight
         : UIBlurEffectStyleDark;
         _wrapperView.effect = [UIBlurEffect effectWithStyle:style];
         
