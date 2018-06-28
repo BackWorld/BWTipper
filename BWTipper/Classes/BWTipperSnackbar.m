@@ -163,12 +163,12 @@
     return CGSizeMake(34, 34);
 }
 
-- (UIView *)wrapperView{
-    UIView *view = [super wrapperView];
+- (UIVisualEffectView *)wrapperView{
+    UIVisualEffectView *view = [super wrapperView];
     view.alpha = 1;
     
-    [view addSubview:self.imageView];
-    [view addSubview:self.button];
+    [view.contentView addSubview:self.imageView];
+    [view.contentView addSubview:self.button];
     
     return view;
 }

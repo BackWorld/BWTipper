@@ -226,11 +226,11 @@
     return CGSizeMake(60, 60);
 }
 
-- (UIView *)wrapperView{
-    UIView *view = [super wrapperView];
+- (UIVisualEffectView *)wrapperView{
+    UIVisualEffectView *view = [super wrapperView];
     
-    [view addSubview:self.imageView];
-    [view addSubview:self.indicatorView];
+    [view.contentView addSubview:self.imageView];
+    [view.contentView addSubview:self.indicatorView];
     
     return view;
 }

@@ -7,11 +7,6 @@
 
 #import "BWTipperComponent.h"
 
-@interface BWTipperComponent()
-
-@property(nonatomic, strong)UIVisualEffectView *effectView;
-
-@end
 
 @implementation BWTipperComponent
 
@@ -106,31 +101,24 @@
 
 - (void)setWrapperCornerRadius:(CGFloat)wrapperCornerRadius{
     if (BWTipperConfigure.defaultConfigure.cornerRoundOn) {
-        self.effectView.layer.cornerRadius = wrapperCornerRadius;
+        for (UIView *subview in self.wrapperView.subviews) {
+            subview.layer.cornerRadius = wrapperCornerRadius;
+        }
     }
     _wrapperCornerRadius = wrapperCornerRadius;
 }
 
 #pragma mark - Getters
 
-- (UIVisualEffectView *)effectView{
-    if (!_effectView) {
-        _effectView = [UIVisualEffectView new];
-        _effectView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+- (UIVisualEffectView *)wrapperView{
+    if (!_wrapperView) {
+        _wrapperView = [UIVisualEffectView new];
+        _wrapperView.alpha = 0;
         
         UIBlurEffectStyle style = (BWTipperConfigure.defaultConfigure.theme == BWTipperThemeDark)
         ? UIBlurEffectStyleDark
         : UIBlurEffectStyleLight;
-        _effectView.effect = [UIBlurEffect effectWithStyle:style];
-        _effectView.clipsToBounds = YES;
-    }
-    return _effectView;
-}
-
-- (UIView *)wrapperView{
-    if (!_wrapperView) {
-        _wrapperView = [UIView new];
-        _wrapperView.alpha = 0;
+        _wrapperView.effect = [UIBlurEffect effectWithStyle:style];
         
         if (BWTipperConfigure.defaultConfigure.shadowOn) {
             _wrapperView.layer.shadowOffset = CGSizeZero;
@@ -138,8 +126,8 @@
             _wrapperView.layer.shadowRadius = 8;
         }
         
-        [_wrapperView addSubview:self.effectView];
-        [_wrapperView addSubview:self.messageLabel];
+        
+        [_wrapperView.contentView addSubview:self.messageLabel];
     }
     return _wrapperView;
 }
