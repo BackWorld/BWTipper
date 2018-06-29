@@ -6,7 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BWTipperTool.h"
+#import "BWTipperDefines.h"
 
 
 @interface BWTipperConfigure : NSObject
@@ -45,13 +45,6 @@
 + (instancetype)defaultConfigure;
 
 
-- (UIImage *)iconWithStyle:(BWTipperStyle)style;
-
-- (UIColor *)themeRevertedColor;
-
-- (UIColor *)themeColor;
-
-- (BOOL)isLightTheme;
 
 
 @end

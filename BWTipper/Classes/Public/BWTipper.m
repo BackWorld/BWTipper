@@ -6,6 +6,9 @@
 //
 
 #import "BWTipper.h"
+#import "BWTipperHUD.h"
+#import "BWTipperToast.h"
+#import "BWTipperSnackbar.h"
 
 @implementation BWTipper
 

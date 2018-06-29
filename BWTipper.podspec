@@ -31,6 +31,7 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'BWTipper/Classes/**/*'
+  s.public_header_files = 'BWTipper/Classes/Public/*.h'
   
   s.resource_bundles = {
     'BWTipper' => ['BWTipper/Assets/*.png']

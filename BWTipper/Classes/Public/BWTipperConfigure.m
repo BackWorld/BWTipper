@@ -6,6 +6,7 @@
 //
 
 #import "BWTipperConfigure.h"
+#import "BWTipperTool.h"
 
 @implementation BWTipperConfigure
 
@@ -29,36 +30,6 @@
 }
 
 #pragma mark - Public
-- (UIImage *)iconWithStyle:(BWTipperStyle)style{
-    UIImage *image = nil;
-    switch (style) {
-        case BWTipperStyleSuccess:
-            image = self.styleIcons[BWTipperStyleIconImageKeySuccess];
-            break;
-        case BWTipperStyleError:
-            image = self.styleIcons[BWTipperStyleIconImageKeyError];
-            break;
-        case BWTipperStyleInfo:
-            image = self.styleIcons[BWTipperStyleIconImageKeyInfo];
-            break;
-    }
-    return [BWTipperTool image:image withTintColor:self.themeRevertedColor];
-}
-
-- (BOOL)isLightTheme{
-    return (self.theme == BWTipperThemeLight);
-}
-
-#pragma mark - Private
-- (UIColor *)themeRevertedColor{
-    BOOL isDarkTheme = (self.theme == BWTipperThemeDark);
-    return isDarkTheme ? UIColor.whiteColor : UIColor.blackColor;
-}
-
-- (UIColor *)themeColor{
-    BOOL isDarkTheme = (self.theme == BWTipperThemeDark);
-    return isDarkTheme ? UIColor.blackColor : UIColor.whiteColor;
-}
 
 #pragma mark - Setters
 

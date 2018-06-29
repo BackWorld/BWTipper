@@ -19,7 +19,11 @@
 {
     [super viewDidLoad];
     
+    
 }
+
+
+
 
 - (IBAction)showDialog:(id)sender {
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"测试对话框" message:nil delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];

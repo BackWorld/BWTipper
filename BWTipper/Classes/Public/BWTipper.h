@@ -6,9 +6,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BWTipperHUD.h"
-#import "BWTipperToast.h"
-#import "BWTipperSnackbar.h"
+#import "BWTipperConfigure.h"
 
 @interface BWTipper : NSObject
 

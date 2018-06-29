@@ -8,6 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "BWTipperTool.h"
 #import "BWTipperConfigure.h"
+#import "BWTipperConfigure+Private.h"
 
 #define kDisplayAnimationDuration 0.3f
 #define kHideAnimationDuration 0.2f

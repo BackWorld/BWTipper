@@ -7,7 +7,6 @@
 
 #import "BWTipperComponent.h"
 
-typedef void(^BWTipperSnackbarActionHandler)(NSString *action);
 
 @interface BWTipperSnackbar : BWTipperComponent
 

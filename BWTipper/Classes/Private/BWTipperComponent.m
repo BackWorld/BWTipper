@@ -7,7 +7,6 @@
 
 #import "BWTipperComponent.h"
 
-
 @implementation BWTipperComponent
 
 #pragma mark - Intial
@@ -32,6 +31,9 @@
 - (void)initData{
     self.userInteractionEnabled = NO;
     self.delay = 1.5;
+    
+    // 监听转屏
+    [kWindow addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)addViews{
@@ -55,10 +57,6 @@
     
 }
 
-- (void)setStatusBarHidden: (BOOL)hide{
-    [UIApplication.sharedApplication setStatusBarHidden:hide withAnimation:UIStatusBarAnimationFade];
-}
-
 #pragma mark - Lifecycle
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -78,6 +76,20 @@
                 [subview removeFromSuperview];
             }
         }
+    }
+}
+
+- (void)dealloc
+{
+    [kWindow removeObserver:self forKeyPath:@"frame"];
+}
+
+#pragma mark - KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (object == kWindow) {
+//        NSLog(@"%@: %@: %@", keyPath, object, change);
+        [self setNeedsLayout];
     }
 }
 
