@@ -9,27 +9,27 @@
 /* Begin PBXBuildFile section */
 		05896A7C4B0CA4C1FCB789050C728A7F /* BWTipper.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */; };
 		0D9D44D11B1ABB06E359407691F3646F /* BWTipperComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E0725D6A0FF959D66440D32CEBAA061 /* BWTipperComponent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15D42D1C95D1DF28EB6F90C3BB1F3B3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		1D3FAAD8EC209943C1D94DBE6A347BE8 /* BWTipperToast.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC6B4E2C80AD9EE621821CB75F60277 /* BWTipperToast.m */; };
 		1E801D0E3D97382077DE32D9CDE05405 /* Pods-BWTipper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F69769D77089ADA8A59AD258458D2B8D /* Pods-BWTipper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F8D28580AFEF4B78FB3245E9FCBF23F /* Pods-BWTipper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 782AB4085305BFAF83AB182FAA4F0116 /* Pods-BWTipper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		32BFD08A7434137D86DD1B2489E323AE /* BWTipperConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFA0F097348445D7F391739580DA39F /* BWTipperConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37F454D66C85D0A507223E26B131EE84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		3311725DD3A1076D47EF2BEDDDA13043 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
 		3AD1AD731363697139325BE197E4E40B /* Pods-BWTipper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3E70EBAABE6CD3725A1DB9D241003 /* Pods-BWTipper_Tests-dummy.m */; };
 		3FFAD86BDB3D03983E719AB080434072 /* BWTipperComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 83E14B1AD1604A9AC32BF261427F76AD /* BWTipperComponent.m */; };
+		435311CD2AE2B4109275BBEC337A2D43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		43FD316FD760BFF5A1B6A13549B8CD42 /* BWTipperSnackbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E2507CC10710191CB8C8A89509DB71B /* BWTipperSnackbar.m */; };
 		4FD6246244AA6CFFB58575E848798153 /* BWTipper.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E54ABFEFB3F066FCB4605AE40D2301 /* BWTipper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		538FE922CF15CD1F828A10E06ADFD4EF /* BWTipperHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 64960E136C1C2092F344380A7D7BBD9C /* BWTipperHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5BD3C983BA7D2D6B0A80543E28DAC7A3 /* BWTipper.m in Sources */ = {isa = PBXBuildFile; fileRef = F8BE264FA77E37C0D985375ABF954FBE /* BWTipper.m */; };
 		7EAD6C0FEEDC3D5290A9467E73F93C08 /* BWTipper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B4B0413F11253E5C5035E23145551A6F /* BWTipper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		969AA7E1D24A9D785A41E3A8B55FDB49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		A989A55E1E710F1354BCCDAF63A96A66 /* Pods-BWTipper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3A2C123E453133026ABE2D9B1AAB2A /* Pods-BWTipper_Example-dummy.m */; };
-		AF04E75A8BD218A9F7D795209B3C9070 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		B0CABA7C2B63D6F7DCD8C4FF17166A0E /* BWTipper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 43BFADDEAF738290A408E5775C138808 /* BWTipper-dummy.m */; };
 		C979BDC67FA153A88F7998B43BB02CCB /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E1D69C1F5B58A2D06E50B7616C3F29B /* error.png */; };
 		CC1621A1F8E29F7F0FE9104D736AAB23 /* BWTipperHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = CA66E8E7E73F74897D875049CD436B80 /* BWTipperHUD.m */; };
 		D6F55A7EBFD11A38C92F8ED4D2918CB5 /* BWTipperSnackbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AAD507DA1D66F8E149ABA8004E4B6FD /* BWTipperSnackbar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1FFC87861DDDB71AE6E0F6668F0A716 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = D14A2FAFEA4597C3AEF9382623CD699E /* info.png */; };
-		EC25B93F26FC7371580E36D2C3CA2427 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		E5E1B9D30B31BCC36C9F689105C93C65 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
 		ED8710F254F2DEEA18AA7128A92605F6 /* BWTipperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B94DB57D3F52E7DC692E83635DC5640B /* BWTipperTool.m */; };
 		EF93B88B2355B1D085D314CA10946E77 /* BWTipperTool.h in Headers */ = {isa = PBXBuildFile; fileRef = C5889708CDB483EEE10680C2D24990E0 /* BWTipperTool.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0FA6B8C76FB69639683F4C33AA21040 /* BWTipperToast.h in Headers */ = {isa = PBXBuildFile; fileRef = CF032264AE0B63063E7C8311C7635A27 /* BWTipperToast.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -63,20 +63,20 @@
 
 /* Begin PBXFileReference section */
 		0F3A2C123E453133026ABE2D9B1AAB2A /* Pods-BWTipper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BWTipper_Example-dummy.m"; sourceTree = "<group>"; };
-		1A5A466E29E1440522736D1614EC72D6 /* BWTipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BWTipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5A466E29E1440522736D1614EC72D6 /* BWTipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BWTipper.framework; path = BWTipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AAD507DA1D66F8E149ABA8004E4B6FD /* BWTipperSnackbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BWTipperSnackbar.h; path = BWTipper/Classes/BWTipperSnackbar.h; sourceTree = "<group>"; };
 		23F3E70EBAABE6CD3725A1DB9D241003 /* Pods-BWTipper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BWTipper_Tests-dummy.m"; sourceTree = "<group>"; };
 		2B5C900C81A4400E6390540D6EF70CAE /* Pods-BWTipper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BWTipper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		2E2B5018535C8133DD39E9437A96AED9 /* BWTipper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipper-prefix.pch"; sourceTree = "<group>"; };
 		333F61F67F1B4082606D45E46C5DEE89 /* Pods-BWTipper_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Tests-resources.sh"; sourceTree = "<group>"; };
-		3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWTipper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BWTipper.bundle; path = "BWTipper-BWTipper.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		436D3D4292C237DA7467DBCE04905E8B /* Pods-BWTipper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Example.release.xcconfig"; sourceTree = "<group>"; };
 		43BFADDEAF738290A408E5775C138808 /* BWTipper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipper-dummy.m"; sourceTree = "<group>"; };
-		46F42033AB5109438B64D8ABDF005593 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		46F42033AB5109438B64D8ABDF005593 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
 		4D30FD5A7D2A924865EF045BE091A5ED /* Pods-BWTipper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BWTipper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		4E0725D6A0FF959D66440D32CEBAA061 /* BWTipperComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BWTipperComponent.h; path = BWTipper/Classes/BWTipperComponent.h; sourceTree = "<group>"; };
 		5601FE2E145CE735B53279C1F0C563D5 /* Pods-BWTipper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5629381BBEB282490CB5FF9A393BE5CE /* Pods_BWTipper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BWTipper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5629381BBEB282490CB5FF9A393BE5CE /* Pods_BWTipper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BWTipper_Example.framework; path = "Pods-BWTipper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C043FBF2EAC5BC65E1254AE62610580 /* Pods-BWTipper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		61C458934E4212908420CC7790EB235D /* success.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = success.png; path = BWTipper/Assets/success.png; sourceTree = "<group>"; };
 		64960E136C1C2092F344380A7D7BBD9C /* BWTipperHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BWTipperHUD.h; path = BWTipper/Classes/BWTipperHUD.h; sourceTree = "<group>"; };
@@ -88,17 +88,16 @@
 		7E1D69C1F5B58A2D06E50B7616C3F29B /* error.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = error.png; path = BWTipper/Assets/error.png; sourceTree = "<group>"; };
 		805A71DFAABF2EBC6FB028769577FF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		83E14B1AD1604A9AC32BF261427F76AD /* BWTipperComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BWTipperComponent.m; path = BWTipper/Classes/BWTipperComponent.m; sourceTree = "<group>"; };
-		8CEC817ED0B4DDF6EB118658C7445D18 /* Pods_BWTipper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BWTipper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		8CEC817ED0B4DDF6EB118658C7445D18 /* Pods_BWTipper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BWTipper_Tests.framework; path = "Pods-BWTipper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D48AACB3DC2CCB2F2DF29C51CBBA586 /* Pods-BWTipper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Example-frameworks.sh"; sourceTree = "<group>"; };
 		A82C8C10769F223EC042DA5878EB2A00 /* Pods-BWTipper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Example-resources.sh"; sourceTree = "<group>"; };
 		AAEC5D1F82AD06A247F701CCF44D6830 /* Pods-BWTipper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BWTipper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		ABD03765E574330A93A53C73B5A2A9CE /* BWTipperConfigure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BWTipperConfigure.m; path = BWTipper/Classes/BWTipperConfigure.m; sourceTree = "<group>"; };
-		AE5EC6DEC2A95955F827531B8EE412C1 /* BWTipper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BWTipper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AE5EC6DEC2A95955F827531B8EE412C1 /* BWTipper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BWTipper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		B4B0413F11253E5C5035E23145551A6F /* BWTipper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipper-umbrella.h"; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		B94DB57D3F52E7DC692E83635DC5640B /* BWTipperTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BWTipperTool.m; path = BWTipper/Classes/BWTipperTool.m; sourceTree = "<group>"; };
-		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		C5889708CDB483EEE10680C2D24990E0 /* BWTipperTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BWTipperTool.h; path = BWTipper/Classes/BWTipperTool.h; sourceTree = "<group>"; };
 		CA66E8E7E73F74897D875049CD436B80 /* BWTipperHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BWTipperHUD.m; path = BWTipper/Classes/BWTipperHUD.m; sourceTree = "<group>"; };
 		CBC6B4E2C80AD9EE621821CB75F60277 /* BWTipperToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BWTipperToast.m; path = BWTipper/Classes/BWTipperToast.m; sourceTree = "<group>"; };
@@ -106,11 +105,12 @@
 		D14A2FAFEA4597C3AEF9382623CD699E /* info.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = info.png; path = BWTipper/Assets/info.png; sourceTree = "<group>"; };
 		D48E3713EDF345B69C8DB9E731C19523 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D57EDAEB7C34F58DEBA11CF6697948B9 /* BWTipper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BWTipper.modulemap; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D9D0CC287ACA80F9D67AF7055D97B298 /* Pods-BWTipper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DE51239D872504350E87273A0D95865A /* Pods-BWTipper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BWTipper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DF55FB8D4579BD0CF3B215B95B863178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2C0B5AA1CAA7CE82E746F5D7C244FB6 /* BWTipper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BWTipper.xcconfig; sourceTree = "<group>"; };
-		E3CD68B1E353006B580227B5E2EFB96C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E3CD68B1E353006B580227B5E2EFB96C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		E4E54ABFEFB3F066FCB4605AE40D2301 /* BWTipper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BWTipper.h; path = BWTipper/Classes/BWTipper.h; sourceTree = "<group>"; };
 		E500AA7FBB7A0B845F3FED48164D6B8C /* Pods-BWTipper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		F69769D77089ADA8A59AD258458D2B8D /* Pods-BWTipper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BWTipper_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -123,8 +123,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37F454D66C85D0A507223E26B131EE84 /* Foundation.framework in Frameworks */,
-				EC25B93F26FC7371580E36D2C3CA2427 /* UIKit.framework in Frameworks */,
+				E5E1B9D30B31BCC36C9F689105C93C65 /* Foundation.framework in Frameworks */,
+				3311725DD3A1076D47EF2BEDDDA13043 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF04E75A8BD218A9F7D795209B3C9070 /* Foundation.framework in Frameworks */,
+				435311CD2AE2B4109275BBEC337A2D43 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				969AA7E1D24A9D785A41E3A8B55FDB49 /* Foundation.framework in Frameworks */,
+				15D42D1C95D1DF28EB6F90C3BB1F3B3F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,15 +154,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
-				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
 		335593E87F1C8BB996562DF4B3ED48DB /* Pods-BWTipper_Example */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,9 +184,18 @@
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		7C8EC175837EA86B47BCEAE29DE04B9F /* Support Files */ = {
@@ -231,6 +231,8 @@
 				F8BE264FA77E37C0D985375ABF954FBE /* BWTipper.m */,
 				4E0725D6A0FF959D66440D32CEBAA061 /* BWTipperComponent.h */,
 				83E14B1AD1604A9AC32BF261427F76AD /* BWTipperComponent.m */,
+				6BFA0F097348445D7F391739580DA39F /* BWTipperConfigure.h */,
+				ABD03765E574330A93A53C73B5A2A9CE /* BWTipperConfigure.m */,
 				64960E136C1C2092F344380A7D7BBD9C /* BWTipperHUD.h */,
 				CA66E8E7E73F74897D875049CD436B80 /* BWTipperHUD.m */,
 				1AAD507DA1D66F8E149ABA8004E4B6FD /* BWTipperSnackbar.h */,
@@ -239,8 +241,6 @@
 				CBC6B4E2C80AD9EE621821CB75F60277 /* BWTipperToast.m */,
 				C5889708CDB483EEE10680C2D24990E0 /* BWTipperTool.h */,
 				B94DB57D3F52E7DC692E83635DC5640B /* BWTipperTool.m */,
-				6BFA0F097348445D7F391739580DA39F /* BWTipperConfigure.h */,
-				ABD03765E574330A93A53C73B5A2A9CE /* BWTipperConfigure.m */,
 				885A6DB102B90703A2F70DE867A1B72A /* Pod */,
 				D8A1EC95C038346008FB996C1A8495C2 /* Resources */,
 				7C8EC175837EA86B47BCEAE29DE04B9F /* Support Files */,
