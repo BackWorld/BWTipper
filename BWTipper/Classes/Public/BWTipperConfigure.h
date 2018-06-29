@@ -35,6 +35,12 @@
 @property(nonatomic)BOOL cornerRoundOn;
 
 
+/**
+ 蒙层透明度
+ */
+@property(nonatomic)CGFloat backgroundDimmedAlpha;
+
+
 #pragma mark - Method
 
 /**

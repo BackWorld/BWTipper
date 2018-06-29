@@ -59,15 +59,15 @@
 #pragma mark HUD Loading Images
 + (void)hudLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
                             duration: (NSTimeInterval)duration{
-    [self hudLoadingWithAnimatedImages:images duration:duration message:nil backgroundDimmed:NO timeout:0];
+    [self hudLoadingWithAnimatedImages:images duration:duration message:nil backgroundDimmed:NO wrapperDisplayOn:YES timeout:0];
 }
 
 + (void)hudLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
                             duration: (NSTimeInterval)duration
                              message: (NSString *)message
                     backgroundDimmed: (BOOL)backgroundDimmed
-                             timeout: (NSTimeInterval)timeout{
-    [BWTipperHUD showLoadingWithAnimatedImages:images duration:duration message:message backgroundDimmed:backgroundDimmed timeout:timeout];
+                    wrapperDisplayOn:(BOOL)wrapperDisplayOn timeout:(NSTimeInterval)timeout{
+    [BWTipperHUD showLoadingWithAnimatedImages:images duration:duration message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:wrapperDisplayOn timeout:timeout];
 }
 
 

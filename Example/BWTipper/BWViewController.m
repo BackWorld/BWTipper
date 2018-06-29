@@ -59,15 +59,16 @@
 - (IBAction)showHUD:(id)sender {
 //    [BWTipper hudWithStyle:BWTipperStyleSuccess];
     
-    [BWTipper hudLoadingWithMessage:@"LongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessage" backgroundDimmed:NO];
+//    [BWTipper hudLoadingWithMessage:@"LongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessage" backgroundDimmed:NO];
     
-    return;
+//    return;
+//    BWTipperConfigure.defaultConfigure.backgroundDimmedAlpha = 0.8;
     NSMutableArray *images = [NSMutableArray new];
     for (int i=3; i>=0; i--) {
         NSString *icon = [NSString stringWithFormat:@"number-%d.png", i];
         [images addObject:[UIImage imageNamed:icon]];
     }
-    [BWTipper hudLoadingWithAnimatedImages:images duration:0.5];
+    [BWTipper hudLoadingWithAnimatedImages:images duration:0.5 message:nil backgroundDimmed:YES wrapperDisplayOn:NO timeout:2];
 }
 
 - (IBAction)showSnackbar:(id)sender {

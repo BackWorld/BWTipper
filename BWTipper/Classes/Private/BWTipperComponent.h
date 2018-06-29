@@ -48,4 +48,6 @@
 
 - (void)playHideAnimation;
 
+- (void)clearWrapperViewBackgroundColor;
+
 @end

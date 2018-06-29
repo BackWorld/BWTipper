@@ -43,10 +43,10 @@
 #pragma mark - Interface
 + (void)showComponent: (BWTipperComponent *)component{
     // 移除其它
-    [BWTipperComponent dismissComponentByClass:component.class animated:NO];
+    [self dismissComponentByClass:component.class animated:NO];
     
     // 添加当前
-    [BWTipperTool.tipperKeyWindow addSubview:component];
+    [kWindow addSubview:component];
 }
 
 - (void)playDisplayAnimation{
@@ -55,6 +55,17 @@
 
 - (void)playHideAnimation{
     
+}
+
+- (void)clearWrapperViewBackgroundColor{
+    for (UIView *subview in self.wrapperView.subviews) {
+        if ([subview isKindOfClass:NSClassFromString(@"_UIVisualEffectBackdropView")]) {
+            subview.hidden = YES;
+        }
+        else{
+            subview.backgroundColor = nil;
+        }
+    }
 }
 
 #pragma mark - Lifecycle
@@ -126,7 +137,6 @@
     if (!_wrapperView) {
         _wrapperView = [UIVisualEffectView new];
         _wrapperView.alpha = 0;
-        _wrapperView.contentView.backgroundColor = [BWTipperConfigure.defaultConfigure.themeColor colorWithAlphaComponent:0.5];
         
         UIBlurEffectStyle style = BWTipperConfigure.defaultConfigure.isLightTheme
         ? UIBlurEffectStyleExtraLight

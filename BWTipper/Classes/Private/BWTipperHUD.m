@@ -84,12 +84,16 @@
                              duration:(NSTimeInterval)duration
                               message:(NSString *)message
                      backgroundDimmed:(BOOL)backgroundDimmed
+                     wrapperDisplayOn:(BOOL)wrapperDisplayOn
                               timeout:(NSTimeInterval)timeout{
     BWTipperHUD *hud = [self new];
     
     hud.userInteractionEnabled = backgroundDimmed;
     hud.message = message;
     hud.delay = CGFLOAT_MAX;
+    if (!wrapperDisplayOn) {
+        [hud clearWrapperViewBackgroundColor];
+    }
     
     [hud showLoadingWithAnimatedImages:images duration:duration timeout:timeout];
 }
@@ -106,7 +110,7 @@
     CGFloat space = kLayoutSpace20;
     CGFloat wrapperW = kWrapperViewMinWidth;
     CGFloat messageW = CGRectGetWidth(self.messageLabel.bounds);
-    CGFloat messageH = 0;
+    CGFloat messageH = CGRectGetHeight(self.messageLabel.bounds);
     
     if (messageW > kWrapperViewMaxWidth) {
         wrapperW = kWrapperViewMaxWidth;
@@ -211,7 +215,7 @@
 #pragma mark - Setters
 - (void)setUserInteractionEnabled:(BOOL)userInteractionEnabled{
     if (userInteractionEnabled) {
-        self.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:0.3];
+        self.backgroundColor = [UIColor.blackColor colorWithAlphaComponent:BWTipperConfigure.defaultConfigure.backgroundDimmedAlpha];
     }
     
     [super setUserInteractionEnabled:userInteractionEnabled];
@@ -239,6 +243,7 @@
     UILabel *label = [super messageLabel];
     label.textAlignment = NSTextAlignmentCenter;
     label.numberOfLines = 2;
+    label.font = [UIFont boldSystemFontOfSize:label.font.pointSize];
     
     return label;
 }

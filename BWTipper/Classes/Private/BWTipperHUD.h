@@ -32,6 +32,7 @@
                              duration:(NSTimeInterval)duration
                               message:(NSString *)message
                      backgroundDimmed:(BOOL)backgroundDimmed
+                     wrapperDisplayOn:(BOOL)wrapperDisplayOn
                               timeout:(NSTimeInterval)timeout;
 
 @end
