@@ -10,6 +10,17 @@
 
 @implementation BWTipperConfigure (Private)
 
+- (NSArray<UIImage *> *)loadingIcons{
+    NSMutableArray *icons = [NSMutableArray new];
+    for (int i=0; i<35; i++) {
+        NSString *name = [NSString stringWithFormat:@"loading-%d.png", i];
+        UIImage *image = [BWTipperTool bundleImage:name];
+        image = [BWTipperTool image:image withTintColor:self.themeRevertedColor];
+        [icons addObject:image];
+    }
+    return icons;
+}
+
 - (UIImage *)iconWithStyle:(BWTipperStyle)style{
     UIImage *image = nil;
     switch (style) {

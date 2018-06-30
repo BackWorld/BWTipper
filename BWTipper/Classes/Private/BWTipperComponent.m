@@ -41,12 +41,12 @@
 }
 
 #pragma mark - Interface
-+ (void)showComponent: (BWTipperComponent *)component{
+- (void)show{
     // 移除其它
-    [self dismissComponentByClass:component.class animated:NO];
+    [BWTipperComponent dismissComponentByClass:self.class animated:NO];
     
     // 添加当前
-    [kWindow addSubview:component];
+    [kWindow addSubview:self];
 }
 
 - (void)playDisplayAnimation{
@@ -105,12 +105,6 @@
 }
 
 #pragma mark - Setters
-- (void)setImage:(UIImage *)image{
-    self.imageView.image = image;
-    
-    _image = image;
-}
-
 - (void)setDelay:(NSTimeInterval)delay{
     _delay = delay ?: 1.0;
 }

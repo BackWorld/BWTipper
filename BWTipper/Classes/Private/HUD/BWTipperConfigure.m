@@ -24,7 +24,7 @@
     if (self) {
         self.theme = BWTipperThemeDark;
         self.cornerRoundOn = YES;
-        self.shadowOn = YES;
+        self.shadowOn = NO;
         self.backgroundDimmedAlpha = 0.3;
     }
     return self;

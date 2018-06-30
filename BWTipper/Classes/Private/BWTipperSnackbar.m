@@ -56,7 +56,7 @@
     BWTipperSnackbar *bar = [BWTipperSnackbar new];
     
     bar.message = message;
-    bar.image = image;
+    bar.imageView.image = image;
     bar.actionHandler = actionHandler;
     bar.delay = delay;
     if (action.length > 0) {
@@ -66,7 +66,7 @@
         [bar.button sizeToFit];
     }
     
-    [self showComponent:bar];
+    [bar show];
 }
 
 #pragma mark - Overrides

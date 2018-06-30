@@ -55,6 +55,9 @@
                     wrapperDisplayOn: (BOOL)wrapperDisplayOn
                              timeout: (NSTimeInterval)timeout;
 
++ (void)hudLoadingWithProgressing: (void(^)(BWTipperHUDLoadingProgressHandler handler))progressHandler
+                  backgroundDimmed: (BOOL)backgroundDimmed;
+
 #pragma mark - Toast
 
 + (void)toastWithMessage: (NSString *)message;

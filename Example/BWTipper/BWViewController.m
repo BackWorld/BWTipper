@@ -40,6 +40,24 @@
     [BWTipper dismiss];
 }
 
+
+float progress;
+- (IBAction)showProgress:(UISegmentedControl *)sender{
+    [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
+        progress += 0.01;
+        
+        [BWTipper hudLoadingWithProgressing:^(BWTipperHUDLoadingProgressHandler handler) {
+            handler(0.1, [NSString stringWithFormat:@"%.f %%", (100 * progress)]);
+        } backgroundDimmed:YES];
+        
+        if (progress >= 1) {
+            progress = 0;
+            [timer invalidate];
+            [BWTipper dismiss];
+        }
+    }];
+}
+
 - (IBAction)changeTheme:(UISegmentedControl *)sender {
     
     BWTipperConfigure.defaultConfigure.theme = sender.selectedSegmentIndex;
@@ -59,7 +77,7 @@
 - (IBAction)showHUD:(id)sender {
 //    [BWTipper hudWithStyle:BWTipperStyleSuccess];
     
-//    [BWTipper hudLoadingWithMessage:@"LongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessage" backgroundDimmed:NO];
+//    [BWTipper hudLoadingWithMessage:nil backgroundDimmed:NO];
     
 //    return;
 //    BWTipperConfigure.defaultConfigure.backgroundDimmedAlpha = 0.8;

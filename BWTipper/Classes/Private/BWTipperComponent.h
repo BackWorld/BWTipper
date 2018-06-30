@@ -29,13 +29,12 @@
 @property(nonatomic, readonly)CGSize imageViewSize;
 @property(nonatomic)CGFloat wrapperCornerRadius;
 @property(nonatomic, copy)NSString *message;
-@property(nonatomic, strong)UIImage *image;
 @property(nonatomic)NSTimeInterval delay;
 
 @property(nonatomic)BOOL isAnimating;
 @property(nonatomic, strong, readonly)UIWindow *keyWindow;
 
-+ (void)showComponent: (BWTipperComponent *)component;
+- (void)show;
 
 + (void)dismissComponentByClass: (Class)componentClass
                        animated: (BOOL)animated;

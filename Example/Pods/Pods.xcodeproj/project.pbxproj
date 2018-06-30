@@ -7,37 +7,85 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B28E4DECA0C120CC4322862FEE350EC /* BWTipperDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = FC302710189D27504FF004D0E6B0E279 /* BWTipperDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0E0BB3AECA6696CFA945CE2A87BDE46B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
-		140F7965E2B819BE5960CF59DDF8ECFC /* BWTipperHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = C1B1BDEFB23DA5BE7EB81155B9CFD44E /* BWTipperHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		1471648986B1806CEEE7824BA100FE72 /* BWTipper.h in Headers */ = {isa = PBXBuildFile; fileRef = 7711195CD119FA4E3D23C28AB094E5A1 /* BWTipper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		15D42D1C95D1DF28EB6F90C3BB1F3B3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		175DA49ED5E8A79FF41A62DCCE81D3F1 /* BWTipperComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 23E7AB5CC43057222B5435AEF43E61CA /* BWTipperComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		0642B0E35CCC1D39DCE0415F2AB19947 /* loading-34.png in Resources */ = {isa = PBXBuildFile; fileRef = CBA850A15D75BF426CA37145AA1458D8 /* loading-34.png */; };
+		06C43E20C1C226125722DF1A4EEE4F18 /* BWTipperHUD+Images.m in Sources */ = {isa = PBXBuildFile; fileRef = C3296C9C1483DE042E00B1DE69199A7E /* BWTipperHUD+Images.m */; };
+		0A880C8DE2262009975289A3CB0E5771 /* loading-23.png in Resources */ = {isa = PBXBuildFile; fileRef = B6A2530DF9088786A4057C239D812EA2 /* loading-23.png */; };
+		0E525F4BD38D2688A1B274BE3A2B56A4 /* BWTipperDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = B072911C99C05AB3F89A654F2EA565B9 /* BWTipperDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		11CB50035EEDB155E073D782D5D165BD /* BWTipper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8574752B6212E13E1CBDD00092F136AD /* BWTipper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		15C8FB40BDE9BF488798F8E28D9C1FF4 /* loading-17.png in Resources */ = {isa = PBXBuildFile; fileRef = 556D347CB0EBAA7A643268B19B164B86 /* loading-17.png */; };
 		1E801D0E3D97382077DE32D9CDE05405 /* Pods-BWTipper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F69769D77089ADA8A59AD258458D2B8D /* Pods-BWTipper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F19B452ED0AD02693964AF8F4008AE7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
 		1F8D28580AFEF4B78FB3245E9FCBF23F /* Pods-BWTipper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 782AB4085305BFAF83AB182FAA4F0116 /* Pods-BWTipper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		270F8B3B2CC6BED58246E1925BED9E34 /* BWTipperSnackbar.m in Sources */ = {isa = PBXBuildFile; fileRef = E99B21F9A976C83F295B3A3590B942C7 /* BWTipperSnackbar.m */; };
+		20E6ED19F346D1F9C409369AE410B2A5 /* BWTipper.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C1631087429D22E1F3B0BC4F0C0A4C /* BWTipper.m */; };
+		29CCE6E250712AC23441BF4E33F179BA /* BWTipper.h in Headers */ = {isa = PBXBuildFile; fileRef = 80BE8161A608BA4CD0B8C0BF1FD0987B /* BWTipper.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29D2470CA1BBFC9F1D9FEA5A31A5DAA6 /* BWTipperComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A54906B05C83A3649BA2CA6C6B85A151 /* BWTipperComponent.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		315C60A787DBBC2722591ED7B71427E0 /* BWTipperToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B72D6A0BE87EA7D17775F1452AEFF05 /* BWTipperToast.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		329ABAB87989505A038214FD74D7CD0D /* loading-8.png in Resources */ = {isa = PBXBuildFile; fileRef = 4D959C5CA7F774B09D83480DF3296944 /* loading-8.png */; };
+		345A584D5F206460FBBD32D0D51D836F /* loading-28.png in Resources */ = {isa = PBXBuildFile; fileRef = 645DFCCB991913CCF36239A5FFE40F35 /* loading-28.png */; };
+		3938FAB79937F960FF1CB63B9AB0AB60 /* BWTipperHUD+Style.h in Headers */ = {isa = PBXBuildFile; fileRef = 6141C79214DB24509175454833E45C8F /* BWTipperHUD+Style.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3A495A01BAD59B704EEDD7A5B674FB8C /* BWTipperSnackbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 80395C1864B8B100F506F82CEAF0DB15 /* BWTipperSnackbar.m */; };
 		3AD1AD731363697139325BE197E4E40B /* Pods-BWTipper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 23F3E70EBAABE6CD3725A1DB9D241003 /* Pods-BWTipper_Tests-dummy.m */; };
-		41AB7FF300042981BF08AB8A268ED8A7 /* BWTipperComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C2A90695E97721E28DF21D74CA00003 /* BWTipperComponent.m */; };
-		435311CD2AE2B4109275BBEC337A2D43 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		588C9C6FC670B7DFC892B0E21439AEFE /* BWTipperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = BBFFF87A0469B88D6FE80703F4F16965 /* BWTipperTool.m */; };
-		6A94ECE6545120C9EBFCEE696DF8A0AC /* BWTipperConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C4A0ECD8607EF7C5FBD5B91279D3926 /* BWTipperConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6DEE7240EE09E6F6FF5B0F390A895F31 /* BWTipperToast.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A80E0D62B8A583905526B2197B54BD /* BWTipperToast.m */; };
-		92F1C66C2CFA53F1B1E03A43D9A5C7E4 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = C669205B63D0EF08FEE49906D9DDD38A /* success.png */; };
-		95A410AF116DD6D5C9F6459E531698F4 /* BWTipper.m in Sources */ = {isa = PBXBuildFile; fileRef = B5329328D35AE00EC9AC2C99B8516393 /* BWTipper.m */; };
-		97ACD3E2E94DE8316836EA0F2CF92B93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
-		9D2CA6D36484A3712A423E2E4E8683A8 /* BWTipperTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 9589A7EDC652208E4D8BE969A648150A /* BWTipperTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A2936290947058AB01C6D129225A40AC /* BWTipperHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = F30EA6913881DB455FAF5D818B832A6A /* BWTipperHUD.m */; };
+		3D70B316F324CEFBA149E27BD4485558 /* loading-13.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E46AB4D472205A18E16142A72D2223A /* loading-13.png */; };
+		3D8D1F28D8C7F488DE84E71AFEA1F3B3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */; };
+		3DC58ABEF5F239808C214892AEEB1D17 /* loading-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 3C8D90C2048653C4396E3A0F3B473333 /* loading-3.png */; };
+		3E01700A033A6CC9197E1B9A03949EB6 /* loading-15.png in Resources */ = {isa = PBXBuildFile; fileRef = 40176252337E8E54D0A0CD53E8529F79 /* loading-15.png */; };
+		47159E6E34751BF04FAAC942C13809A6 /* loading-29.png in Resources */ = {isa = PBXBuildFile; fileRef = 948212D430309A1DD72BA12E3B603460 /* loading-29.png */; };
+		4840F9C53E4186743DA152F18DD84076 /* loading-7.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E0C686B0ECB0CB5329D47474A00572 /* loading-7.png */; };
+		48BDF2309288F26719309E79D5DDCF92 /* loading-1.png in Resources */ = {isa = PBXBuildFile; fileRef = A12425816D01FF6CE8477C2E8BD92BF3 /* loading-1.png */; };
+		4BBFD8470B76B29BB35476B972633E09 /* loading-32.png in Resources */ = {isa = PBXBuildFile; fileRef = F54386311FFE744749D4C6639FA9D37C /* loading-32.png */; };
+		4EFC436952B0EEF19462CC30EBE7DD3C /* BWTipperHUD+Layout.h in Headers */ = {isa = PBXBuildFile; fileRef = 462EAA553DB2A04CB3C354B89D6379A5 /* BWTipperHUD+Layout.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		521A08C176DB699AC4CBB0916A739024 /* loading-18.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B2C3715152232CE1FECD402E9C341AB /* loading-18.png */; };
+		587260B84B250E5BFBF25775816F19F0 /* BWTipperHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 405328D63CC101B66E102EBFF1B8C9AE /* BWTipperHUD.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5F119F6C925CFF94CB9CFA9227C5D074 /* BWTipperTool.h in Headers */ = {isa = PBXBuildFile; fileRef = 06657315ACAB45254D88F54EA03FEF48 /* BWTipperTool.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5FB689D0C7A2617EB7AFB81D1CCA70A3 /* loading-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 2EEB92DF5C1740FB1CBB71D8EF2602CD /* loading-24.png */; };
+		6A383CEEECA9E7E18633894D13A489C0 /* BWTipper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 69C81960F83369198820D72327B27A7D /* BWTipper-dummy.m */; };
+		6ACBFCAB92519ADD8B8F0E6F4A4E1D7A /* BWTipper.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */; };
+		72BEB7B897F14A3C461CB61B4E52A575 /* loading-26.png in Resources */ = {isa = PBXBuildFile; fileRef = 9758DB0A16F2F33D2454BE286A725268 /* loading-26.png */; };
+		77BBD49241D55807B654FE0BA282875B /* BWTipperSnackbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D73391F2492393FDD7FDD52A283DC8 /* BWTipperSnackbar.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		7FACE9B43FA49CB7158284472717A9E9 /* BWTipperHUD+Progress.m in Sources */ = {isa = PBXBuildFile; fileRef = C94A4AA28E1B8A6FB72EDA5F1E0D29BD /* BWTipperHUD+Progress.m */; };
+		7FED116EEF69651C8E775F5712E31C9B /* loading-14.png in Resources */ = {isa = PBXBuildFile; fileRef = 2E9157E35349F21E1FB13E43D1CEFDB9 /* loading-14.png */; };
+		865277BBD956FC70BFFAC82903A4E96E /* loading-27.png in Resources */ = {isa = PBXBuildFile; fileRef = B749BB42A930A87A4C078E2F84B3BBB6 /* loading-27.png */; };
+		87445F651465B4FE8687C8A49BBDC7C5 /* loading-12.png in Resources */ = {isa = PBXBuildFile; fileRef = 3316BCA35DA5D43C8859E32EC5177579 /* loading-12.png */; };
+		8872129E0FC04D7DDD87364DE24D803C /* loading-31.png in Resources */ = {isa = PBXBuildFile; fileRef = C06871AC2C8C056C75E30F94C2BFD56E /* loading-31.png */; };
+		88EF465335D70F0B72FBC9A68D7CDA7F /* loading-2.png in Resources */ = {isa = PBXBuildFile; fileRef = CC8A9C581A9E6EFE689842DB9B576AB6 /* loading-2.png */; };
+		895CE9EFC7A1F50B84E1AE16D8A612DA /* BWTipperHUD+Loading.h in Headers */ = {isa = PBXBuildFile; fileRef = 488DDFF87A582BFC794801D27FE71C95 /* BWTipperHUD+Loading.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		8EB64918971839CAE85B16E18AD96A61 /* loading-25.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B8029584B2019E6598547455C8AD3B1 /* loading-25.png */; };
+		958D8C29D0F39A1F83FF0A3DE6F8EAA1 /* BWTipperHUDHeaders.h in Headers */ = {isa = PBXBuildFile; fileRef = F82453F58AE189FC3A2BD4474FCC7631 /* BWTipperHUDHeaders.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		967D94EA9696D1345135E63D2E9C350C /* loading-16.png in Resources */ = {isa = PBXBuildFile; fileRef = 201B08A5C21A36E595B6E2FB26C55F9D /* loading-16.png */; };
+		969AA7E1D24A9D785A41E3A8B55FDB49 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		96E39080AC3A45CE11CEF8E1E4C391AE /* BWTipperConfigure+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = F760414A567D4B88B979398BD5378D0E /* BWTipperConfigure+Private.m */; };
+		9C56A0266B536138F4568B152CAAF440 /* loading-11.png in Resources */ = {isa = PBXBuildFile; fileRef = D21147121E5E8340BF8905E507A7FCFB /* loading-11.png */; };
+		A31B7D7A3DC2094999D549A77095F775 /* loading-5.png in Resources */ = {isa = PBXBuildFile; fileRef = B4D468261D825077C3E120BDDBB64C44 /* loading-5.png */; };
 		A989A55E1E710F1354BCCDAF63A96A66 /* Pods-BWTipper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3A2C123E453133026ABE2D9B1AAB2A /* Pods-BWTipper_Example-dummy.m */; };
-		AEE39B8E440CAC189480FC8BD169C3B0 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = C3D55D96C8C340C69EF9681F0F8F691C /* info.png */; };
-		B392B0F654112BAC6D60F7286C9ACC21 /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = A885FF4295AEEADD79535B08AF0BF270 /* error.png */; };
-		C403DDB7BD2DCAA4261ED6779386E942 /* BWTipperSnackbar.h in Headers */ = {isa = PBXBuildFile; fileRef = A82097FFB00D5674BDAAF4EF5089AFF6 /* BWTipperSnackbar.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C641C13740F61EBCD9E427F7258B14A1 /* BWTipperConfigure+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B9A4830F48B16751319C5327BF8F3CA /* BWTipperConfigure+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		DB6218132CD1E29A57664735ACA0CF8E /* BWTipper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F173E6410E3402658BB45C77F2B5F7E0 /* BWTipper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DDA1EF937E3DD85F6EC7C706C4376DF3 /* BWTipper.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */; };
-		E191811D9C1AFCA683B77F1B5A15D1DF /* BWTipper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E252BE630001C95D736C469EC518920C /* BWTipper-dummy.m */; };
-		E2B15E277BDD7C8A15C57EA9F441D1F4 /* BWTipperToast.h in Headers */ = {isa = PBXBuildFile; fileRef = 03CB922417D8F855AD0E3340E345234B /* BWTipperToast.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		E4686CFE220BE653CBCA60AA14C4E32C /* BWTipperConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = 55C08A3885CD293B9662173E0E4E62AF /* BWTipperConfigure.m */; };
-		F97FA1B443B22D64791D3B0C7D71A873 /* BWTipperConfigure+Private.m in Sources */ = {isa = PBXBuildFile; fileRef = 195BEC76C0973681CB6ACE6F5E787007 /* BWTipperConfigure+Private.m */; };
+		AA04826BA4374256016F83F071A0D1BF /* loading-9.png in Resources */ = {isa = PBXBuildFile; fileRef = 2FF87623A98725EA3F489C8F484E3A30 /* loading-9.png */; };
+		AA3347534C7BA0F607C64C142C0C1EBF /* loading-22.png in Resources */ = {isa = PBXBuildFile; fileRef = 89FF5D70A378BA645AE645E1322D5180 /* loading-22.png */; };
+		AA4FDBA588854342F72608EF1856E8DE /* BWTipperHUD+Animation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB46C4E84C837D04A739C24BA01F4D3D /* BWTipperHUD+Animation.m */; };
+		AF04E75A8BD218A9F7D795209B3C9070 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 908E902E026C5C22904CF9014A5604AD /* Foundation.framework */; };
+		B09EB1F5431BE3ADE1D9BF7F4DA590D3 /* loading-20.png in Resources */ = {isa = PBXBuildFile; fileRef = 08A3CD03D93CA1F2C51BBC7FA1CBF2F0 /* loading-20.png */; };
+		B335DA9243C85E55B3AB9FA89F1B7E86 /* BWTipperHUD+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB8BDF5F1F7B336E220B92FE016A8AC /* BWTipperHUD+Style.m */; };
+		B4CCB0EA6374F4EC71F4455F0023EC20 /* BWTipperConfigure.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B7A18B5654350305757A1327689C81 /* BWTipperConfigure.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B937EA857C08D78C70452CC1A8913F37 /* BWTipperHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 42A5B29FF8F6EEDC31B5B0B87531BA84 /* BWTipperHUD.m */; };
+		BAFB99A7CF8DEB2F419F377ABBBD78FB /* BWTipperConfigure+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = B554003D7DC0D1F60C799923BFE6016B /* BWTipperConfigure+Private.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		BB1964D08884E3C49C549DE7EA509458 /* success.png in Resources */ = {isa = PBXBuildFile; fileRef = 1F0B6B97368D7F5C24A601AB182AE6AE /* success.png */; };
+		C2AB8CE9484B22972BF13D8424420FC6 /* loading-4.png in Resources */ = {isa = PBXBuildFile; fileRef = F4C40E61763D362F18FF0A2D14C03192 /* loading-4.png */; };
+		C37CC00290BDFC27FAFE8993CB06E79E /* BWTipperHUD+Animation.h in Headers */ = {isa = PBXBuildFile; fileRef = 104138FAAE2E49648364366C5FBCBC30 /* BWTipperHUD+Animation.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C610AD3E2EA9B89982C5B70A6F6ED344 /* loading-30.png in Resources */ = {isa = PBXBuildFile; fileRef = CB04DB12EB08439ABA4EBB951C9C54AF /* loading-30.png */; };
+		C6CD334E4136E41B8C7DFEBA0893791B /* BWTipperHUD+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = FD67228170258A730A702A65B1412AB7 /* BWTipperHUD+Loading.m */; };
+		C7382C204FD932AB6489FEB5A31C4BBE /* error.png in Resources */ = {isa = PBXBuildFile; fileRef = D212CC5A68D0517A3774101B8612D02F /* error.png */; };
+		D3FA2BDC05E1C1E31DBA5DE41D087ED9 /* BWTipperHUD+Images.h in Headers */ = {isa = PBXBuildFile; fileRef = 3317FE0FD1E914FB9F8C2AAEEDFF44B8 /* BWTipperHUD+Images.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		D51D8B64B805A9980CB515F928CB7B29 /* loading-19.png in Resources */ = {isa = PBXBuildFile; fileRef = 9C1228449F9591BD825B591878C18C9B /* loading-19.png */; };
+		D5AC381F59AF443CDF451C06AA5DA184 /* loading-10.png in Resources */ = {isa = PBXBuildFile; fileRef = FA552DA18100488995A04CEB4B159870 /* loading-10.png */; };
+		D7B614E10A3FAD1AC4378F4610D729C8 /* BWTipperHUD+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E3CE203AF0B33F0618128A1FAB2FD7B /* BWTipperHUD+Layout.m */; };
+		DA18A89A7DA89AB0DE7EDC8169A09CE1 /* BWTipperToast.m in Sources */ = {isa = PBXBuildFile; fileRef = FB55A71D6A1FF67DE9929E608D773748 /* BWTipperToast.m */; };
+		DE948BE00813B2A369BB7FA7FBD963F1 /* BWTipperComponent.m in Sources */ = {isa = PBXBuildFile; fileRef = 19324A2F2AE8E0793E7F89678CB08624 /* BWTipperComponent.m */; };
+		E54C3AA532793E7DF8FF26BDA0C62121 /* BWTipperHUD+Progress.h in Headers */ = {isa = PBXBuildFile; fileRef = 784768221AEA55CB423D36489FD521A6 /* BWTipperHUD+Progress.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E918BC31EAD1CB8977596FB00AA81185 /* loading-0.png in Resources */ = {isa = PBXBuildFile; fileRef = 78A93124C2A57294487D51B08036D383 /* loading-0.png */; };
+		F38FD7161136E4D401E6156C26E45599 /* BWTipperTool.m in Sources */ = {isa = PBXBuildFile; fileRef = B499B1013FE211A62A5DCE4B0D2FD224 /* BWTipperTool.m */; };
+		F4B68ED92F260E264693DFB09D5353FB /* loading-33.png in Resources */ = {isa = PBXBuildFile; fileRef = 37B5C47C92EC5DE9C82948C74DB60DE1 /* loading-33.png */; };
+		F4C8454EF3827437A197ABFA8267EAE4 /* loading-21.png in Resources */ = {isa = PBXBuildFile; fileRef = EEB3B74F2BF513C9039408110C09C5A9 /* loading-21.png */; };
+		FA83025F240E0AAFEFB9F49339F53543 /* BWTipperConfigure.m in Sources */ = {isa = PBXBuildFile; fileRef = EFFE6D4D603F17A8F05B29487C3D81F9 /* BWTipperConfigure.m */; };
+		FB9452395928C7DFFF27C486B00B2E06 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = EDA2C6E09C860AEE61C6B2FF3F4136CB /* info.png */; };
+		FE019A76F381B7279A5AFAFFFE192808 /* loading-6.png in Resources */ = {isa = PBXBuildFile; fileRef = 83950FCD0474618DF2B80F751AD29935 /* loading-6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,96 +96,144 @@
 			remoteGlobalIDString = DAAE63AF83E64801B75335EB6962CA62;
 			remoteInfo = "Pods-BWTipper_Example";
 		};
-		8D65F29A984AA03DF50C18D2B048B84C /* PBXContainerItemProxy */ = {
+		81382646DD656C18EF3785F0A34D9BEF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4F7B2DBF31992E44F45E852C626652F8;
+			remoteGlobalIDString = E9431C7C8A6D7D454328F85A4A63D9C3;
 			remoteInfo = "BWTipper-BWTipper";
 		};
 		F7A65B8E7E227C0C9ACC5D72C0ABB13B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 03EF802169BCFA94ECB124B7E233A163;
+			remoteGlobalIDString = 7E6449FAC22028FFB4AD503C0BD453A6;
 			remoteInfo = BWTipper;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		03539C9C0752146B3CF9C18BA412475B /* BWTipper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BWTipper.modulemap; sourceTree = "<group>"; };
-		03CB922417D8F855AD0E3340E345234B /* BWTipperToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperToast.h; sourceTree = "<group>"; };
-		054B54230C0B6A31C90F908478205124 /* BWTipper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BWTipper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		0C4A0ECD8607EF7C5FBD5B91279D3926 /* BWTipperConfigure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperConfigure.h; sourceTree = "<group>"; };
+		04E0C686B0ECB0CB5329D47474A00572 /* loading-7.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-7.png"; path = "BWTipper/Assets/loading-7.png"; sourceTree = "<group>"; };
+		06657315ACAB45254D88F54EA03FEF48 /* BWTipperTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperTool.h; sourceTree = "<group>"; };
+		08A3CD03D93CA1F2C51BBC7FA1CBF2F0 /* loading-20.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-20.png"; path = "BWTipper/Assets/loading-20.png"; sourceTree = "<group>"; };
 		0F3A2C123E453133026ABE2D9B1AAB2A /* Pods-BWTipper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BWTipper_Example-dummy.m"; sourceTree = "<group>"; };
-		195BEC76C0973681CB6ACE6F5E787007 /* BWTipperConfigure+Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperConfigure+Private.m"; sourceTree = "<group>"; };
+		104138FAAE2E49648364366C5FBCBC30 /* BWTipperHUD+Animation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Animation.h"; sourceTree = "<group>"; };
+		19324A2F2AE8E0793E7F89678CB08624 /* BWTipperComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperComponent.m; sourceTree = "<group>"; };
 		1A5A466E29E1440522736D1614EC72D6 /* BWTipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BWTipper.framework; path = BWTipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C2A90695E97721E28DF21D74CA00003 /* BWTipperComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperComponent.m; sourceTree = "<group>"; };
-		23E7AB5CC43057222B5435AEF43E61CA /* BWTipperComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperComponent.h; sourceTree = "<group>"; };
+		1CA23ED56E04456A4C52A775EA3FF5EB /* BWTipper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BWTipper.modulemap; sourceTree = "<group>"; };
+		1F0B6B97368D7F5C24A601AB182AE6AE /* success.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = success.png; path = BWTipper/Assets/success.png; sourceTree = "<group>"; };
+		201B08A5C21A36E595B6E2FB26C55F9D /* loading-16.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-16.png"; path = "BWTipper/Assets/loading-16.png"; sourceTree = "<group>"; };
 		23F3E70EBAABE6CD3725A1DB9D241003 /* Pods-BWTipper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BWTipper_Tests-dummy.m"; sourceTree = "<group>"; };
+		2A4E215AADD744056684BCF03597F071 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B5C900C81A4400E6390540D6EF70CAE /* Pods-BWTipper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BWTipper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		2E46AB4D472205A18E16142A72D2223A /* loading-13.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-13.png"; path = "BWTipper/Assets/loading-13.png"; sourceTree = "<group>"; };
+		2E9157E35349F21E1FB13E43D1CEFDB9 /* loading-14.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-14.png"; path = "BWTipper/Assets/loading-14.png"; sourceTree = "<group>"; };
+		2EEB92DF5C1740FB1CBB71D8EF2602CD /* loading-24.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-24.png"; path = "BWTipper/Assets/loading-24.png"; sourceTree = "<group>"; };
+		2FF87623A98725EA3F489C8F484E3A30 /* loading-9.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-9.png"; path = "BWTipper/Assets/loading-9.png"; sourceTree = "<group>"; };
+		3316BCA35DA5D43C8859E32EC5177579 /* loading-12.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-12.png"; path = "BWTipper/Assets/loading-12.png"; sourceTree = "<group>"; };
+		3317FE0FD1E914FB9F8C2AAEEDFF44B8 /* BWTipperHUD+Images.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Images.h"; sourceTree = "<group>"; };
 		333F61F67F1B4082606D45E46C5DEE89 /* Pods-BWTipper_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Tests-resources.sh"; sourceTree = "<group>"; };
+		37B5C47C92EC5DE9C82948C74DB60DE1 /* loading-33.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-33.png"; path = "BWTipper/Assets/loading-33.png"; sourceTree = "<group>"; };
+		3B72D6A0BE87EA7D17775F1452AEFF05 /* BWTipperToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperToast.h; sourceTree = "<group>"; };
+		3C8D90C2048653C4396E3A0F3B473333 /* loading-3.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-3.png"; path = "BWTipper/Assets/loading-3.png"; sourceTree = "<group>"; };
 		3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BWTipper.bundle; path = "BWTipper-BWTipper.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40176252337E8E54D0A0CD53E8529F79 /* loading-15.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-15.png"; path = "BWTipper/Assets/loading-15.png"; sourceTree = "<group>"; };
+		405328D63CC101B66E102EBFF1B8C9AE /* BWTipperHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperHUD.h; sourceTree = "<group>"; };
+		42A5B29FF8F6EEDC31B5B0B87531BA84 /* BWTipperHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperHUD.m; sourceTree = "<group>"; };
 		436D3D4292C237DA7467DBCE04905E8B /* Pods-BWTipper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Example.release.xcconfig"; sourceTree = "<group>"; };
-		46C4201403CA86EB5A5800EB6E335E12 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		49F10FBFCBD6700BDF46D0DC40D824EB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		462EAA553DB2A04CB3C354B89D6379A5 /* BWTipperHUD+Layout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Layout.h"; sourceTree = "<group>"; };
+		488DDFF87A582BFC794801D27FE71C95 /* BWTipperHUD+Loading.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Loading.h"; sourceTree = "<group>"; };
+		4B8029584B2019E6598547455C8AD3B1 /* loading-25.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-25.png"; path = "BWTipper/Assets/loading-25.png"; sourceTree = "<group>"; };
 		4D30FD5A7D2A924865EF045BE091A5ED /* Pods-BWTipper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BWTipper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		55C08A3885CD293B9662173E0E4E62AF /* BWTipperConfigure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperConfigure.m; sourceTree = "<group>"; };
+		4D959C5CA7F774B09D83480DF3296944 /* loading-8.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-8.png"; path = "BWTipper/Assets/loading-8.png"; sourceTree = "<group>"; };
+		556D347CB0EBAA7A643268B19B164B86 /* loading-17.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-17.png"; path = "BWTipper/Assets/loading-17.png"; sourceTree = "<group>"; };
 		5601FE2E145CE735B53279C1F0C563D5 /* Pods-BWTipper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		5629381BBEB282490CB5FF9A393BE5CE /* Pods_BWTipper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BWTipper_Example.framework; path = "Pods-BWTipper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C043FBF2EAC5BC65E1254AE62610580 /* Pods-BWTipper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		7711195CD119FA4E3D23C28AB094E5A1 /* BWTipper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipper.h; sourceTree = "<group>"; };
+		6141C79214DB24509175454833E45C8F /* BWTipperHUD+Style.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Style.h"; sourceTree = "<group>"; };
+		61C1631087429D22E1F3B0BC4F0C0A4C /* BWTipper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipper.m; sourceTree = "<group>"; };
+		645DFCCB991913CCF36239A5FFE40F35 /* loading-28.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-28.png"; path = "BWTipper/Assets/loading-28.png"; sourceTree = "<group>"; };
+		69C81960F83369198820D72327B27A7D /* BWTipper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipper-dummy.m"; sourceTree = "<group>"; };
+		7615A09687A29FEE573112D0F00416E0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
 		782AB4085305BFAF83AB182FAA4F0116 /* Pods-BWTipper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BWTipper_Example-umbrella.h"; sourceTree = "<group>"; };
-		7B9A4830F48B16751319C5327BF8F3CA /* BWTipperConfigure+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperConfigure+Private.h"; sourceTree = "<group>"; };
-		7C6B14BEBCAEC4D057F97C3C8659DFD5 /* BWTipper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipper-prefix.pch"; sourceTree = "<group>"; };
+		784768221AEA55CB423D36489FD521A6 /* BWTipperHUD+Progress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Progress.h"; sourceTree = "<group>"; };
+		78A93124C2A57294487D51B08036D383 /* loading-0.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-0.png"; path = "BWTipper/Assets/loading-0.png"; sourceTree = "<group>"; };
+		7B2C3715152232CE1FECD402E9C341AB /* loading-18.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-18.png"; path = "BWTipper/Assets/loading-18.png"; sourceTree = "<group>"; };
 		7D066CFCB98E83B8A27BBA99CE3FB466 /* Pods-BWTipper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BWTipper_Example.modulemap"; sourceTree = "<group>"; };
-		8C966803B97FD0467BAE22BEBCAA66FE /* BWTipper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BWTipper.xcconfig; sourceTree = "<group>"; };
+		7D9BA0A75941BC5406AF800D063A830E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7E3CE203AF0B33F0618128A1FAB2FD7B /* BWTipperHUD+Layout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperHUD+Layout.m"; sourceTree = "<group>"; };
+		80395C1864B8B100F506F82CEAF0DB15 /* BWTipperSnackbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperSnackbar.m; sourceTree = "<group>"; };
+		80BE8161A608BA4CD0B8C0BF1FD0987B /* BWTipper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipper.h; sourceTree = "<group>"; };
+		83950FCD0474618DF2B80F751AD29935 /* loading-6.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-6.png"; path = "BWTipper/Assets/loading-6.png"; sourceTree = "<group>"; };
+		8574752B6212E13E1CBDD00092F136AD /* BWTipper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipper-umbrella.h"; sourceTree = "<group>"; };
+		889FFE83004CB46882BCE4BD08B334FD /* BWTipper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BWTipper.xcconfig; sourceTree = "<group>"; };
+		89FF5D70A378BA645AE645E1322D5180 /* loading-22.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-22.png"; path = "BWTipper/Assets/loading-22.png"; sourceTree = "<group>"; };
 		8CEC817ED0B4DDF6EB118658C7445D18 /* Pods_BWTipper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BWTipper_Tests.framework; path = "Pods-BWTipper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9589A7EDC652208E4D8BE969A648150A /* BWTipperTool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperTool.h; sourceTree = "<group>"; };
+		948212D430309A1DD72BA12E3B603460 /* loading-29.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-29.png"; path = "BWTipper/Assets/loading-29.png"; sourceTree = "<group>"; };
+		9758DB0A16F2F33D2454BE286A725268 /* loading-26.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-26.png"; path = "BWTipper/Assets/loading-26.png"; sourceTree = "<group>"; };
+		99D73391F2492393FDD7FDD52A283DC8 /* BWTipperSnackbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperSnackbar.h; sourceTree = "<group>"; };
+		9A05BABA6E67A76E889EBA017AE7F271 /* BWTipper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BWTipper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C1228449F9591BD825B591878C18C9B /* loading-19.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-19.png"; path = "BWTipper/Assets/loading-19.png"; sourceTree = "<group>"; };
 		9D48AACB3DC2CCB2F2DF29C51CBBA586 /* Pods-BWTipper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Example-frameworks.sh"; sourceTree = "<group>"; };
-		A82097FFB00D5674BDAAF4EF5089AFF6 /* BWTipperSnackbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperSnackbar.h; sourceTree = "<group>"; };
+		9DA411EEA0550197C44D539C341C2AC3 /* BWTipper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipper-prefix.pch"; sourceTree = "<group>"; };
+		A12425816D01FF6CE8477C2E8BD92BF3 /* loading-1.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-1.png"; path = "BWTipper/Assets/loading-1.png"; sourceTree = "<group>"; };
+		A227FCCDED27F797945C397882E32765 /* ResourceBundle-BWTipper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BWTipper-Info.plist"; sourceTree = "<group>"; };
+		A54906B05C83A3649BA2CA6C6B85A151 /* BWTipperComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperComponent.h; sourceTree = "<group>"; };
 		A82C8C10769F223EC042DA5878EB2A00 /* Pods-BWTipper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Example-resources.sh"; sourceTree = "<group>"; };
-		A885FF4295AEEADD79535B08AF0BF270 /* error.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = error.png; path = BWTipper/Assets/error.png; sourceTree = "<group>"; };
 		AAEC5D1F82AD06A247F701CCF44D6830 /* Pods-BWTipper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BWTipper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		B2EC93FD12F863346B3DFF593596C0DD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B5329328D35AE00EC9AC2C99B8516393 /* BWTipper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipper.m; sourceTree = "<group>"; };
-		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BBFFF87A0469B88D6FE80703F4F16965 /* BWTipperTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperTool.m; sourceTree = "<group>"; };
-		C1B1BDEFB23DA5BE7EB81155B9CFD44E /* BWTipperHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperHUD.h; sourceTree = "<group>"; };
-		C3D55D96C8C340C69EF9681F0F8F691C /* info.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = info.png; path = BWTipper/Assets/info.png; sourceTree = "<group>"; };
-		C669205B63D0EF08FEE49906D9DDD38A /* success.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = success.png; path = BWTipper/Assets/success.png; sourceTree = "<group>"; };
+		B072911C99C05AB3F89A654F2EA565B9 /* BWTipperDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperDefines.h; sourceTree = "<group>"; };
+		B499B1013FE211A62A5DCE4B0D2FD224 /* BWTipperTool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperTool.m; sourceTree = "<group>"; };
+		B4D468261D825077C3E120BDDBB64C44 /* loading-5.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-5.png"; path = "BWTipper/Assets/loading-5.png"; sourceTree = "<group>"; };
+		B554003D7DC0D1F60C799923BFE6016B /* BWTipperConfigure+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperConfigure+Private.h"; sourceTree = "<group>"; };
+		B6A2530DF9088786A4057C239D812EA2 /* loading-23.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-23.png"; path = "BWTipper/Assets/loading-23.png"; sourceTree = "<group>"; };
+		B749BB42A930A87A4C078E2F84B3BBB6 /* loading-27.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-27.png"; path = "BWTipper/Assets/loading-27.png"; sourceTree = "<group>"; };
+		BB46C4E84C837D04A739C24BA01F4D3D /* BWTipperHUD+Animation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperHUD+Animation.m"; sourceTree = "<group>"; };
+		BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		C06871AC2C8C056C75E30F94C2BFD56E /* loading-31.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-31.png"; path = "BWTipper/Assets/loading-31.png"; sourceTree = "<group>"; };
+		C3296C9C1483DE042E00B1DE69199A7E /* BWTipperHUD+Images.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperHUD+Images.m"; sourceTree = "<group>"; };
+		C94A4AA28E1B8A6FB72EDA5F1E0D29BD /* BWTipperHUD+Progress.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperHUD+Progress.m"; sourceTree = "<group>"; };
+		CB04DB12EB08439ABA4EBB951C9C54AF /* loading-30.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-30.png"; path = "BWTipper/Assets/loading-30.png"; sourceTree = "<group>"; };
+		CBA850A15D75BF426CA37145AA1458D8 /* loading-34.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-34.png"; path = "BWTipper/Assets/loading-34.png"; sourceTree = "<group>"; };
+		CC8A9C581A9E6EFE689842DB9B576AB6 /* loading-2.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-2.png"; path = "BWTipper/Assets/loading-2.png"; sourceTree = "<group>"; };
+		CEB8BDF5F1F7B336E220B92FE016A8AC /* BWTipperHUD+Style.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperHUD+Style.m"; sourceTree = "<group>"; };
+		D21147121E5E8340BF8905E507A7FCFB /* loading-11.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-11.png"; path = "BWTipper/Assets/loading-11.png"; sourceTree = "<group>"; };
+		D212CC5A68D0517A3774101B8612D02F /* error.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = error.png; path = BWTipper/Assets/error.png; sourceTree = "<group>"; };
 		D48E3713EDF345B69C8DB9E731C19523 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D9D0CC287ACA80F9D67AF7055D97B298 /* Pods-BWTipper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		DE51239D872504350E87273A0D95865A /* Pods-BWTipper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BWTipper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		DF55FB8D4579BD0CF3B215B95B863178 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E252BE630001C95D736C469EC518920C /* BWTipper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipper-dummy.m"; sourceTree = "<group>"; };
 		E500AA7FBB7A0B845F3FED48164D6B8C /* Pods-BWTipper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		E99B21F9A976C83F295B3A3590B942C7 /* BWTipperSnackbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperSnackbar.m; sourceTree = "<group>"; };
-		F173E6410E3402658BB45C77F2B5F7E0 /* BWTipper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipper-umbrella.h"; sourceTree = "<group>"; };
-		F30EA6913881DB455FAF5D818B832A6A /* BWTipperHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperHUD.m; sourceTree = "<group>"; };
-		F46BF41A37733285D60916036CDD1929 /* ResourceBundle-BWTipper-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BWTipper-Info.plist"; sourceTree = "<group>"; };
+		EDA2C6E09C860AEE61C6B2FF3F4136CB /* info.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = info.png; path = BWTipper/Assets/info.png; sourceTree = "<group>"; };
+		EEB3B74F2BF513C9039408110C09C5A9 /* loading-21.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-21.png"; path = "BWTipper/Assets/loading-21.png"; sourceTree = "<group>"; };
+		EFFE6D4D603F17A8F05B29487C3D81F9 /* BWTipperConfigure.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperConfigure.m; sourceTree = "<group>"; };
+		F3B7A18B5654350305757A1327689C81 /* BWTipperConfigure.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperConfigure.h; sourceTree = "<group>"; };
+		F4C40E61763D362F18FF0A2D14C03192 /* loading-4.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-4.png"; path = "BWTipper/Assets/loading-4.png"; sourceTree = "<group>"; };
+		F54386311FFE744749D4C6639FA9D37C /* loading-32.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-32.png"; path = "BWTipper/Assets/loading-32.png"; sourceTree = "<group>"; };
 		F69769D77089ADA8A59AD258458D2B8D /* Pods-BWTipper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BWTipper_Tests-umbrella.h"; sourceTree = "<group>"; };
-		F7A80E0D62B8A583905526B2197B54BD /* BWTipperToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperToast.m; sourceTree = "<group>"; };
-		FC302710189D27504FF004D0E6B0E279 /* BWTipperDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperDefines.h; sourceTree = "<group>"; };
+		F760414A567D4B88B979398BD5378D0E /* BWTipperConfigure+Private.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperConfigure+Private.m"; sourceTree = "<group>"; };
+		F82453F58AE189FC3A2BD4474FCC7631 /* BWTipperHUDHeaders.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperHUDHeaders.h; sourceTree = "<group>"; };
+		FA552DA18100488995A04CEB4B159870 /* loading-10.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-10.png"; path = "BWTipper/Assets/loading-10.png"; sourceTree = "<group>"; };
+		FB55A71D6A1FF67DE9929E608D773748 /* BWTipperToast.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperToast.m; sourceTree = "<group>"; };
+		FD67228170258A730A702A65B1412AB7 /* BWTipperHUD+Loading.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperHUD+Loading.m"; sourceTree = "<group>"; };
 		FD76ECCF0FDF366F691DFE1500AA83F0 /* Pods-BWTipper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BWTipper_Tests.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3068073BE79C085E3D549A619A33456C /* Frameworks */ = {
+		197BD4A4869010D30CA91D0E7564DD1A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F19B452ED0AD02693964AF8F4008AE7 /* Foundation.framework in Frameworks */,
+				3D8D1F28D8C7F488DE84E71AFEA1F3B3 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		930B56EF7EF3E8E79C12564D74A50F0E /* Frameworks */ = {
+		3B71B021C21654E159BE352C35CE3261 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97ACD3E2E94DE8316836EA0F2CF92B93 /* Foundation.framework in Frameworks */,
-				0E0BB3AECA6696CFA945CE2A87BDE46B /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,7 +241,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				435311CD2AE2B4109275BBEC337A2D43 /* Foundation.framework in Frameworks */,
+				AF04E75A8BD218A9F7D795209B3C9070 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,31 +249,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15D42D1C95D1DF28EB6F90C3BB1F3B3F /* Foundation.framework in Frameworks */,
+				969AA7E1D24A9D785A41E3A8B55FDB49 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2CCF1DA41263299E7EBBE56E86F8DB95 /* Private */ = {
+		10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				23E7AB5CC43057222B5435AEF43E61CA /* BWTipperComponent.h */,
-				1C2A90695E97721E28DF21D74CA00003 /* BWTipperComponent.m */,
-				7B9A4830F48B16751319C5327BF8F3CA /* BWTipperConfigure+Private.h */,
-				195BEC76C0973681CB6ACE6F5E787007 /* BWTipperConfigure+Private.m */,
-				C1B1BDEFB23DA5BE7EB81155B9CFD44E /* BWTipperHUD.h */,
-				F30EA6913881DB455FAF5D818B832A6A /* BWTipperHUD.m */,
-				A82097FFB00D5674BDAAF4EF5089AFF6 /* BWTipperSnackbar.h */,
-				E99B21F9A976C83F295B3A3590B942C7 /* BWTipperSnackbar.m */,
-				03CB922417D8F855AD0E3340E345234B /* BWTipperToast.h */,
-				F7A80E0D62B8A583905526B2197B54BD /* BWTipperToast.m */,
-				9589A7EDC652208E4D8BE969A648150A /* BWTipperTool.h */,
-				BBFFF87A0469B88D6FE80703F4F16965 /* BWTipperTool.m */,
+				908E902E026C5C22904CF9014A5604AD /* Foundation.framework */,
+				BC2C02191C153C1554B35DEE8B2D09D4 /* UIKit.framework */,
 			);
-			name = Private;
-			path = BWTipper/Classes/Private;
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		335593E87F1C8BB996562DF4B3ED48DB /* Pods-BWTipper_Example */ = {
@@ -198,17 +283,19 @@
 			path = "Target Support Files/Pods-BWTipper_Example";
 			sourceTree = "<group>";
 		};
-		37B97D1A89F842B3861802241031AE4E /* BWTipper */ = {
+		3B88B040750F85B2D4D0AE002EDBFDA4 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6FBCD61DAE4CF9A2919139695E6DD041 /* Pod */,
-				2CCF1DA41263299E7EBBE56E86F8DB95 /* Private */,
-				9B0F934316E71A13C42CC3E40FB7050E /* Public */,
-				65E6A2712C82AA574518763E22B84A72 /* Resources */,
-				953C5CDAB42A96009A6E016D4E6C275D /* Support Files */,
+				1CA23ED56E04456A4C52A775EA3FF5EB /* BWTipper.modulemap */,
+				889FFE83004CB46882BCE4BD08B334FD /* BWTipper.xcconfig */,
+				69C81960F83369198820D72327B27A7D /* BWTipper-dummy.m */,
+				9DA411EEA0550197C44D539C341C2AC3 /* BWTipper-prefix.pch */,
+				8574752B6212E13E1CBDD00092F136AD /* BWTipper-umbrella.h */,
+				2A4E215AADD744056684BCF03597F071 /* Info.plist */,
+				A227FCCDED27F797945C397882E32765 /* ResourceBundle-BWTipper-Info.plist */,
 			);
-			name = BWTipper;
-			path = ../..;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/BWTipper";
 			sourceTree = "<group>";
 		};
 		425E2CEB02ACE826B6023D24B29FC889 /* Targets Support Files */ = {
@@ -223,44 +310,39 @@
 		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+				10DEDCB394BAA0C7FEDEBE330207B074 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+		4DD76B54DB3145810504989B3B2291DC /* BWTipper */ = {
 			isa = PBXGroup;
 			children = (
-				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
-				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+				D964C58F6B7C3A910E1E4E1C2A56DA63 /* Pod */,
+				C460B2D2F08F29C06D8CA74F583F8DF9 /* Private */,
+				50472E09EFED8807EDE17E2E7A73797D /* Public */,
+				E8E01AF6F84EF2E451DD82D601599AF9 /* Resources */,
+				3B88B040750F85B2D4D0AE002EDBFDA4 /* Support Files */,
 			);
-			name = iOS;
+			name = BWTipper;
+			path = ../..;
 			sourceTree = "<group>";
 		};
-		65E6A2712C82AA574518763E22B84A72 /* Resources */ = {
+		50472E09EFED8807EDE17E2E7A73797D /* Public */ = {
 			isa = PBXGroup;
 			children = (
-				A885FF4295AEEADD79535B08AF0BF270 /* error.png */,
-				C3D55D96C8C340C69EF9681F0F8F691C /* info.png */,
-				C669205B63D0EF08FEE49906D9DDD38A /* success.png */,
+				80BE8161A608BA4CD0B8C0BF1FD0987B /* BWTipper.h */,
+				F3B7A18B5654350305757A1327689C81 /* BWTipperConfigure.h */,
+				B072911C99C05AB3F89A654F2EA565B9 /* BWTipperDefines.h */,
 			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		6FBCD61DAE4CF9A2919139695E6DD041 /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				054B54230C0B6A31C90F908478205124 /* BWTipper.podspec */,
-				46C4201403CA86EB5A5800EB6E335E12 /* LICENSE */,
-				49F10FBFCBD6700BDF46D0DC40D824EB /* README.md */,
-			);
-			name = Pod;
+			name = Public;
+			path = BWTipper/Classes/Public;
 			sourceTree = "<group>";
 		};
 		74E8C7C09AB076CA5DBB6073066FF0D4 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				37B97D1A89F842B3861802241031AE4E /* BWTipper */,
+				4DD76B54DB3145810504989B3B2291DC /* BWTipper */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -287,34 +369,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		953C5CDAB42A96009A6E016D4E6C275D /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				03539C9C0752146B3CF9C18BA412475B /* BWTipper.modulemap */,
-				8C966803B97FD0467BAE22BEBCAA66FE /* BWTipper.xcconfig */,
-				E252BE630001C95D736C469EC518920C /* BWTipper-dummy.m */,
-				7C6B14BEBCAEC4D057F97C3C8659DFD5 /* BWTipper-prefix.pch */,
-				F173E6410E3402658BB45C77F2B5F7E0 /* BWTipper-umbrella.h */,
-				B2EC93FD12F863346B3DFF593596C0DD /* Info.plist */,
-				F46BF41A37733285D60916036CDD1929 /* ResourceBundle-BWTipper-Info.plist */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/BWTipper";
-			sourceTree = "<group>";
-		};
-		9B0F934316E71A13C42CC3E40FB7050E /* Public */ = {
-			isa = PBXGroup;
-			children = (
-				7711195CD119FA4E3D23C28AB094E5A1 /* BWTipper.h */,
-				B5329328D35AE00EC9AC2C99B8516393 /* BWTipper.m */,
-				0C4A0ECD8607EF7C5FBD5B91279D3926 /* BWTipperConfigure.h */,
-				55C08A3885CD293B9662173E0E4E62AF /* BWTipperConfigure.m */,
-				FC302710189D27504FF004D0E6B0E279 /* BWTipperDefines.h */,
-			);
-			name = Public;
-			path = BWTipper/Classes/Public;
-			sourceTree = "<group>";
-		};
 		BBAA1AD7D24F411A9B3465A495B0B442 /* Pods-BWTipper_Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,26 +387,108 @@
 			path = "Target Support Files/Pods-BWTipper_Tests";
 			sourceTree = "<group>";
 		};
+		C460B2D2F08F29C06D8CA74F583F8DF9 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				A54906B05C83A3649BA2CA6C6B85A151 /* BWTipperComponent.h */,
+				19324A2F2AE8E0793E7F89678CB08624 /* BWTipperComponent.m */,
+				B554003D7DC0D1F60C799923BFE6016B /* BWTipperConfigure+Private.h */,
+				F760414A567D4B88B979398BD5378D0E /* BWTipperConfigure+Private.m */,
+				99D73391F2492393FDD7FDD52A283DC8 /* BWTipperSnackbar.h */,
+				80395C1864B8B100F506F82CEAF0DB15 /* BWTipperSnackbar.m */,
+				3B72D6A0BE87EA7D17775F1452AEFF05 /* BWTipperToast.h */,
+				FB55A71D6A1FF67DE9929E608D773748 /* BWTipperToast.m */,
+				06657315ACAB45254D88F54EA03FEF48 /* BWTipperTool.h */,
+				B499B1013FE211A62A5DCE4B0D2FD224 /* BWTipperTool.m */,
+				D4A7AD630F9E81548380FE054C0EB67F /* HUD */,
+			);
+			name = Private;
+			path = BWTipper/Classes/Private;
+			sourceTree = "<group>";
+		};
+		D4A7AD630F9E81548380FE054C0EB67F /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				61C1631087429D22E1F3B0BC4F0C0A4C /* BWTipper.m */,
+				EFFE6D4D603F17A8F05B29487C3D81F9 /* BWTipperConfigure.m */,
+				405328D63CC101B66E102EBFF1B8C9AE /* BWTipperHUD.h */,
+				42A5B29FF8F6EEDC31B5B0B87531BA84 /* BWTipperHUD.m */,
+				104138FAAE2E49648364366C5FBCBC30 /* BWTipperHUD+Animation.h */,
+				BB46C4E84C837D04A739C24BA01F4D3D /* BWTipperHUD+Animation.m */,
+				3317FE0FD1E914FB9F8C2AAEEDFF44B8 /* BWTipperHUD+Images.h */,
+				C3296C9C1483DE042E00B1DE69199A7E /* BWTipperHUD+Images.m */,
+				462EAA553DB2A04CB3C354B89D6379A5 /* BWTipperHUD+Layout.h */,
+				7E3CE203AF0B33F0618128A1FAB2FD7B /* BWTipperHUD+Layout.m */,
+				488DDFF87A582BFC794801D27FE71C95 /* BWTipperHUD+Loading.h */,
+				FD67228170258A730A702A65B1412AB7 /* BWTipperHUD+Loading.m */,
+				784768221AEA55CB423D36489FD521A6 /* BWTipperHUD+Progress.h */,
+				C94A4AA28E1B8A6FB72EDA5F1E0D29BD /* BWTipperHUD+Progress.m */,
+				6141C79214DB24509175454833E45C8F /* BWTipperHUD+Style.h */,
+				CEB8BDF5F1F7B336E220B92FE016A8AC /* BWTipperHUD+Style.m */,
+				F82453F58AE189FC3A2BD4474FCC7631 /* BWTipperHUDHeaders.h */,
+			);
+			name = HUD;
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		D964C58F6B7C3A910E1E4E1C2A56DA63 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				9A05BABA6E67A76E889EBA017AE7F271 /* BWTipper.podspec */,
+				7615A09687A29FEE573112D0F00416E0 /* LICENSE */,
+				7D9BA0A75941BC5406AF800D063A830E /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		E8E01AF6F84EF2E451DD82D601599AF9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D212CC5A68D0517A3774101B8612D02F /* error.png */,
+				EDA2C6E09C860AEE61C6B2FF3F4136CB /* info.png */,
+				78A93124C2A57294487D51B08036D383 /* loading-0.png */,
+				A12425816D01FF6CE8477C2E8BD92BF3 /* loading-1.png */,
+				FA552DA18100488995A04CEB4B159870 /* loading-10.png */,
+				D21147121E5E8340BF8905E507A7FCFB /* loading-11.png */,
+				3316BCA35DA5D43C8859E32EC5177579 /* loading-12.png */,
+				2E46AB4D472205A18E16142A72D2223A /* loading-13.png */,
+				2E9157E35349F21E1FB13E43D1CEFDB9 /* loading-14.png */,
+				40176252337E8E54D0A0CD53E8529F79 /* loading-15.png */,
+				201B08A5C21A36E595B6E2FB26C55F9D /* loading-16.png */,
+				556D347CB0EBAA7A643268B19B164B86 /* loading-17.png */,
+				7B2C3715152232CE1FECD402E9C341AB /* loading-18.png */,
+				9C1228449F9591BD825B591878C18C9B /* loading-19.png */,
+				CC8A9C581A9E6EFE689842DB9B576AB6 /* loading-2.png */,
+				08A3CD03D93CA1F2C51BBC7FA1CBF2F0 /* loading-20.png */,
+				EEB3B74F2BF513C9039408110C09C5A9 /* loading-21.png */,
+				89FF5D70A378BA645AE645E1322D5180 /* loading-22.png */,
+				B6A2530DF9088786A4057C239D812EA2 /* loading-23.png */,
+				2EEB92DF5C1740FB1CBB71D8EF2602CD /* loading-24.png */,
+				4B8029584B2019E6598547455C8AD3B1 /* loading-25.png */,
+				9758DB0A16F2F33D2454BE286A725268 /* loading-26.png */,
+				B749BB42A930A87A4C078E2F84B3BBB6 /* loading-27.png */,
+				645DFCCB991913CCF36239A5FFE40F35 /* loading-28.png */,
+				948212D430309A1DD72BA12E3B603460 /* loading-29.png */,
+				3C8D90C2048653C4396E3A0F3B473333 /* loading-3.png */,
+				CB04DB12EB08439ABA4EBB951C9C54AF /* loading-30.png */,
+				C06871AC2C8C056C75E30F94C2BFD56E /* loading-31.png */,
+				F54386311FFE744749D4C6639FA9D37C /* loading-32.png */,
+				37B5C47C92EC5DE9C82948C74DB60DE1 /* loading-33.png */,
+				CBA850A15D75BF426CA37145AA1458D8 /* loading-34.png */,
+				F4C40E61763D362F18FF0A2D14C03192 /* loading-4.png */,
+				B4D468261D825077C3E120BDDBB64C44 /* loading-5.png */,
+				83950FCD0474618DF2B80F751AD29935 /* loading-6.png */,
+				04E0C686B0ECB0CB5329D47474A00572 /* loading-7.png */,
+				4D959C5CA7F774B09D83480DF3296944 /* loading-8.png */,
+				2FF87623A98725EA3F489C8F484E3A30 /* loading-9.png */,
+				1F0B6B97368D7F5C24A601AB182AE6AE /* success.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1670A0405E99AB0911832A13AD3FD88F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DB6218132CD1E29A57664735ACA0CF8E /* BWTipper-umbrella.h in Headers */,
-				1471648986B1806CEEE7824BA100FE72 /* BWTipper.h in Headers */,
-				175DA49ED5E8A79FF41A62DCCE81D3F1 /* BWTipperComponent.h in Headers */,
-				C641C13740F61EBCD9E427F7258B14A1 /* BWTipperConfigure+Private.h in Headers */,
-				6A94ECE6545120C9EBFCEE696DF8A0AC /* BWTipperConfigure.h in Headers */,
-				0B28E4DECA0C120CC4322862FEE350EC /* BWTipperDefines.h in Headers */,
-				140F7965E2B819BE5960CF59DDF8ECFC /* BWTipperHUD.h in Headers */,
-				C403DDB7BD2DCAA4261ED6779386E942 /* BWTipperSnackbar.h in Headers */,
-				E2B15E277BDD7C8A15C57EA9F441D1F4 /* BWTipperToast.h in Headers */,
-				9D2CA6D36484A3712A423E2E4E8683A8 /* BWTipperTool.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2860CE5C51B8449EB2A4D1C10BB2BB62 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,44 +505,51 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EBCB76AD83AB46FF59F1033CE94D41F4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11CB50035EEDB155E073D782D5D165BD /* BWTipper-umbrella.h in Headers */,
+				29CCE6E250712AC23441BF4E33F179BA /* BWTipper.h in Headers */,
+				29D2470CA1BBFC9F1D9FEA5A31A5DAA6 /* BWTipperComponent.h in Headers */,
+				BAFB99A7CF8DEB2F419F377ABBBD78FB /* BWTipperConfigure+Private.h in Headers */,
+				B4CCB0EA6374F4EC71F4455F0023EC20 /* BWTipperConfigure.h in Headers */,
+				0E525F4BD38D2688A1B274BE3A2B56A4 /* BWTipperDefines.h in Headers */,
+				C37CC00290BDFC27FAFE8993CB06E79E /* BWTipperHUD+Animation.h in Headers */,
+				D3FA2BDC05E1C1E31DBA5DE41D087ED9 /* BWTipperHUD+Images.h in Headers */,
+				4EFC436952B0EEF19462CC30EBE7DD3C /* BWTipperHUD+Layout.h in Headers */,
+				895CE9EFC7A1F50B84E1AE16D8A612DA /* BWTipperHUD+Loading.h in Headers */,
+				E54C3AA532793E7DF8FF26BDA0C62121 /* BWTipperHUD+Progress.h in Headers */,
+				3938FAB79937F960FF1CB63B9AB0AB60 /* BWTipperHUD+Style.h in Headers */,
+				587260B84B250E5BFBF25775816F19F0 /* BWTipperHUD.h in Headers */,
+				958D8C29D0F39A1F83FF0A3DE6F8EAA1 /* BWTipperHUDHeaders.h in Headers */,
+				77BBD49241D55807B654FE0BA282875B /* BWTipperSnackbar.h in Headers */,
+				315C60A787DBBC2722591ED7B71427E0 /* BWTipperToast.h in Headers */,
+				5F119F6C925CFF94CB9CFA9227C5D074 /* BWTipperTool.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		03EF802169BCFA94ECB124B7E233A163 /* BWTipper */ = {
+		7E6449FAC22028FFB4AD503C0BD453A6 /* BWTipper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CDBF6EC970E7FF66BB71FC9791899475 /* Build configuration list for PBXNativeTarget "BWTipper" */;
+			buildConfigurationList = 62708E442453B053D43C024A7E51EB34 /* Build configuration list for PBXNativeTarget "BWTipper" */;
 			buildPhases = (
-				B85C7898D4BC0EED28A661E7AB4544F5 /* Sources */,
-				930B56EF7EF3E8E79C12564D74A50F0E /* Frameworks */,
-				A4F21EC9C18B888E5FAE0BACCFF1A513 /* Resources */,
-				1670A0405E99AB0911832A13AD3FD88F /* Headers */,
+				F630D514B418C5339ADFE887750B83FA /* Sources */,
+				197BD4A4869010D30CA91D0E7564DD1A /* Frameworks */,
+				C48397FFBEAF144C238E8215BF142D36 /* Resources */,
+				EBCB76AD83AB46FF59F1033CE94D41F4 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				258318EFE0F74ACAE9A5BAC5B5C5AAA1 /* PBXTargetDependency */,
+				F93236666F538A555E77BC7805BBFC02 /* PBXTargetDependency */,
 			);
 			name = BWTipper;
 			productName = BWTipper;
 			productReference = 1A5A466E29E1440522736D1614EC72D6 /* BWTipper.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		4F7B2DBF31992E44F45E852C626652F8 /* BWTipper-BWTipper */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 38D18E571CEAAEF20E153D20B5C553A3 /* Build configuration list for PBXNativeTarget "BWTipper-BWTipper" */;
-			buildPhases = (
-				DCA74BA891C8DC7AC7F65838ED872A11 /* Sources */,
-				3068073BE79C085E3D549A619A33456C /* Frameworks */,
-				D1DCB3B96CD4BBDA09DABDA6B85260A9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BWTipper-BWTipper";
-			productName = "BWTipper-BWTipper";
-			productReference = 3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 		DA9C718E8E5991E3C30A7B2E4E87F6A2 /* Pods-BWTipper_Tests */ = {
 			isa = PBXNativeTarget;
@@ -444,6 +587,23 @@
 			productReference = 5629381BBEB282490CB5FF9A393BE5CE /* Pods_BWTipper_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		E9431C7C8A6D7D454328F85A4A63D9C3 /* BWTipper-BWTipper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 115486E48D4AC6103E30F8086FC9F1EF /* Build configuration list for PBXNativeTarget "BWTipper-BWTipper" */;
+			buildPhases = (
+				BF1BD0D8C9BF8A9A60BFBFAB76AC16F1 /* Sources */,
+				3B71B021C21654E159BE352C35CE3261 /* Frameworks */,
+				AB394536DE20C3C63E049C888D62036F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BWTipper-BWTipper";
+			productName = "BWTipper-BWTipper";
+			productReference = 3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -465,8 +625,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				03EF802169BCFA94ECB124B7E233A163 /* BWTipper */,
-				4F7B2DBF31992E44F45E852C626652F8 /* BWTipper-BWTipper */,
+				7E6449FAC22028FFB4AD503C0BD453A6 /* BWTipper */,
+				E9431C7C8A6D7D454328F85A4A63D9C3 /* BWTipper-BWTipper */,
 				DAAE63AF83E64801B75335EB6962CA62 /* Pods-BWTipper_Example */,
 				DA9C718E8E5991E3C30A7B2E4E87F6A2 /* Pods-BWTipper_Tests */,
 			);
@@ -474,21 +634,56 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A4F21EC9C18B888E5FAE0BACCFF1A513 /* Resources */ = {
+		AB394536DE20C3C63E049C888D62036F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDA1EF937E3DD85F6EC7C706C4376DF3 /* BWTipper.bundle in Resources */,
+				C7382C204FD932AB6489FEB5A31C4BBE /* error.png in Resources */,
+				FB9452395928C7DFFF27C486B00B2E06 /* info.png in Resources */,
+				E918BC31EAD1CB8977596FB00AA81185 /* loading-0.png in Resources */,
+				48BDF2309288F26719309E79D5DDCF92 /* loading-1.png in Resources */,
+				D5AC381F59AF443CDF451C06AA5DA184 /* loading-10.png in Resources */,
+				9C56A0266B536138F4568B152CAAF440 /* loading-11.png in Resources */,
+				87445F651465B4FE8687C8A49BBDC7C5 /* loading-12.png in Resources */,
+				3D70B316F324CEFBA149E27BD4485558 /* loading-13.png in Resources */,
+				7FED116EEF69651C8E775F5712E31C9B /* loading-14.png in Resources */,
+				3E01700A033A6CC9197E1B9A03949EB6 /* loading-15.png in Resources */,
+				967D94EA9696D1345135E63D2E9C350C /* loading-16.png in Resources */,
+				15C8FB40BDE9BF488798F8E28D9C1FF4 /* loading-17.png in Resources */,
+				521A08C176DB699AC4CBB0916A739024 /* loading-18.png in Resources */,
+				D51D8B64B805A9980CB515F928CB7B29 /* loading-19.png in Resources */,
+				88EF465335D70F0B72FBC9A68D7CDA7F /* loading-2.png in Resources */,
+				B09EB1F5431BE3ADE1D9BF7F4DA590D3 /* loading-20.png in Resources */,
+				F4C8454EF3827437A197ABFA8267EAE4 /* loading-21.png in Resources */,
+				AA3347534C7BA0F607C64C142C0C1EBF /* loading-22.png in Resources */,
+				0A880C8DE2262009975289A3CB0E5771 /* loading-23.png in Resources */,
+				5FB689D0C7A2617EB7AFB81D1CCA70A3 /* loading-24.png in Resources */,
+				8EB64918971839CAE85B16E18AD96A61 /* loading-25.png in Resources */,
+				72BEB7B897F14A3C461CB61B4E52A575 /* loading-26.png in Resources */,
+				865277BBD956FC70BFFAC82903A4E96E /* loading-27.png in Resources */,
+				345A584D5F206460FBBD32D0D51D836F /* loading-28.png in Resources */,
+				47159E6E34751BF04FAAC942C13809A6 /* loading-29.png in Resources */,
+				3DC58ABEF5F239808C214892AEEB1D17 /* loading-3.png in Resources */,
+				C610AD3E2EA9B89982C5B70A6F6ED344 /* loading-30.png in Resources */,
+				8872129E0FC04D7DDD87364DE24D803C /* loading-31.png in Resources */,
+				4BBFD8470B76B29BB35476B972633E09 /* loading-32.png in Resources */,
+				F4B68ED92F260E264693DFB09D5353FB /* loading-33.png in Resources */,
+				0642B0E35CCC1D39DCE0415F2AB19947 /* loading-34.png in Resources */,
+				C2AB8CE9484B22972BF13D8424420FC6 /* loading-4.png in Resources */,
+				A31B7D7A3DC2094999D549A77095F775 /* loading-5.png in Resources */,
+				FE019A76F381B7279A5AFAFFFE192808 /* loading-6.png in Resources */,
+				4840F9C53E4186743DA152F18DD84076 /* loading-7.png in Resources */,
+				329ABAB87989505A038214FD74D7CD0D /* loading-8.png in Resources */,
+				AA04826BA4374256016F83F071A0D1BF /* loading-9.png in Resources */,
+				BB1964D08884E3C49C549DE7EA509458 /* success.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1DCB3B96CD4BBDA09DABDA6B85260A9 /* Resources */ = {
+		C48397FFBEAF144C238E8215BF142D36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B392B0F654112BAC6D60F7286C9ACC21 /* error.png in Resources */,
-				AEE39B8E440CAC189480FC8BD169C3B0 /* info.png in Resources */,
-				92F1C66C2CFA53F1B1E03A43D9A5C7E4 /* success.png in Resources */,
+				6ACBFCAB92519ADD8B8F0E6F4A4E1D7A /* BWTipper.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,42 +706,42 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B85C7898D4BC0EED28A661E7AB4544F5 /* Sources */ = {
+		BF1BD0D8C9BF8A9A60BFBFAB76AC16F1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E191811D9C1AFCA683B77F1B5A15D1DF /* BWTipper-dummy.m in Sources */,
-				95A410AF116DD6D5C9F6459E531698F4 /* BWTipper.m in Sources */,
-				41AB7FF300042981BF08AB8A268ED8A7 /* BWTipperComponent.m in Sources */,
-				F97FA1B443B22D64791D3B0C7D71A873 /* BWTipperConfigure+Private.m in Sources */,
-				E4686CFE220BE653CBCA60AA14C4E32C /* BWTipperConfigure.m in Sources */,
-				A2936290947058AB01C6D129225A40AC /* BWTipperHUD.m in Sources */,
-				270F8B3B2CC6BED58246E1925BED9E34 /* BWTipperSnackbar.m in Sources */,
-				6DEE7240EE09E6F6FF5B0F390A895F31 /* BWTipperToast.m in Sources */,
-				588C9C6FC670B7DFC892B0E21439AEFE /* BWTipperTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DCA74BA891C8DC7AC7F65838ED872A11 /* Sources */ = {
+		F630D514B418C5339ADFE887750B83FA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A383CEEECA9E7E18633894D13A489C0 /* BWTipper-dummy.m in Sources */,
+				20E6ED19F346D1F9C409369AE410B2A5 /* BWTipper.m in Sources */,
+				DE948BE00813B2A369BB7FA7FBD963F1 /* BWTipperComponent.m in Sources */,
+				96E39080AC3A45CE11CEF8E1E4C391AE /* BWTipperConfigure+Private.m in Sources */,
+				FA83025F240E0AAFEFB9F49339F53543 /* BWTipperConfigure.m in Sources */,
+				AA4FDBA588854342F72608EF1856E8DE /* BWTipperHUD+Animation.m in Sources */,
+				06C43E20C1C226125722DF1A4EEE4F18 /* BWTipperHUD+Images.m in Sources */,
+				D7B614E10A3FAD1AC4378F4610D729C8 /* BWTipperHUD+Layout.m in Sources */,
+				C6CD334E4136E41B8C7DFEBA0893791B /* BWTipperHUD+Loading.m in Sources */,
+				7FACE9B43FA49CB7158284472717A9E9 /* BWTipperHUD+Progress.m in Sources */,
+				B335DA9243C85E55B3AB9FA89F1B7E86 /* BWTipperHUD+Style.m in Sources */,
+				B937EA857C08D78C70452CC1A8913F37 /* BWTipperHUD.m in Sources */,
+				3A495A01BAD59B704EEDD7A5B674FB8C /* BWTipperSnackbar.m in Sources */,
+				DA18A89A7DA89AB0DE7EDC8169A09CE1 /* BWTipperToast.m in Sources */,
+				F38FD7161136E4D401E6156C26E45599 /* BWTipperTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		258318EFE0F74ACAE9A5BAC5B5C5AAA1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "BWTipper-BWTipper";
-			target = 4F7B2DBF31992E44F45E852C626652F8 /* BWTipper-BWTipper */;
-			targetProxy = 8D65F29A984AA03DF50C18D2B048B84C /* PBXContainerItemProxy */;
-		};
 		3766D02FE58BE9C795F050501BB21022 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BWTipper;
-			target = 03EF802169BCFA94ECB124B7E233A163 /* BWTipper */;
+			target = 7E6449FAC22028FFB4AD503C0BD453A6 /* BWTipper */;
 			targetProxy = F7A65B8E7E227C0C9ACC5D72C0ABB13B /* PBXContainerItemProxy */;
 		};
 		51B3F1B2676A1E5B5BA15A77A2873271 /* PBXTargetDependency */ = {
@@ -555,12 +750,34 @@
 			target = DAAE63AF83E64801B75335EB6962CA62 /* Pods-BWTipper_Example */;
 			targetProxy = 3DFD877117E471AE243CA43CE753FA3F /* PBXContainerItemProxy */;
 		};
+		F93236666F538A555E77BC7805BBFC02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "BWTipper-BWTipper";
+			target = E9431C7C8A6D7D454328F85A4A63D9C3 /* BWTipper-BWTipper */;
+			targetProxy = 81382646DD656C18EF3785F0A34D9BEF /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		133850AA2D2AAB7581D3BCACD9219247 /* Release */ = {
+		1ECD400D1E2EAA60D788F7105B1DC624 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C966803B97FD0467BAE22BEBCAA66FE /* BWTipper.xcconfig */;
+			baseConfigurationReference = 889FFE83004CB46882BCE4BD08B334FD /* BWTipper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BWTipper";
+				INFOPLIST_FILE = "Target Support Files/BWTipper/ResourceBundle-BWTipper-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = BWTipper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3C7B08D1EFC48CB491316BC593C7AC5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 889FFE83004CB46882BCE4BD08B334FD /* BWTipper.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BWTipper";
@@ -574,9 +791,9 @@
 			};
 			name = Release;
 		};
-		2187847F274C193212CD393C6EC99098 /* Debug */ = {
+		6D20366A63C828A517294EF8A52C5686 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C966803B97FD0467BAE22BEBCAA66FE /* BWTipper.xcconfig */;
+			baseConfigurationReference = 889FFE83004CB46882BCE4BD08B334FD /* BWTipper.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -599,26 +816,11 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
-		};
-		6BECD61A0828B2193988C4728F57D669 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C966803B97FD0467BAE22BEBCAA66FE /* BWTipper.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BWTipper";
-				INFOPLIST_FILE = "Target Support Files/BWTipper/ResourceBundle-BWTipper-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				PRODUCT_NAME = BWTipper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
+			name = Release;
 		};
 		754E1C01E4975FC5765355F0685940C6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -774,6 +976,36 @@
 			};
 			name = Release;
 		};
+		B9426D0C0776E6850BC80D5C7E6CC5FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 889FFE83004CB46882BCE4BD08B334FD /* BWTipper.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BWTipper/BWTipper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BWTipper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BWTipper/BWTipper.modulemap";
+				PRODUCT_MODULE_NAME = BWTipper;
+				PRODUCT_NAME = BWTipper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		BC7B438464AC6EDAE0B49411C92D893D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5601FE2E145CE735B53279C1F0C563D5 /* Pods-BWTipper_Tests.debug.xcconfig */;
@@ -806,37 +1038,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		C8731291C0E30438D8B6AE880352CB1C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C966803B97FD0467BAE22BEBCAA66FE /* BWTipper.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/BWTipper/BWTipper-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BWTipper/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BWTipper/BWTipper.modulemap";
-				PRODUCT_MODULE_NAME = BWTipper;
-				PRODUCT_NAME = BWTipper;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		E154C4F295FE53B35FD7A664F028EF36 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -918,6 +1119,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		115486E48D4AC6103E30F8086FC9F1EF /* Build configuration list for PBXNativeTarget "BWTipper-BWTipper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ECD400D1E2EAA60D788F7105B1DC624 /* Debug */,
+				3C7B08D1EFC48CB491316BC593C7AC5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -927,20 +1137,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38D18E571CEAAEF20E153D20B5C553A3 /* Build configuration list for PBXNativeTarget "BWTipper-BWTipper" */ = {
+		62708E442453B053D43C024A7E51EB34 /* Build configuration list for PBXNativeTarget "BWTipper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6BECD61A0828B2193988C4728F57D669 /* Debug */,
-				133850AA2D2AAB7581D3BCACD9219247 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		CDBF6EC970E7FF66BB71FC9791899475 /* Build configuration list for PBXNativeTarget "BWTipper" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2187847F274C193212CD393C6EC99098 /* Debug */,
-				C8731291C0E30438D8B6AE880352CB1C /* Release */,
+				B9426D0C0776E6850BC80D5C7E6CC5FA /* Debug */,
+				6D20366A63C828A517294EF8A52C5686 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

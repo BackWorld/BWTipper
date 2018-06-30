@@ -9,6 +9,7 @@
 #define BWTipperHeader_h
 
 
+
 typedef NSDictionary<NSString *, UIImage *> * BWTipperImageAssset;
 
 typedef void(^BWTipperCompletion)(void);
@@ -18,6 +19,8 @@ extern NSString *const BWTipperStyleIconImageKeyError;
 extern NSString *const BWTipperStyleIconImageKeyInfo;
 
 typedef void(^BWTipperSnackbarActionHandler)(NSString *action);
+
+typedef void(^BWTipperHUDLoadingProgressHandler)(CGFloat progress, NSString *text);
 
 typedef enum : NSUInteger {
     BWTipperThemeDark, // 黑色

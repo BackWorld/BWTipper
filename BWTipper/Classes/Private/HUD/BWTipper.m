@@ -6,7 +6,7 @@
 //
 
 #import "BWTipper.h"
-#import "BWTipperHUD.h"
+#import "BWTipperHUDHeaders.h"
 #import "BWTipperToast.h"
 #import "BWTipperSnackbar.h"
 
@@ -35,7 +35,7 @@
     backgroundDimmed: (BOOL)backgroundDimmed
                delay: (NSTimeInterval)delay
           completion: (BWTipperCompletion)completion{
-    [BWTipperHUD showWithImage:image message:message backgroundDimmed:backgroundDimmed delay:delay completion:completion];
+    [BWTipperHUD showWithImages:@[image] duration:0 delay:delay message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:YES];
 }
 
 #pragma mark HUD Loading Default
@@ -53,23 +53,29 @@
 }
 
 + (void)hudLoadingWithMessage:(NSString *)message backgroundDimmed:(BOOL)backgroundDimmed timeout:(NSTimeInterval)timeout{
-    [BWTipperHUD showLoadingWithMessage:message backgroundDimmed:backgroundDimmed timeout:timeout];
+    [BWTipperHUD showLoadingWithMessage:message backgroundDimmed:backgroundDimmed];
 }
 
 #pragma mark HUD Loading Images
 + (void)hudLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
                             duration: (NSTimeInterval)duration{
-    [self hudLoadingWithAnimatedImages:images duration:duration message:nil backgroundDimmed:NO wrapperDisplayOn:YES timeout:0];
+    [self hudLoadingWithAnimatedImages:images duration:duration message:nil backgroundDimmed:NO wrapperDisplayOn:YES timeout:CGFLOAT_MAX];
 }
 
 + (void)hudLoadingWithAnimatedImages: (NSArray<UIImage *> *)images
                             duration: (NSTimeInterval)duration
                              message: (NSString *)message
                     backgroundDimmed: (BOOL)backgroundDimmed
-                    wrapperDisplayOn:(BOOL)wrapperDisplayOn timeout:(NSTimeInterval)timeout{
-    [BWTipperHUD showLoadingWithAnimatedImages:images duration:duration message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:wrapperDisplayOn timeout:timeout];
+                    wrapperDisplayOn: (BOOL)wrapperDisplayOn
+                             timeout: (NSTimeInterval)timeout{
+    [BWTipperHUD showWithImages:images duration:duration delay:timeout message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:wrapperDisplayOn];
 }
 
+#pragma mark HUD Loading Progress
++ (void)hudLoadingWithProgressing:(void (^)(BWTipperHUDLoadingProgressHandler))progressHandler backgroundDimmed:(BOOL)backgroundDimmed{
+    
+    [BWTipperHUD showLoadingWithProgressing:progressHandler backgroundDimmed:backgroundDimmed];
+}
 
 #pragma mark - Toast
 + (void)toastWithMessage:(NSString *)message{

@@ -9,6 +9,8 @@
 
 @interface BWTipperConfigure (Private)
 
+- (NSArray<UIImage *> *)loadingIcons;
+
 - (UIImage *)iconWithStyle:(BWTipperStyle)style;
 
 - (UIColor *)themeRevertedColor;

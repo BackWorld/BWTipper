@@ -21,47 +21,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICI-H6-O8B">
-                                <rect key="frame" x="147" y="215" width="73" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="show HUD"/>
-                                <connections>
-                                    <action selector="showHUD:" destination="whP-gf-Uak" eventType="touchUpInside" id="YWs-Pn-Wl5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laH-gI-dBZ">
-                                <rect key="frame" x="131" y="143" width="105" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="show Snackbar"/>
-                                <connections>
-                                    <action selector="showSnackbar:" destination="whP-gf-Uak" eventType="touchUpInside" id="8Af-U1-jc7"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSn-Ys-YLS">
-                                <rect key="frame" x="152" y="351" width="84" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="show Dialog"/>
-                                <connections>
-                                    <action selector="showDialog:" destination="whP-gf-Uak" eventType="touchUpInside" id="MM4-yy-rs8"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="测试键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QRb-X6-DDN">
-                                <rect key="frame" x="141" y="451" width="97" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lD-tW-LUz">
-                                <rect key="frame" x="160" y="266" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="show Toast"/>
-                                <connections>
-                                    <action selector="showToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="Jzs-nE-NiM"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8iM-4J-t7Q">
+                                <rect key="frame" x="135" y="193.5" width="105" height="280"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="laH-gI-dBZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="105" height="30"/>
+                                        <state key="normal" title="show Snackbar"/>
+                                        <connections>
+                                            <action selector="showSnackbar:" destination="whP-gf-Uak" eventType="touchUpInside" id="8Af-U1-jc7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppz-2M-WA8">
+                                        <rect key="frame" x="2" y="50" width="101" height="30"/>
+                                        <state key="normal" title="show Progress"/>
+                                        <connections>
+                                            <action selector="showProgress:" destination="whP-gf-Uak" eventType="touchUpInside" id="CWE-sq-gOr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ICI-H6-O8B">
+                                        <rect key="frame" x="16" y="100" width="73" height="30"/>
+                                        <state key="normal" title="show HUD"/>
+                                        <connections>
+                                            <action selector="showHUD:" destination="whP-gf-Uak" eventType="touchUpInside" id="YWs-Pn-Wl5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lD-tW-LUz">
+                                        <rect key="frame" x="13.5" y="150" width="78" height="30"/>
+                                        <state key="normal" title="show Toast"/>
+                                        <connections>
+                                            <action selector="showToast:" destination="whP-gf-Uak" eventType="touchUpInside" id="Jzs-nE-NiM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rSn-Ys-YLS">
+                                        <rect key="frame" x="10.5" y="200" width="84" height="30"/>
+                                        <state key="normal" title="show Dialog"/>
+                                        <connections>
+                                            <action selector="showDialog:" destination="whP-gf-Uak" eventType="touchUpInside" id="MM4-yy-rs8"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="测试键盘" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QRb-X6-DDN">
+                                        <rect key="frame" x="13.5" y="250" width="78.5" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="8iM-4J-t7Q" firstAttribute="centerX" secondItem="TpU-gO-2f1" secondAttribute="centerX" id="hcL-Q6-QyK"/>
+                            <constraint firstItem="8iM-4J-t7Q" firstAttribute="centerY" secondItem="TpU-gO-2f1" secondAttribute="centerY" id="nwO-Mj-Pzf"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="eCr-gm-UNi">
                         <nil key="title"/>
