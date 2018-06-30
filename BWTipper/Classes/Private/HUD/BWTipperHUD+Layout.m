@@ -30,12 +30,14 @@
     CGFloat space = kLayoutSpace20;
     CGFloat wrapperW = kWrapperViewMinWidth;
     CGFloat messageW = CGRectGetWidth(self.messageLabel.bounds);
-    CGFloat messageH = CGRectGetHeight(self.messageLabel.bounds);
     
-    if (messageW > kWrapperViewMaxWidth) {
-        wrapperW = kWrapperViewMaxWidth;
-        messageH = [self.messageLabel sizeThatFits:CGSizeMake(wrapperW, CGFLOAT_MAX)].height;
+    if (messageW > wrapperW - 40) {
+        wrapperW = messageW + 40;
+        if (wrapperW > kWrapperViewMaxWidth) {
+            wrapperW = kWrapperViewMaxWidth;
+        }
     }
+    CGFloat messageH = [self.messageLabel sizeThatFits:CGSizeMake(wrapperW, CGFLOAT_MAX)].height;
     
     // image view
     CGFloat imageY = kHasMessage
@@ -45,7 +47,7 @@
     self.imageView.frame = CGRectMake(imageX, imageY, self.imageViewSize.width, self.imageViewSize.height);
     
     // message label
-    CGFloat messageY = CGRectGetMaxY(self.imageView.frame) + (kHasMessage ? 8 : 0);
+    CGFloat messageY = CGRectGetMaxY(self.imageView.frame) + (kHasMessage ? space : 0);
     self.messageLabel.frame = CGRectMake(20, messageY, wrapperW - 40, messageH);
     
     // wrapper view

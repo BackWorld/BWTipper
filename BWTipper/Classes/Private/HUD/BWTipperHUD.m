@@ -24,7 +24,6 @@
 
 #pragma mark - Overrides
 
-
 #pragma mark - Private
 
 #pragma mark - Setters
@@ -54,7 +53,6 @@
     UIVisualEffectView *view = [super wrapperView];
     
     [view.contentView addSubview:self.imageView];
-    
     return view;
 }
 

@@ -10,9 +10,8 @@
 @interface BWTipperHUD (Progress)
 
 
-
-
-+ (void)showLoadingWithProgressing: (void(^)(BWTipperHUDLoadingProgressHandler handler))progressHandler
-                  backgroundDimmed: (BOOL)backgroundDimmed;
++ (void)showLoadingWithProgress: (CGFloat)progress
+                   progressText: (NSString *)progressText
+               backgroundDimmed: (BOOL)backgroundDimmed;
 
 @end

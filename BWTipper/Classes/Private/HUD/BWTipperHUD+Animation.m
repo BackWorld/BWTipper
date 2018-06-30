@@ -21,7 +21,6 @@
         self.wrapperView.transform = CGAffineTransformMakeScale(kAnimationScaleTo, kAnimationScaleTo);
         self.wrapperView.alpha = 1;
     } completion:^(BOOL finished) {
-        
         // 启动计时器
         [self performSelector:@selector(playHideAnimation) withObject:nil afterDelay:self.delay];
     }];

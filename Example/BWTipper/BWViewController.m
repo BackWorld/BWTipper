@@ -46,14 +46,14 @@ float progress;
     [NSTimer scheduledTimerWithTimeInterval:0.1 repeats:YES block:^(NSTimer * _Nonnull timer) {
         progress += 0.01;
         
-        [BWTipper hudLoadingWithProgressing:^(BWTipperHUDLoadingProgressHandler handler) {
-            handler(0.1, [NSString stringWithFormat:@"%.f %%", (100 * progress)]);
-        } backgroundDimmed:YES];
+        NSString *text = [NSString stringWithFormat:@"下载进度:  %.1f%%", (100 * progress)];
+        [BWTipper hudLoadingWithProgress:progress progressText:text backgroundDimmed:YES];
         
         if (progress >= 1) {
             progress = 0;
             [timer invalidate];
-            [BWTipper dismiss];
+            
+            [BWTipper hudWithStyle:BWTipperStyleSuccess message:@"下载成功"];
         }
     }];
 }
@@ -77,9 +77,9 @@ float progress;
 - (IBAction)showHUD:(id)sender {
 //    [BWTipper hudWithStyle:BWTipperStyleSuccess];
     
-//    [BWTipper hudLoadingWithMessage:nil backgroundDimmed:NO];
+    [BWTipper hudLoadingWithMessage:@"LongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessage" backgroundDimmed:NO];
     
-//    return;
+    return;
 //    BWTipperConfigure.defaultConfigure.backgroundDimmedAlpha = 0.8;
     NSMutableArray *images = [NSMutableArray new];
     for (int i=3; i>=0; i--) {

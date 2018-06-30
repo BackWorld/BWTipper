@@ -72,9 +72,11 @@
 }
 
 #pragma mark HUD Loading Progress
-+ (void)hudLoadingWithProgressing:(void (^)(BWTipperHUDLoadingProgressHandler))progressHandler backgroundDimmed:(BOOL)backgroundDimmed{
-    
-    [BWTipperHUD showLoadingWithProgressing:progressHandler backgroundDimmed:backgroundDimmed];
+
++ (void)hudLoadingWithProgress: (CGFloat)progress
+                   progressText: (NSString *)progressText
+               backgroundDimmed: (BOOL)backgroundDimmed{
+    [BWTipperHUD showLoadingWithProgress:progress progressText:progressText backgroundDimmed:backgroundDimmed];
 }
 
 #pragma mark - Toast

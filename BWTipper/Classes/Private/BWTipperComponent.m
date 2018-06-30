@@ -75,6 +75,12 @@
     self.frame = kWindow.bounds;
 }
 
+- (void)removeFromSuperview{
+    [super removeFromSuperview];
+    
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(playHideAnimation) object:nil];
+}
+
 #pragma mark - Private
 + (void)dismissComponentByClass: (Class)componentClass animated: (BOOL)animated{
     for (UIView *subview in kWindow.subviews) {

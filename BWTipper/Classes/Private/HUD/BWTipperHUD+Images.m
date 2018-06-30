@@ -6,7 +6,6 @@
 //
 
 #import "BWTipperHUD+Images.h"
-#import "BWTipperConfigure.h"
 
 @implementation BWTipperHUD (Images)
 
@@ -33,8 +32,6 @@
     
     [hud show];
 }
-
-#pragma mark - Private
 
 
 

@@ -119,7 +119,7 @@
 		0F3A2C123E453133026ABE2D9B1AAB2A /* Pods-BWTipper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BWTipper_Example-dummy.m"; sourceTree = "<group>"; };
 		104138FAAE2E49648364366C5FBCBC30 /* BWTipperHUD+Animation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Animation.h"; sourceTree = "<group>"; };
 		19324A2F2AE8E0793E7F89678CB08624 /* BWTipperComponent.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperComponent.m; sourceTree = "<group>"; };
-		1A5A466E29E1440522736D1614EC72D6 /* BWTipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BWTipper.framework; path = BWTipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5A466E29E1440522736D1614EC72D6 /* BWTipper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BWTipper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CA23ED56E04456A4C52A775EA3FF5EB /* BWTipper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BWTipper.modulemap; sourceTree = "<group>"; };
 		1F0B6B97368D7F5C24A601AB182AE6AE /* success.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = success.png; path = BWTipper/Assets/success.png; sourceTree = "<group>"; };
 		201B08A5C21A36E595B6E2FB26C55F9D /* loading-16.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-16.png"; path = "BWTipper/Assets/loading-16.png"; sourceTree = "<group>"; };
@@ -136,7 +136,7 @@
 		37B5C47C92EC5DE9C82948C74DB60DE1 /* loading-33.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-33.png"; path = "BWTipper/Assets/loading-33.png"; sourceTree = "<group>"; };
 		3B72D6A0BE87EA7D17775F1452AEFF05 /* BWTipperToast.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperToast.h; sourceTree = "<group>"; };
 		3C8D90C2048653C4396E3A0F3B473333 /* loading-3.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-3.png"; path = "BWTipper/Assets/loading-3.png"; sourceTree = "<group>"; };
-		3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = BWTipper.bundle; path = "BWTipper-BWTipper.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E90257EFEA1CC3CA2424DCBB1E7C71F /* BWTipper.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BWTipper.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		40176252337E8E54D0A0CD53E8529F79 /* loading-15.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-15.png"; path = "BWTipper/Assets/loading-15.png"; sourceTree = "<group>"; };
 		405328D63CC101B66E102EBFF1B8C9AE /* BWTipperHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperHUD.h; sourceTree = "<group>"; };
 		42A5B29FF8F6EEDC31B5B0B87531BA84 /* BWTipperHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperHUD.m; sourceTree = "<group>"; };
@@ -148,19 +148,19 @@
 		4D959C5CA7F774B09D83480DF3296944 /* loading-8.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-8.png"; path = "BWTipper/Assets/loading-8.png"; sourceTree = "<group>"; };
 		556D347CB0EBAA7A643268B19B164B86 /* loading-17.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-17.png"; path = "BWTipper/Assets/loading-17.png"; sourceTree = "<group>"; };
 		5601FE2E145CE735B53279C1F0C563D5 /* Pods-BWTipper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		5629381BBEB282490CB5FF9A393BE5CE /* Pods_BWTipper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BWTipper_Example.framework; path = "Pods-BWTipper_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5629381BBEB282490CB5FF9A393BE5CE /* Pods_BWTipper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BWTipper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C043FBF2EAC5BC65E1254AE62610580 /* Pods-BWTipper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BWTipper_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		6141C79214DB24509175454833E45C8F /* BWTipperHUD+Style.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Style.h"; sourceTree = "<group>"; };
 		61C1631087429D22E1F3B0BC4F0C0A4C /* BWTipper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipper.m; sourceTree = "<group>"; };
 		645DFCCB991913CCF36239A5FFE40F35 /* loading-28.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-28.png"; path = "BWTipper/Assets/loading-28.png"; sourceTree = "<group>"; };
 		69C81960F83369198820D72327B27A7D /* BWTipper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipper-dummy.m"; sourceTree = "<group>"; };
-		7615A09687A29FEE573112D0F00416E0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		7615A09687A29FEE573112D0F00416E0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		782AB4085305BFAF83AB182FAA4F0116 /* Pods-BWTipper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BWTipper_Example-umbrella.h"; sourceTree = "<group>"; };
 		784768221AEA55CB423D36489FD521A6 /* BWTipperHUD+Progress.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipperHUD+Progress.h"; sourceTree = "<group>"; };
 		78A93124C2A57294487D51B08036D383 /* loading-0.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-0.png"; path = "BWTipper/Assets/loading-0.png"; sourceTree = "<group>"; };
 		7B2C3715152232CE1FECD402E9C341AB /* loading-18.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-18.png"; path = "BWTipper/Assets/loading-18.png"; sourceTree = "<group>"; };
 		7D066CFCB98E83B8A27BBA99CE3FB466 /* Pods-BWTipper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BWTipper_Example.modulemap"; sourceTree = "<group>"; };
-		7D9BA0A75941BC5406AF800D063A830E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		7D9BA0A75941BC5406AF800D063A830E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7E3CE203AF0B33F0618128A1FAB2FD7B /* BWTipperHUD+Layout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BWTipperHUD+Layout.m"; sourceTree = "<group>"; };
 		80395C1864B8B100F506F82CEAF0DB15 /* BWTipperSnackbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = BWTipperSnackbar.m; sourceTree = "<group>"; };
 		80BE8161A608BA4CD0B8C0BF1FD0987B /* BWTipper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipper.h; sourceTree = "<group>"; };
@@ -168,13 +168,13 @@
 		8574752B6212E13E1CBDD00092F136AD /* BWTipper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipper-umbrella.h"; sourceTree = "<group>"; };
 		889FFE83004CB46882BCE4BD08B334FD /* BWTipper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BWTipper.xcconfig; sourceTree = "<group>"; };
 		89FF5D70A378BA645AE645E1322D5180 /* loading-22.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-22.png"; path = "BWTipper/Assets/loading-22.png"; sourceTree = "<group>"; };
-		8CEC817ED0B4DDF6EB118658C7445D18 /* Pods_BWTipper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BWTipper_Tests.framework; path = "Pods-BWTipper_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CEC817ED0B4DDF6EB118658C7445D18 /* Pods_BWTipper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BWTipper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		908E902E026C5C22904CF9014A5604AD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		948212D430309A1DD72BA12E3B603460 /* loading-29.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-29.png"; path = "BWTipper/Assets/loading-29.png"; sourceTree = "<group>"; };
 		9758DB0A16F2F33D2454BE286A725268 /* loading-26.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-26.png"; path = "BWTipper/Assets/loading-26.png"; sourceTree = "<group>"; };
 		99D73391F2492393FDD7FDD52A283DC8 /* BWTipperSnackbar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = BWTipperSnackbar.h; sourceTree = "<group>"; };
-		9A05BABA6E67A76E889EBA017AE7F271 /* BWTipper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = BWTipper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9A05BABA6E67A76E889EBA017AE7F271 /* BWTipper.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; path = BWTipper.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C1228449F9591BD825B591878C18C9B /* loading-19.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = "loading-19.png"; path = "BWTipper/Assets/loading-19.png"; sourceTree = "<group>"; };
 		9D48AACB3DC2CCB2F2DF29C51CBBA586 /* Pods-BWTipper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BWTipper_Example-frameworks.sh"; sourceTree = "<group>"; };
 		9DA411EEA0550197C44D539C341C2AC3 /* BWTipper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BWTipper-prefix.pch"; sourceTree = "<group>"; };
@@ -413,12 +413,12 @@
 				EFFE6D4D603F17A8F05B29487C3D81F9 /* BWTipperConfigure.m */,
 				405328D63CC101B66E102EBFF1B8C9AE /* BWTipperHUD.h */,
 				42A5B29FF8F6EEDC31B5B0B87531BA84 /* BWTipperHUD.m */,
+				462EAA553DB2A04CB3C354B89D6379A5 /* BWTipperHUD+Layout.h */,
+				7E3CE203AF0B33F0618128A1FAB2FD7B /* BWTipperHUD+Layout.m */,
 				104138FAAE2E49648364366C5FBCBC30 /* BWTipperHUD+Animation.h */,
 				BB46C4E84C837D04A739C24BA01F4D3D /* BWTipperHUD+Animation.m */,
 				3317FE0FD1E914FB9F8C2AAEEDFF44B8 /* BWTipperHUD+Images.h */,
 				C3296C9C1483DE042E00B1DE69199A7E /* BWTipperHUD+Images.m */,
-				462EAA553DB2A04CB3C354B89D6379A5 /* BWTipperHUD+Layout.h */,
-				7E3CE203AF0B33F0618128A1FAB2FD7B /* BWTipperHUD+Layout.m */,
 				488DDFF87A582BFC794801D27FE71C95 /* BWTipperHUD+Loading.h */,
 				FD67228170258A730A702A65B1412AB7 /* BWTipperHUD+Loading.m */,
 				784768221AEA55CB423D36489FD521A6 /* BWTipperHUD+Progress.h */,
@@ -427,7 +427,6 @@
 				CEB8BDF5F1F7B336E220B92FE016A8AC /* BWTipperHUD+Style.m */,
 				F82453F58AE189FC3A2BD4474FCC7631 /* BWTipperHUDHeaders.h */,
 			);
-			name = HUD;
 			path = HUD;
 			sourceTree = "<group>";
 		};
