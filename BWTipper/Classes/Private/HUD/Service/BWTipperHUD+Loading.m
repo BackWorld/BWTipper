@@ -13,8 +13,10 @@
 
 + (void)showLoadingWithMessage: (NSString *)message
               backgroundDimmed: (BOOL)backgroundDimmed
+                       timeout: (NSTimeInterval)timeout
 {
-    [self showWithImages:BWTipperConfigure.defaultConfigure.loadingIcons duration:1.5  delay:CGFLOAT_MAX message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:YES];
+    timeout = (timeout > 0 ? timeout : CGFLOAT_MAX);
+    [self showWithImages:BWTipperConfigure.defaultConfigure.loadingIcons duration:1.5  delay:timeout message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:YES];
 }
 
 

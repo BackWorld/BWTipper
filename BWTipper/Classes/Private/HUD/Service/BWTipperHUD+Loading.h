@@ -11,7 +11,8 @@
 
 
 + (void)showLoadingWithMessage: (NSString *)message
-              backgroundDimmed: (BOOL)backgroundDimmed;
+              backgroundDimmed: (BOOL)backgroundDimmed
+                       timeout: (NSTimeInterval)timeout;
 
 
 @end

@@ -53,7 +53,7 @@
 }
 
 + (void)hudLoadingWithMessage:(NSString *)message backgroundDimmed:(BOOL)backgroundDimmed timeout:(NSTimeInterval)timeout{
-    [BWTipperHUD showLoadingWithMessage:message backgroundDimmed:backgroundDimmed];
+    [BWTipperHUD showLoadingWithMessage:message backgroundDimmed:backgroundDimmed timeout:timeout];
 }
 
 #pragma mark HUD Loading Images

@@ -77,7 +77,7 @@ float progress;
 - (IBAction)showHUD:(id)sender {
 //    [BWTipper hudWithStyle:BWTipperStyleSuccess];
     
-    [BWTipper hudLoadingWithMessage:nil];
+    [BWTipper hudLoadingWithMessage:nil backgroundDimmed:YES timeout:10];
     
     return;
 //    BWTipperConfigure.defaultConfigure.backgroundDimmedAlpha = 0.8;

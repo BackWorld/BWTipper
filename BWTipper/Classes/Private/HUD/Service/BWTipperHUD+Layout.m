@@ -66,9 +66,9 @@
 
 - (CGSize)imageViewSize{
     if (self.imageView.animationImages.count > 0) {
-        return CGSizeMake(100, 100);
+        return CGSizeMake(80, 80);
     }
-    return CGSizeMake(60, 60);
+    return CGSizeMake(50, 50);
 }
 
 

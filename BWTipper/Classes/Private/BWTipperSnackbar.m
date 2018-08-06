@@ -167,7 +167,7 @@
 #pragma mark - Getters
 
 - (CGSize)imageViewSize{
-    return CGSizeMake(34, 34);
+    return CGSizeMake(26, 26);
 }
 
 - (UIVisualEffectView *)wrapperView{
