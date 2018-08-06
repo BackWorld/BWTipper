@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     
-    
+    [BWTipperConfigure.defaultConfigure setShadowOn:YES];
 }
 
 
@@ -77,7 +77,7 @@ float progress;
 - (IBAction)showHUD:(id)sender {
 //    [BWTipper hudWithStyle:BWTipperStyleSuccess];
     
-    [BWTipper hudLoadingWithMessage:@"LongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessageLongMessage" backgroundDimmed:NO];
+    [BWTipper hudLoadingWithMessage:nil];
     
     return;
 //    BWTipperConfigure.defaultConfigure.backgroundDimmedAlpha = 0.8;
