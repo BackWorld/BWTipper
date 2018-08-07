@@ -31,7 +31,7 @@
     CGFloat space = 30;
     CGSize messageSize = self.messageLabel.bounds.size;
     
-    CGFloat maxWidth = CGRectGetWidth(kWindow.bounds) - 3 * offset;
+    CGFloat maxWidth = CGRectGetWidth(kTipperKeyWindow.bounds) - 3 * offset;
     
     // 多行
     if (messageSize.width > maxWidth) {
@@ -45,8 +45,8 @@
     
     CGFloat w = messageSize.width + offset;
     CGFloat h = messageSize.height + space;
-    CGFloat x = CGRectGetWidth(kWindow.bounds) / 2 - w / 2;
-    CGFloat y = CGRectGetHeight(kWindow.bounds) - h - 44 - 34;
+    CGFloat x = CGRectGetWidth(kTipperKeyWindow.bounds) / 2 - w / 2;
+    CGFloat y = CGRectGetHeight(kTipperKeyWindow.bounds) - h - 44 - 34;
     
     CGRect frame = CGRectMake(x, y, w, h);
     self.wrapperView.frame = frame;

@@ -9,7 +9,7 @@
 
 
 #define kWrapperViewMinWidth 140.0f
-#define kWrapperViewMaxWidth (CGRectGetWidth(kWindow.bounds) - 40.0f * 2)
+#define kWrapperViewMaxWidth (CGRectGetWidth(kTipperKeyWindow.bounds) - 40.0f * 2)
 
 #define kLayoutSpace20 20.0f
 #define kLayoutSpace30 20.0f

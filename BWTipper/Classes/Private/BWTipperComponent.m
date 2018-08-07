@@ -7,6 +7,7 @@
 
 #import "BWTipperComponent.h"
 
+
 @implementation BWTipperComponent
 
 #pragma mark - Intial
@@ -33,7 +34,7 @@
     self.delay = 1.5;
     
     // 监听转屏（注意这个地方不能是`UIRemoteKeyboardWindow`，否则键盘收起时就会奔溃）
-    [UIApplication.sharedApplication.keyWindow addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
+    [kAppKeyWindow addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)addViews{
@@ -46,7 +47,7 @@
     [BWTipperComponent dismissComponentByClass:self.class animated:NO];
     
     // 添加当前
-    [kWindow addSubview:self];
+    [kTipperKeyWindow addSubview:self];
 }
 
 - (void)playDisplayAnimation{
@@ -72,7 +73,7 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
     
-    self.frame = kWindow.bounds;
+    self.frame = kTipperKeyWindow.bounds;
 }
 
 - (void)removeFromSuperview{
@@ -83,7 +84,7 @@
 
 #pragma mark - Private
 + (void)dismissComponentByClass: (Class)componentClass animated: (BOOL)animated{
-    for (UIView *subview in kWindow.subviews) {
+    for (UIView *subview in kTipperKeyWindow.subviews) {
         if ([subview isKindOfClass:componentClass]) {
             if (animated) {
                 BWTipperComponent *component = (BWTipperComponent *)subview;
@@ -98,13 +99,13 @@
 
 - (void)dealloc
 {
-    [kWindow removeObserver:self forKeyPath:@"frame"];
+    [kAppKeyWindow removeObserver:self forKeyPath:@"frame"];
 }
 
 #pragma mark - KVO
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-    if (object == kWindow) {
+    if (object == kTipperKeyWindow) {
 //        NSLog(@"%@: %@: %@", keyPath, object, change);
         [self setNeedsLayout];
     }
