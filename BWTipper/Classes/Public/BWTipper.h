@@ -88,9 +88,8 @@
 
 #pragma mark - Common
 
-/**
- 移除
- */
-+ (void)dismiss;
++ (void)dismissHUD;
+
++ (void)dismissSnackbar;
 
 @end

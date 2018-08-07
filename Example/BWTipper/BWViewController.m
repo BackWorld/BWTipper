@@ -37,7 +37,7 @@
 }
 
 - (IBAction)dismiss:(id)sender {
-    [BWTipper dismiss];
+    [BWTipper dismissSnackbar];
 }
 
 

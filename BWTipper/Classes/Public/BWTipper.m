@@ -113,9 +113,12 @@
 }
 
 #pragma mark - Common
-+ (void)dismiss{
-    [BWTipperHUD dismissComponentByClass:BWTipperHUD.class animated:YES];
++ (void)dismissHUD{
+    [BWTipperComponent dismissComponentByClass:BWTipperHUD.class animated:YES];
 }
 
++ (void)dismissSnackbar{
+    [BWTipperComponent dismissComponentByClass:BWTipperSnackbar.class animated:YES];
+}
 
 @end
