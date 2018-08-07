@@ -15,7 +15,7 @@
 #define kAnimationScaleFrom 0.8f
 #define kAnimationScaleTo 1.0f
 
-#define kAppKeyWindow UIApplication.sharedApplication.keyWindow
+#define kAppKeyWindow UIApplication.sharedApplication.delegate.window
 #define kTipperKeyWindow [BWTipperTool tipperKeyWindow]
 #define kCenter CGPointMake(CGRectGetMidX(kTipperKeyWindow.bounds), CGRectGetMidY(kTipperKeyWindow.bounds))
 
