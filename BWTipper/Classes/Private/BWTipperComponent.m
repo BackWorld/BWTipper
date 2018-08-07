@@ -32,8 +32,8 @@
     self.userInteractionEnabled = NO;
     self.delay = 1.5;
     
-    // 监听转屏
-    [kWindow addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
+    // 监听转屏（注意这个地方不能是`UIRemoteKeyboardWindow`，否则键盘收起时就会奔溃）
+    [UIApplication.sharedApplication.keyWindow addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
 }
 
 - (void)addViews{
