@@ -17,7 +17,7 @@
            completion: (BWTipperCompletion)completion
 {
     UIImage *icon = [BWTipperConfigure.defaultConfigure iconWithStyle:style];
-    [self showWithImages:@[icon] duration: 0 delay:delay message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:YES];
+    [self showWithImages:@[icon] duration: 0 delay:delay message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:YES completion:completion];
 }
 
 @end

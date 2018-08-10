@@ -35,7 +35,7 @@
     backgroundDimmed: (BOOL)backgroundDimmed
                delay: (NSTimeInterval)delay
           completion: (BWTipperCompletion)completion{
-    [BWTipperHUD showWithImages:@[image] duration:0 delay:delay message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:YES];
+    [BWTipperHUD showWithImages:@[image] duration:0 delay:delay message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:YES completion:completion];
 }
 
 #pragma mark HUD Loading Default
@@ -68,7 +68,7 @@
                     backgroundDimmed: (BOOL)backgroundDimmed
                     wrapperDisplayOn: (BOOL)wrapperDisplayOn
                              timeout: (NSTimeInterval)timeout{
-    [BWTipperHUD showWithImages:images duration:duration delay:timeout message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:wrapperDisplayOn];
+    [BWTipperHUD showWithImages:images duration:duration delay:timeout message:message backgroundDimmed:backgroundDimmed wrapperDisplayOn:wrapperDisplayOn completion:nil];
 }
 
 #pragma mark HUD Loading Progress

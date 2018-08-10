@@ -14,6 +14,7 @@
                  delay: (NSTimeInterval)delay
                message: (NSString *)message
       backgroundDimmed: (BOOL)backgroundDimmed
-      wrapperDisplayOn: (BOOL)wrapperDisplayOn;
+      wrapperDisplayOn: (BOOL)wrapperDisplayOn
+            completion: (BWTipperCompletion)completion;
 
 @end

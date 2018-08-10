@@ -16,6 +16,7 @@
                message: (NSString *)message
       backgroundDimmed: (BOOL)backgroundDimmed
       wrapperDisplayOn: (BOOL)wrapperDisplayOn
+            completion: (BWTipperCompletion)completion
 {
     
     BWTipperHUD *hud = [self new];
@@ -25,6 +26,7 @@
     hud.delay = delay;
     hud.imagesAnimationDuration = duration;
     hud.images = images;
+    hud.completion = completion;
     
     if (!wrapperDisplayOn) {
         [hud clearWrapperViewBackgroundColor];
