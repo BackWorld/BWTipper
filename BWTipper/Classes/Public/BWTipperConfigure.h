@@ -23,6 +23,13 @@
  */
 @property(nonatomic, strong)BWTipperImageAssset styleIcons;
 
+
+/**
+ 默认的loading icons
+ */
+@property(nonatomic, copy)NSArray<UIImage *> *defaultLoadingIcons;
+
+
 /**
  是否显示阴影
  */
@@ -51,6 +58,12 @@
 + (instancetype)defaultConfigure;
 
 
+/**
+ 主题色的反色
+
+ @return 反色
+ */
+- (UIColor *)themeRevertedColor;
 
 
 @end

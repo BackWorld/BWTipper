@@ -75,11 +75,11 @@ float progress;
 
 
 - (IBAction)showHUD:(id)sender {
-//    [BWTipper hudWithStyle:BWTipperStyleSuccess];
+    [BWTipper hudLoadingWithMessage:@"正在加载数据..."];
     
-    [BWTipper hudWithStyle:BWTipperStyleSuccess message:@"提交成功" backgroundDimmed:YES delay:0 completion:^{
-        [BWTipper hudWithStyle:BWTipperStyleSuccess message:@"完成了展示"];
-    }];
+//    [BWTipper hudWithStyle:BWTipperStyleSuccess message:@"提交成功" backgroundDimmed:YES delay:0 completion:^{
+//        [BWTipper hudWithStyle:BWTipperStyleSuccess message:@"完成了展示"];
+//    }];
     
     return;
 //    BWTipperConfigure.defaultConfigure.backgroundDimmedAlpha = 0.8;

@@ -31,10 +31,29 @@
 }
 
 #pragma mark - Public
+- (UIColor *)themeRevertedColor{
+    BOOL isDarkTheme = (self.theme == BWTipperThemeDark);
+    return isDarkTheme ? UIColor.whiteColor : UIColor.blackColor;
+}
+
 
 #pragma mark - Setters
 
 #pragma mark - Getters
+- (NSArray *)defaultLoadingIcons{
+    if (!_defaultLoadingIcons) {
+        NSMutableArray *icons = [NSMutableArray new];
+        for (int i=0; i<35; i++) {
+            NSString *name = [NSString stringWithFormat:@"loading-%d.png", i];
+            UIImage *image = [BWTipperTool bundleImage:name];
+            image = [BWTipperTool image:image withTintColor:self.themeRevertedColor];
+            [icons addObject:image];
+        }
+        _defaultLoadingIcons = [NSArray arrayWithArray:icons];
+    }
+    return _defaultLoadingIcons;
+}
+
 - (BWTipperImageAssset)styleIcons{
     if (!_styleIcons) {
         UIImage *success = [BWTipperTool bundleImage:@"success.png"];

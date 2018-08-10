@@ -65,8 +65,12 @@
 
 
 - (CGSize)imageViewSize{
-    if (self.imageView.animationImages.count > 0) {
-        return CGSizeMake(80, 80);
+    BOOL isDefaultLoadingIcons = [self.images isEqual:BWTipperConfigure.defaultConfigure.defaultLoadingIcons];
+    if (isDefaultLoadingIcons) {
+        return CGSizeMake(70, 70);
+    }
+    else if (self.images.count > 1) {
+        return CGSizeMake(100, 100);
     }
     return CGSizeMake(50, 50);
 }
