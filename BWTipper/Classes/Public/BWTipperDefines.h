@@ -9,6 +9,8 @@
 #define BWTipperHeader_h
 
 
+#define kBWTipperBlackColor [UIColor colorWithRed:45/255.0 green:45/255.0 blue:45/255.0 alpha:1]
+#define kBWTipperWhiteColor [UIColor whiteColor]
 
 typedef NSDictionary<NSString *, UIImage *> * BWTipperImageAssset;
 

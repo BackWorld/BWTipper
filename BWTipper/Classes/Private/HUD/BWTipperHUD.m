@@ -49,10 +49,10 @@
 }
 
 #pragma mark - Getters
-- (UIVisualEffectView *)wrapperView{
-    UIVisualEffectView *view = [super wrapperView];
+- (UIView *)wrapperView{
+    UIView *view = [super wrapperView];
     
-    [view.contentView addSubview:self.imageView];
+    [view addSubview:self.imageView];
     return view;
 }
 

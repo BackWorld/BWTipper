@@ -38,6 +38,7 @@
 
 - (IBAction)dismiss:(id)sender {
     [BWTipper dismissSnackbar];
+    [BWTipper dismissHUD];
 }
 
 

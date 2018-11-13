@@ -6,7 +6,6 @@
 //
 
 #import "BWTipperConfigure+Private.h"
-#import "BWTipperTool.h"
 
 @implementation BWTipperConfigure (Private)
 
@@ -32,7 +31,12 @@
 
 - (UIColor *)themeColor{
     BOOL isDarkTheme = (self.theme == BWTipperThemeDark);
-    return isDarkTheme ? UIColor.blackColor : UIColor.whiteColor;
+    return isDarkTheme ? kBWTipperBlackColor : kBWTipperWhiteColor;
+}
+
+- (UIColor *)themeRevertedColor{
+    BOOL isDarkTheme = (self.theme == BWTipperThemeDark);
+    return isDarkTheme ? kBWTipperWhiteColor : kBWTipperBlackColor;
 }
 
 

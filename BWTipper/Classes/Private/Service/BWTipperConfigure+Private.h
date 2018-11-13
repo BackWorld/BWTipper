@@ -5,13 +5,16 @@
 //  Created by koolearn on 2018/6/29.
 //
 
-#import <BWTipper/BWTipper.h>
+#import "BWTipperTool.h"
+#import "BWTipperConfigure.h"
 
 @interface BWTipperConfigure (Private)
 
 - (UIImage *)iconWithStyle:(BWTipperStyle)style;
 
 - (UIColor *)themeColor;
+
+- (UIColor *)themeRevertedColor;
 
 - (BOOL)isLightTheme;
 

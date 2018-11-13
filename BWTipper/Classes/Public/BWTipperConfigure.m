@@ -5,8 +5,9 @@
 //  Created by zhuxuhong on 2018/6/24.
 //
 
-#import "BWTipperConfigure.h"
 #import "BWTipperTool.h"
+#import "BWTipperConfigure+Private.h"
+#import "BWTipperConfigure.h"
 
 @implementation BWTipperConfigure
 
@@ -26,18 +27,21 @@
         self.cornerRoundOn = YES;
         self.shadowOn = NO;
         self.backgroundDimmedAlpha = 0.3;
+        
+        
     }
     return self;
 }
 
 #pragma mark - Public
-- (UIColor *)themeRevertedColor{
-    BOOL isDarkTheme = (self.theme == BWTipperThemeDark);
-    return isDarkTheme ? UIColor.whiteColor : UIColor.blackColor;
-}
-
 
 #pragma mark - Setters
+- (void)setTheme:(BWTipperTheme)theme{
+    // 重置default loading icons
+    self.defaultLoadingIcons = nil;
+    
+    _theme = theme;
+}
 
 #pragma mark - Getters
 - (NSArray *)defaultLoadingIcons{

@@ -22,7 +22,7 @@
 @interface BWTipperComponent : UIView
 
 #pragma mark - UI
-@property(nonatomic, strong)UIVisualEffectView *wrapperView;
+@property(nonatomic, strong)UIView *wrapperView;
 @property(nonatomic, strong)UILabel *messageLabel;
 @property(nonatomic, strong)UIImageView *imageView;
 

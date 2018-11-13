@@ -58,12 +58,4 @@
 + (instancetype)defaultConfigure;
 
 
-/**
- 主题色的反色
-
- @return 反色
- */
-- (UIColor *)themeRevertedColor;
-
-
 @end

@@ -5,6 +5,7 @@
 //  Created by zhuxuhong on 2018/6/24.
 //
 
+#import "BWTipperConfigure+Private.h"
 #import "BWTipperComponent.h"
 
 
@@ -125,24 +126,18 @@
 
 - (void)setWrapperCornerRadius:(CGFloat)wrapperCornerRadius{
     if (BWTipperConfigure.defaultConfigure.cornerRoundOn) {
-        for (UIView *subview in self.wrapperView.subviews) {
-            subview.layer.cornerRadius = wrapperCornerRadius;
-        }
+        self.wrapperView.layer.cornerRadius = wrapperCornerRadius;
     }
     _wrapperCornerRadius = wrapperCornerRadius;
 }
 
 #pragma mark - Getters
 
-- (UIVisualEffectView *)wrapperView{
+- (UIView *)wrapperView{
     if (!_wrapperView) {
-        _wrapperView = [UIVisualEffectView new];
+        _wrapperView = [UIView new];
         _wrapperView.alpha = 0;
-        
-        UIBlurEffectStyle style = BWTipperConfigure.defaultConfigure.isLightTheme
-        ? UIBlurEffectStyleExtraLight
-        : UIBlurEffectStyleDark;
-        _wrapperView.effect = [UIBlurEffect effectWithStyle:style];
+        _wrapperView.backgroundColor = [BWTipperConfigure.defaultConfigure themeColor];
         
         if (BWTipperConfigure.defaultConfigure.shadowOn) {
             _wrapperView.layer.shadowOffset = CGSizeZero;
@@ -150,7 +145,7 @@
             _wrapperView.layer.shadowRadius = 8;
         }
         
-        [_wrapperView.contentView addSubview:self.messageLabel];
+        [_wrapperView addSubview:self.messageLabel];
     }
     return _wrapperView;
 }
